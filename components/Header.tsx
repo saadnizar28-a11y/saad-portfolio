@@ -6,6 +6,7 @@ import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const pathname = usePathname();
 
   useEffect(() => {
@@ -78,10 +79,42 @@ export default function Header() {
           ))}
         </nav>
         
-        {/* Mobile Menu */}
-        <button className="md:hidden text-white/50 hover:text-[var(--accent-cyan)] transition-colors z-10 text-xs tracking-widest uppercase outline-none">
-          Menu
+        {/* Mobile Menu Button */}
+        <button 
+          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          className="md:hidden text-white hover:text-[var(--accent-cyan)] transition-colors z-50 relative text-xs tracking-widest uppercase outline-none"
+        >
+          {isMobileMenuOpen ? "Close" : "Menu"}
         </button>
+      </div>
+
+      {/* Mobile Menu Overlay */}
+      <div 
+        className={`fixed inset-0 bg-[#050505]/95 backdrop-blur-3xl z-40 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-center items-center ${
+          isMobileMenuOpen 
+            ? "opacity-100 pointer-events-auto" 
+            : "opacity-0 pointer-events-none"
+        }`}
+      >
+        <nav className="flex flex-col items-center gap-8">
+          {navLinks.map((link, i) => (
+            <Link
+              key={link.href}
+              href={link.href}
+              onClick={() => setIsMobileMenuOpen(false)}
+              className={`text-2xl tracking-[0.2em] uppercase transition-all duration-500 transform ${
+                isMobileMenuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+              } ${
+                pathname === link.href 
+                  ? "text-[var(--accent-cyan)] font-bold drop-shadow-[0_0_20px_rgba(0,240,255,0.8)]" 
+                  : "text-white/50 hover:text-white"
+              }`}
+              style={{ transitionDelay: `${isMobileMenuOpen ? i * 75 + 100 : 0}ms` }}
+            >
+              {link.label}
+            </Link>
+          ))}
+        </nav>
       </div>
     </header>
   );

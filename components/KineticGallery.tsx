@@ -7,6 +7,7 @@ export default function KineticGallery({ prompts }: { prompts: any[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const [offset, setOffset] = useState({ x: 0, y: 0 });
   const targetOffset = useRef({ x: 0, y: 0 });
+  const lastTouch = useRef({ x: 0, y: 0 });
 
   useEffect(() => {
     let animationFrameId: number;
@@ -50,12 +51,40 @@ export default function KineticGallery({ prompts }: { prompts: any[] }) {
     if (targetOffset.current.y < -1500) targetOffset.current.y = -1500;
   };
 
+  const handleTouchStart = (e: React.TouchEvent) => {
+    if (e.touches.length > 0) {
+      lastTouch.current = { x: e.touches[0].clientX, y: e.touches[0].clientY };
+    }
+  };
+
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (e.touches.length > 0) {
+      const touch = e.touches[0];
+      const deltaX = touch.clientX - lastTouch.current.x;
+      const deltaY = touch.clientY - lastTouch.current.y;
+      
+      lastTouch.current = { x: touch.clientX, y: touch.clientY };
+
+      targetOffset.current = {
+        x: targetOffset.current.x + deltaX * 2,
+        y: targetOffset.current.y + deltaY * 2
+      };
+      
+      if (targetOffset.current.y > 800) targetOffset.current.y = 800;
+      if (targetOffset.current.y < -1500) targetOffset.current.y = -1500;
+      if (targetOffset.current.x > 800) targetOffset.current.x = 800;
+      if (targetOffset.current.x < -1500) targetOffset.current.x = -1500;
+    }
+  };
+
   return (
     <div 
       ref={containerRef}
       onMouseMove={handleMouseMove}
       onWheel={handleWheel}
-      className="relative w-full h-[100vh] overflow-hidden flex justify-center items-center cursor-move z-10"
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      className="relative w-full h-[100vh] overflow-hidden flex justify-center items-center cursor-move z-10 touch-none"
       style={{ WebkitMaskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 90%)', maskImage: 'radial-gradient(ellipse at center, rgba(0,0,0,1) 40%, rgba(0,0,0,0) 90%)' }}
     >
       <div 

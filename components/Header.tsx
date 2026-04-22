@@ -81,33 +81,48 @@ export default function Header() {
         
         {/* Mobile Menu Button */}
         <button 
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          className="md:hidden text-white hover:text-[var(--accent-cyan)] transition-colors z-50 relative text-xs tracking-widest uppercase outline-none"
+          onClick={() => setIsMobileMenuOpen(true)}
+          className={`md:hidden text-white hover:text-[var(--accent-cyan)] transition-all z-40 relative text-xs tracking-widest uppercase outline-none ${isMobileMenuOpen ? 'opacity-0 pointer-events-none' : 'opacity-100'}`}
         >
-          {isMobileMenuOpen ? "Close" : "Menu"}
+          Menu
         </button>
       </div>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu Backdrop */}
       <div 
-        className={`fixed inset-0 bg-[#050505]/95 backdrop-blur-3xl z-40 transition-all duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] flex flex-col justify-center items-center ${
-          isMobileMenuOpen 
-            ? "opacity-100 pointer-events-auto" 
-            : "opacity-0 pointer-events-none"
+        className={`fixed inset-0 bg-black/60 backdrop-blur-sm z-40 transition-opacity duration-500 ${
+          isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
+        }`}
+        onClick={() => setIsMobileMenuOpen(false)}
+      />
+
+      {/* Mobile Menu Drawer (Right Side) */}
+      <div 
+        className={`fixed top-0 right-0 w-[80vw] max-w-[320px] h-[100dvh] bg-[#050505]/95 backdrop-blur-3xl z-50 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] border-l border-white/10 flex flex-col pt-10 px-10 shadow-[-20px_0_40px_rgba(0,0,0,0.8)] ${
+          isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <nav className="flex flex-col items-center gap-8">
+        <div className="flex justify-end mb-16">
+          <button 
+            onClick={() => setIsMobileMenuOpen(false)}
+            className="text-[var(--accent-cyan)] hover:text-white transition-colors text-xs tracking-widest uppercase outline-none font-bold"
+          >
+            Close
+          </button>
+        </div>
+
+        <nav className="flex flex-col items-start gap-8">
           {navLinks.map((link, i) => (
             <Link
               key={link.href}
               href={link.href}
               onClick={() => setIsMobileMenuOpen(false)}
-              className={`text-2xl tracking-[0.2em] uppercase transition-all duration-500 transform ${
-                isMobileMenuOpen ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"
+              className={`text-xl tracking-[0.2em] uppercase transition-all duration-500 transform ${
+                isMobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
               } ${
                 pathname === link.href 
                   ? "text-[var(--accent-cyan)] font-bold drop-shadow-[0_0_20px_rgba(0,240,255,0.8)]" 
-                  : "text-white/50 hover:text-white"
+                  : "text-white/70 hover:text-white"
               }`}
               style={{ transitionDelay: `${isMobileMenuOpen ? i * 75 + 100 : 0}ms` }}
             >

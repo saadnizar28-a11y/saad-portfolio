@@ -34,22 +34,22 @@ export default function Blog() {
   }, []);
 
   return (
-    <main className="h-[100dvh] w-full relative overflow-hidden bg-[var(--background)] flex flex-col">
+    <main className="min-h-[100dvh] lg:h-[100dvh] w-full relative overflow-x-hidden bg-[var(--background)] flex flex-col">
       {/* Background Ambience */}
       <div className="absolute top-0 right-1/4 w-[50vw] h-[50vh] bg-gradient-radial from-[var(--accent-pink)]/5 to-transparent blur-[150px] pointer-events-none rounded-full" />
       <div className="absolute bottom-1/4 left-0 w-[40vw] h-[40vh] bg-gradient-radial from-[var(--accent-cyan)]/5 to-transparent blur-[150px] pointer-events-none rounded-full z-0" />
 
       {/* Header Area (Fixed) */}
-      <div className="pt-32 px-6 md:px-16 flex-shrink-0 relative z-10 w-full max-w-[100vw]">
-        <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-8 mb-8">
+      <div className="pt-28 md:pt-32 px-6 md:px-16 flex-shrink-0 relative z-10 w-full max-w-[100vw]">
+        <div className="flex flex-col xl:flex-row xl:items-center justify-between gap-6 md:gap-8 mb-4 md:mb-8">
           <FadeIn>
-            <div className="relative inline-block">
+            <div className="relative inline-block mt-4 md:mt-0">
               <HeadingBurst />
-              <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter mb-4 relative z-10">
+              <h1 className="text-4xl md:text-7xl font-extrabold tracking-tighter mb-2 md:mb-4 relative z-10">
                 Insights & <span className="text-gradient hover:drop-shadow-[0_0_20px_rgba(0,240,255,0.4)] transition-all">News.</span>
               </h1>
             </div>
-            <p className="text-lg md:text-xl text-white/50 font-light max-w-2xl">
+            <p className="text-base md:text-xl text-white/50 font-light max-w-2xl mb-2 md:mb-0">
               Live updates, technical breakdowns, and the engineering behind highly converting platforms.
             </p>
           </FadeIn>

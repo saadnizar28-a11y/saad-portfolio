@@ -16,6 +16,9 @@ export default function Blog() {
     if (!container) return;
 
     const handleWheel = (e: WheelEvent) => {
+      // If predominantly horizontal scroll (e.g. trackpad), allow native behavior
+      if (Math.abs(e.deltaX) > Math.abs(e.deltaY)) return;
+
       // Prevent default vertical scroll and apply it to horizontal scroll instead
       if (e.deltaY !== 0) {
         e.preventDefault();
@@ -31,7 +34,7 @@ export default function Blog() {
   }, []);
 
   return (
-    <main className="h-screen w-full relative overflow-hidden bg-[var(--background)] flex flex-col">
+    <main className="h-[100dvh] w-full relative overflow-hidden bg-[var(--background)] flex flex-col">
       {/* Background Ambience */}
       <div className="absolute top-0 right-1/4 w-[50vw] h-[50vh] bg-gradient-radial from-[var(--accent-pink)]/5 to-transparent blur-[150px] pointer-events-none rounded-full" />
       <div className="absolute bottom-1/4 left-0 w-[40vw] h-[40vh] bg-gradient-radial from-[var(--accent-cyan)]/5 to-transparent blur-[150px] pointer-events-none rounded-full z-0" />

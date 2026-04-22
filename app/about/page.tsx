@@ -10,25 +10,25 @@ export default function About() {
       {/* Cinematic Background glow */}
       <div className="absolute top-0 right-0 w-[60vw] h-[60vh] bg-gradient-radial from-[var(--accent-cyan)]/5 to-transparent blur-[150px] pointer-events-none rounded-full" />
       <div className="absolute bottom-0 left-0 w-[50vw] h-[50vh] bg-gradient-radial from-[var(--accent-violet)]/5 to-transparent blur-[150px] pointer-events-none rounded-full" />
-      
+
       <div className="max-w-5xl mx-auto relative z-10 flex flex-col lg:flex-row gap-16">
-        
+
         {/* Left Column Text Narrative */}
         <div className="w-full lg:w-3/5">
           <FadeIn delay={100}>
             <div className="relative inline-block">
               <HeadingBurst />
               <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter mb-16 leading-tight relative z-10">
-                I’m <span className="text-gradient">Saad.</span>
+                I’m <span className="text-gradient">Saad</span>
               </h1>
             </div>
           </FadeIn>
-          
+
           <div className="space-y-8 text-lg font-light text-white/70 leading-relaxed">
             <FadeIn delay={300}>
               <p>My journey didn’t start in design — it started in understanding people.</p>
             </FadeIn>
-            
+
             <FadeIn delay={400}>
               <p className="text-white/90 text-xl font-medium">
                 From sales floors to digital spaces, I learned how attention works, how decisions are made, and what actually drives action.
@@ -56,7 +56,7 @@ export default function About() {
             <FadeIn delay={800}>
               <div className="pt-10 mt-10 border-t border-white/5 space-y-4">
                 <p>I don’t believe in random design. Every detail should have a purpose. Every element should move people.</p>
-                <p className="text-white font-medium text-xl pt-2">I’m not here to just create websites.<br/>I’m here to build digital presence that <span className="text-[var(--accent-pink)]">converts.</span></p>
+                <p className="text-white font-medium text-xl pt-2">I’m not here to just create websites.<br />I’m here to build digital presence that <span className="text-[var(--accent-pink)]">converts.</span></p>
               </div>
             </FadeIn>
           </div>
@@ -64,7 +64,7 @@ export default function About() {
 
         {/* Right Column Interactive Widgets */}
         <div className="w-full lg:w-2/5 flex flex-col gap-6 pt-6">
-          
+
           <FadeIn delay={300}>
             <SystemStatus />
           </FadeIn>

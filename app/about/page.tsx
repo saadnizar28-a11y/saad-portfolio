@@ -18,45 +18,107 @@ export default function About() {
           <FadeIn delay={100}>
             <div className="relative inline-block">
               <HeadingBurst />
-              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter mb-16 leading-tight relative z-10">
-                I’m <span className="text-gradient">Saad</span>
+              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter mb-4 leading-tight relative z-10">
+                I’m <span className="text-gradient">Saad Nizar</span>
               </h1>
+              <h2 className="text-xl md:text-2xl text-[var(--accent-cyan)] font-medium mb-12 max-w-lg">
+                Freelance Digital Marketing Specialist & Graphic Designer
+              </h2>
             </div>
           </FadeIn>
 
           <div className="space-y-8 text-lg font-light text-white/70 leading-relaxed">
+            <FadeIn delay={200}>
+              <p>
+                Focused on brand strategy, creative marketing, and performance-driven growth. Having been raised in Dubai and with 8 years of professional experience in the UAE, I have developed a strong understanding of GCC market expectations, brand standards, and consumer behavior. This exposure allows me to approach marketing with a perspective aligned with Dubai’s competitive and high-quality business environment.
+              </p>
+            </FadeIn>
+
             <FadeIn delay={300}>
-              <p>My journey didn’t start in design — it started in understanding people.</p>
+              <p>
+                With a strong foundation in client-facing roles, I understand how people think, decide, and engage. I apply this insight to build marketing systems that are not only visually strong but strategically designed to attract, engage, and convert the right audience.
+              </p>
             </FadeIn>
 
             <FadeIn delay={400}>
-              <p className="text-white/90 text-xl font-medium">
-                From sales floors to digital spaces, I learned how attention works, how decisions are made, and what actually drives action.
+              <p>
+                I help businesses and personal brands solve real marketing problems through digital channels — improving visibility, strengthening brand identity, and driving meaningful engagement. I have worked on multiple client projects across branding, social media, and digital campaigns, delivering creative and strategic solutions tailored to different industries and audiences.
               </p>
             </FadeIn>
 
             <FadeIn delay={500}>
-              <p>
-                I didn’t follow the usual path. I built mine through experience — pressure, rejection, and constant learning. While working in sales, creativity never left me. I kept experimenting, designing, and observing how visuals influence behavior.
+              <p className="border-l-2 border-[var(--accent-pink)] pl-4 py-1 my-6 text-white/90">
+                I also bring experience working with leading brands including <span className="text-[var(--accent-pink)] font-semibold">OPPO, Xiaomi, Nokia, HMD, and Emirates Exchange</span>, which has strengthened my understanding of customer psychology, market dynamics, and brand positioning in competitive environments.
               </p>
             </FadeIn>
 
             <FadeIn delay={600}>
-              <p className="text-[var(--accent-cyan)] font-medium text-xl border-l-2 border-[var(--accent-cyan)] pl-4 my-8">
-                That’s where everything changed.
-              </p>
-            </FadeIn>
-
-            <FadeIn delay={700}>
               <p>
-                Today, I combine strategy, design, and marketing to create systems that don’t just look good — but natively perform at high levels.
+                Currently, I am working with a UAE-based company, Synosys, contributing to its subsidiary brand <span className="text-[var(--accent-cyan)] font-medium">Locator</span>, a GPS tracking and fleet management SaaS platform, as a Creative Marketing Strategist & Designer. I handle digital marketing, branding, and creative design initiatives aligned with GCC market standards, supporting solutions in AI, IoT, and intelligent fleet management systems.
               </p>
             </FadeIn>
 
+            {/* Education Section */}
+            <FadeIn delay={700}>
+              <div className="mt-12 pt-10 border-t border-white/10">
+                <h3 className="text-2xl font-bold text-white mb-6 tracking-tight">Education</h3>
+                <ul className="space-y-4">
+                  <li className="flex gap-4 items-start">
+                    <span className="text-[var(--accent-violet)] mt-1">⯌</span>
+                    <p>Bachelor of Business Administration (BBA) from International College of Law, Business Administration & Technology (ICLBAT), Ajman, an institution under the Atlas Group.</p>
+                  </li>
+                  <li className="flex gap-4 items-start">
+                    <span className="text-[var(--accent-violet)] mt-1">⯌</span>
+                    <p>MBA with specialization in Airline and Airport Management from Brillianz Institute of Management and Studies (BIMS), Dubai.</p>
+                  </li>
+                </ul>
+              </div>
+            </FadeIn>
+
+            {/* What I Do Section */}
             <FadeIn delay={800}>
-              <div className="pt-10 mt-10 border-t border-white/5 space-y-4">
-                <p>I don’t believe in random design. Every detail should have a purpose. Every element should move people.</p>
-                <p className="text-white font-medium text-xl pt-2">I’m not here to just create websites.<br />I’m here to build digital presence that <span className="text-[var(--accent-pink)]">converts.</span></p>
+              <div className="mt-12 pt-10 border-t border-white/10">
+                <h3 className="text-2xl font-bold text-white mb-6 tracking-tight">What I Do</h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                  {[
+                    "Digital Marketing Strategy",
+                    "Performance Marketing & Lead Gen",
+                    "Social Media Marketing",
+                    "Search Engine Optimization (SEO)",
+                    "Branding & Personal Branding",
+                    "Creative Campaign Development",
+                    "Graphic Design (Posters, Logos)",
+                    "UI Design & Visual Identity"
+                  ].map((service, i) => (
+                    <div key={i} className="bg-white/5 border border-white/10 px-4 py-3 rounded-xl flex items-center gap-3 text-sm font-medium hover:bg-white/10 transition-colors">
+                      <div className="w-1.5 h-1.5 rounded-full bg-[var(--accent-cyan)] shadow-[0_0_8px_var(--accent-cyan)]" />
+                      {service}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={900}>
+              <div className="mt-12 pt-10 border-t border-white/10 space-y-6">
+                <p>
+                  Alongside this, I offer freelance services on a global scale, covering digital marketing, creative branding, visual identity design, and strategic content development — helping brands build a strong, consistent, and impactful presence across platforms.
+                </p>
+                <p>
+                  My approach is simple: <span className="text-white font-medium">every design and every strategy must serve a purpose</span>. I focus on combining creative thinking with clear business objectives, ensuring that the work not only looks good but performs effectively.
+                </p>
+                <p>
+                  Currently, I’m focused on building complete brand and digital presence systems — from idea and positioning to execution — helping businesses stand out in competitive markets. I am now seeking opportunities in the GCC market, aiming to contribute as a creative and strategic professional who aligns branding, design, and marketing with real business growth.
+                </p>
+              </div>
+            </FadeIn>
+
+            <FadeIn delay={1000}>
+              <div className="pt-8 mt-8 border-t border-[var(--accent-pink)]/20">
+                <p className="text-white font-medium text-2xl leading-tight">
+                  I don’t just create visuals or run campaigns — <br className="hidden md:block" />
+                  <span className="text-[var(--accent-pink)] drop-shadow-[0_0_15px_rgba(255,42,109,0.3)]">I build marketing systems that deliver real impact.</span>
+                </p>
               </div>
             </FadeIn>
           </div>

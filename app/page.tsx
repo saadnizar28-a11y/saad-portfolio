@@ -185,7 +185,10 @@ export default function Home() {
       </div>
 
       {/* Main Home Content Below Intro */}
-      <section className="min-h-screen bg-[var(--background)] flex flex-col items-center justify-center text-center px-6 py-32 relative z-10 w-full overflow-hidden">
+      <section 
+        className="min-h-screen bg-transparent flex flex-col items-center justify-center text-center px-6 py-32 relative z-10 w-full"
+        style={{ marginTop: "-30vh", paddingTop: "30vh" }}
+      >
         
         <AmoebaBackground />
 

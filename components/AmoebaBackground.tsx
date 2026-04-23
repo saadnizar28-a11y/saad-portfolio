@@ -15,54 +15,46 @@ export default function AmoebaBackground() {
     let width = window.innerWidth;
     let height = window.innerHeight;
     
-    // Mouse tracks where the shape should "go"
-    let mouse = {
-      x: width / 3, // Start slightly left
-      y: height / 2,
-      targetX: width / 3,
-      targetY: height / 2,
-      vx: 0,
-      vy: 0
-    };
-
-    // User requested white, violet, and light blue colors
-    const colors = ["#ffffff", "#ffffff", "#ffffff", "#8e2de2", "#00f0ff"];
-
-    // Reduced density drastically as requested
-    const numParticles = 450; 
+    // Pure White Dots
+    const numParticles = 200; 
     const particles: { 
       ox: number, oy: number, oz: number, 
-      color: string, 
-      drawnX: number | null, drawnY: number | null, 
       speedModifier: number, 
-      hasGlow: boolean
+      drawnX: number | null, drawnY: number | null,
+      baseRadius: number
     }[] = [];
     
-    // Organic, scattered random layout instead of structured pattern
+    // Create organic dot cluster
     for (let i = 0; i < numParticles; i++) {
-       // Random volumetric distribution to destroy perfect patterns
-       const r = Math.cbrt(Math.random()); 
        const u = Math.random();
        const v = Math.random();
        const theta = u * 2.0 * Math.PI;
        const phi = Math.acos(2.0 * v - 1.0);
+       const r = Math.cbrt(Math.random()); // Volume distribution
        
        particles.push({
          ox: r * Math.sin(phi) * Math.cos(theta),
          oy: r * Math.sin(phi) * Math.sin(theta),
          oz: r * Math.cos(phi),
-         color: colors[Math.floor(Math.random() * colors.length)],
+         speedModifier: 0.5 + Math.random(),
          drawnX: null,
          drawnY: null,
-         speedModifier: 0.5 + Math.random(), // Unique random speeds for each dot
-         hasGlow: Math.random() > 0.65, // 35% of dots will have a heavy glow
+         baseRadius: 0.5 + Math.random() * 0.8, // Very small, minimalist white dots
        });
     }
 
     let time = 0;
-    let angleX = 0;
-    let angleY = 0;
     
+    // Mouse tracks where the shape should "go" and distort
+    let mouse = {
+      x: width / 2,
+      y: height / 2,
+      targetX: width / 2,
+      targetY: height / 2,
+      vx: 0,
+      vy: 0
+    };
+
     let cx = mouse.x;
     let cy = mouse.y;
 
@@ -82,61 +74,57 @@ export default function AmoebaBackground() {
     const draw = () => {
       ctx.clearRect(0, 0, width, height);
 
-      // Mouse velocity calculation
+      // Smooth time for breathing
+      time += 0.02;
+
+      // Mouse velocity for "Octopus" drag effect (Reduced for very slow gummy feel)
       const dx = mouse.targetX - mouse.x;
       const dy = mouse.targetY - mouse.y;
       
-      // Gummy mouse tracking (reduced to 0.05 for slower heavy drag)
-      mouse.vx = dx * 0.08;
-      mouse.vy = dy * 0.08;
+      mouse.vx = dx * 0.015;
+      mouse.vy = dy * 0.015;
 
       mouse.x += mouse.vx;
       mouse.y += mouse.vy;
 
-      // The entire scattered cloud follows the cursor very slowly for ambient feel
+      // The core follows the cursor slowly (syrupy)
       cx += (mouse.x - cx) * 0.015;
       cy += (mouse.y - cy) * 0.015;
 
-      // Drastically slowed down for a calm, slow-motion effect
-      time += 0.003;
-      angleX += 0.0002;
-      angleY -= 0.0003;
-
-      const cosX = Math.cos(angleX);
-      const sinX = Math.sin(angleX);
-      const cosY = Math.cos(angleY);
-      const sinY = Math.sin(angleY);
-
-      // Massive scattered cloud
-      const sphereRadius = Math.min(width, height) * 1.1;
+      // Deep, smooth breathing (scaling up and down organically)
+      const breathingScale = 1 + Math.sin(time * 1.2) * 0.15;
+      
+      const isMobile = width < 768;
+      const sphereRadius = Math.min(width, height) * (isMobile ? 0.75 : 0.5) * breathingScale;
       const focalLength = 800;
 
       for (let i = 0; i < particles.length; i++) {
         const p = particles[i];
 
-        // 3D Rotation matrices
+        // Slight natural drift to make it feel alive, but NO continuous rotation
+        const swayAngleX = Math.sin(time * 0.2) * 0.1;
+        const swayAngleY = Math.cos(time * 0.2) * 0.1;
+        
+        const cosX = Math.cos(swayAngleX);
+        const sinX = Math.sin(swayAngleX);
+        const cosY = Math.cos(swayAngleY);
+        const sinY = Math.sin(swayAngleY);
+
         const x1 = p.ox * cosY - p.oz * sinY;
         const z1 = p.oz * cosY + p.ox * sinY;
         const y2 = p.oy * cosX - z1 * sinX;
         const z2 = z1 * cosX + p.oy * sinX;
 
-        // Skip far back particles to reduce clutter
-        if (z2 < -0.1) continue; 
-
         const scale = focalLength / (focalLength + z2 * sphereRadius);
-        
-        // Ensure scale doesn't flip weirdly if camera gets too close
         if (scale < 0) continue;
 
         let targetX = cx + x1 * sphereRadius * scale;
         let targetY = cy + y2 * sphereRadius * scale;
 
-        // ==========================================
-        // FLUID AMOEBA DEFORMATION MATH (Randomized)
-        // ==========================================
-        // Applying organic waving motion so it behaves organically instead of perfectly
+        // Octopus / Amoeba organic deformation
         const waveAngle = Math.atan2(y2, x1);
-        const waveDistortion = Math.sin(p.speedModifier * 5 + time * 3) * 30 + Math.cos(waveAngle * 2 - time * 2) * 20;
+        // Distorts the shape into flowing tentacles/waves
+        const waveDistortion = Math.sin(p.speedModifier * 5 + time * 3) * 30 + Math.cos(waveAngle * 3 - time * 2) * 20;
         
         targetX += Math.cos(waveAngle) * waveDistortion * scale;
         targetY += Math.sin(waveAngle) * waveDistortion * scale;
@@ -146,38 +134,28 @@ export default function AmoebaBackground() {
             p.drawnY = targetY;
         }
 
-        // ==========================================
-        // GUMMY SWARM PHYSICS
-        // ==========================================
-        // The dots sway heavily in the direction of the mouse wind (swarming)
-        let swayX = targetX + mouse.vx * 15;
-        let swayY = targetY + mouse.vy * 15;
+        // Gummy mouse physics: dragging creates the octopus head/tail effect
+        let swayX = targetX + mouse.vx * 10;
+        let swayY = targetY + mouse.vy * 10;
 
-        // Slower positional dragging makes the dots feel like they are moving through syrup
         p.drawnX += (swayX - p.drawnX) * 0.04;
         p.drawnY += (swayY - p.drawnY) * 0.04;
 
-        const alpha = Math.min(1, Math.max(0.1, scale * 1.5 - 0.3));
+        const alpha = Math.min(1, Math.max(0.05, scale * 1.5 - 0.5));
         
-        // Clear shadow blur as it's unreliable in Canvas on some browsers
-        ctx.shadowBlur = 0;
-
-        // Base dot drawing
+        // Draw pure white dots
         ctx.beginPath();
-        const baseRadius = Math.max(0.5, (p.hasGlow ? 1.5 : 0.8) * scale);
-        ctx.arc(p.drawnX, p.drawnY, baseRadius, 0, Math.PI * 2);
-        
-        ctx.globalAlpha = p.hasGlow ? alpha : alpha * 0.4;
-        ctx.fillStyle = p.color;
+        ctx.arc(p.drawnX, p.drawnY, p.baseRadius * scale, 0, Math.PI * 2);
+        ctx.fillStyle = "#ffffff";
+        ctx.globalAlpha = alpha * 0.8;
         ctx.fill();
-
-        // Native Explicit Glow / Aura (Guaranteed to render reliably)
-        if (p.hasGlow) {
+        
+        // Add a very subtle tiny glow to a few dots so it's not overpowering
+        if (p.speedModifier > 1.3) {
            ctx.beginPath();
-           const glowRadius = baseRadius * 4;
-           ctx.arc(p.drawnX, p.drawnY, glowRadius, 0, Math.PI * 2);
-           ctx.globalAlpha = alpha * 0.15; // Soft translucent aura
-           ctx.fillStyle = p.color;
+           ctx.arc(p.drawnX, p.drawnY, p.baseRadius * scale * 2, 0, Math.PI * 2);
+           ctx.fillStyle = "#ffffff";
+           ctx.globalAlpha = alpha * 0.05;
            ctx.fill();
         }
       }
@@ -194,7 +172,17 @@ export default function AmoebaBackground() {
       mouse.targetY = e.clientY - rect.top;
     };
 
+    // Mobile touch tracking
+    const handleTouchMove = (e: TouchEvent) => {
+      const rect = canvas.getBoundingClientRect();
+      if (e.touches.length > 0) {
+        mouse.targetX = e.touches[0].clientX - rect.left;
+        mouse.targetY = e.touches[0].clientY - rect.top;
+      }
+    };
+
     window.addEventListener("mousemove", handleMouseMove);
+    window.addEventListener("touchmove", handleTouchMove, { passive: true });
 
     resize();
     draw();
@@ -202,6 +190,7 @@ export default function AmoebaBackground() {
     return () => {
       window.removeEventListener("resize", resize);
       window.removeEventListener("mousemove", handleMouseMove);
+      window.removeEventListener("touchmove", handleTouchMove);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);
@@ -209,7 +198,7 @@ export default function AmoebaBackground() {
   return (
     <canvas
       ref={canvasRef}
-      className="absolute top-0 left-0 w-full h-full pointer-events-none z-0 mix-blend-screen opacity-70"
+      className="fixed top-0 left-0 w-full h-full pointer-events-none z-0 mix-blend-screen opacity-90"
       style={{
         background: "transparent",
       }}

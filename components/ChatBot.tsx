@@ -10,6 +10,7 @@ export default function ChatBot() {
     { text: "Hi! I'm Saad's AI. How can I help you today?", isBot: true }
   ]);
   const [input, setInput] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
 
   const scrollToBottom = () => {
@@ -40,35 +41,33 @@ export default function ChatBot() {
     if (!isOpen) setShowBubble(false);
   };
 
-  const submitMessage = (textMsg: string) => {
+  const submitMessage = async (textMsg: string) => {
     const userMsg = textMsg.trim();
-    if (!userMsg) return;
+    if (!userMsg || isLoading) return;
 
-    setMessages(prev => [...prev, { text: userMsg, isBot: false }]);
+    const newMessages = [...messages, { text: userMsg, isBot: false }];
+    setMessages(newMessages);
     setInput("");
+    setIsLoading(true);
 
-    // Simulate typing delay
-    setTimeout(() => {
-      let botReply = "I'm still learning the exact details, but I'll make sure Saad gets your message! You can also explore the navigation menu above to see more.";
+    try {
+      const res = await fetch("/api/chat", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ messages: newMessages })
+      });
+      const data = await res.json();
       
-      const lower = userMsg.toLowerCase();
-      
-      if (lower.includes("hi") || lower.includes("hello") || lower.includes("hey")) {
-        botReply = "Hello! I'm Saad's AI Assistant. How can I help you today?";
-      } else if (lower.includes("service") || lower.includes("what do you do") || lower.includes("provide")) {
-        botReply = "We specialize in AI Automation, Custom Web Development, UI/UX Design, and Lead Generation. Which one are you looking for? Leave your contact info and we will contact u as soon as posible.";
-      } else if (lower.includes("appointment") || lower.includes("book") || lower.includes("meet")) {
-        botReply = "You can book a strategy session with Saad directly through the Contact page, or just leave your best email here and we will reach out to schedule one.";
-      } else if (lower.includes("contact") || lower.includes("email") || lower.includes("phone")) {
-        botReply = "You can head over to our Contact page to send a direct message, or just drop your details right here and we will contact u as soon as posible.";
-      } else if (lower.includes("ai solutions") || lower.includes("automation")) {
-        botReply = "Saad engineers custom AI setups using Claude Pro, Gemini Advanced, and ChatGPT to automate workflows and scale revenue operations. Want to see a use case?";
-      } else if (lower.includes("who is saad") || lower.includes("about saad")) {
-        botReply = "Saad is a digital strategist and founder who architects systems that drive attention and systematically convert it. He combines cinematic aesthetics with deep conversion psychology.";
+      if (data.reply) {
+        setMessages(prev => [...prev, { text: data.reply, isBot: true }]);
+      } else {
+        setMessages(prev => [...prev, { text: "Sorry, I'm having trouble connecting right now. Please try again later.", isBot: true }]);
       }
-
-      setMessages(prev => [...prev, { text: botReply, isBot: true }]);
-    }, 1000);
+    } catch (error) {
+      setMessages(prev => [...prev, { text: "Sorry, I'm having trouble connecting right now. Please try again later.", isBot: true }]);
+    } finally {
+      setIsLoading(false);
+    }
   };
 
   const handleSend = (e: React.FormEvent) => {
@@ -165,12 +164,14 @@ export default function ChatBot() {
               type="text" 
               value={input}
               onChange={(e) => setInput(e.target.value)}
-              placeholder="Ask anything..." 
-              className="w-full bg-white/5 border border-white/10 rounded-full py-3 pl-4 pr-12 text-sm text-white focus:outline-none focus:border-[var(--accent-cyan)]/50 transition-colors"
+              disabled={isLoading}
+              placeholder={isLoading ? "Thinking..." : "Ask anything..."} 
+              className="w-full bg-white/5 border border-white/10 rounded-full py-3 pl-4 pr-12 text-sm text-white focus:outline-none focus:border-[var(--accent-cyan)]/50 transition-colors disabled:opacity-50"
             />
             <button 
               type="submit"
-              className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[var(--accent-cyan)] flex items-center justify-center text-black hover:scale-110 transition-transform"
+              disabled={isLoading}
+              className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[var(--accent-cyan)] flex items-center justify-center text-black hover:scale-110 transition-transform disabled:opacity-50 disabled:hover:scale-100"
             >
               <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8"/></svg>
             </button>

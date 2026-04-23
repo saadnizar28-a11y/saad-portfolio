@@ -41,11 +41,22 @@ export default function Home() {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
-    let frame = 0;
+    let targetFrame = 0;
+    let currentFrame = 0;
+    let animationFrameId: number;
 
     const render = () => {
-      const img = images[frame];
-      if (img.complete && img.naturalWidth !== 0) {
+      // Lerp current frame towards target frame for momentum smoothing
+      currentFrame += (targetFrame - currentFrame) * 0.1;
+      
+      const frameIndex = Math.min(totalFrames - 1, Math.floor(currentFrame));
+      const nextFrameIndex = Math.min(totalFrames - 1, frameIndex + 1);
+      const blend = currentFrame - frameIndex;
+
+      const img = images[frameIndex];
+      const nextImg = images[nextFrameIndex];
+
+      if (img?.complete && img.naturalWidth !== 0) {
         const canvasAspect = canvas.width / canvas.height;
         const imgAspect = img.naturalWidth / img.naturalHeight;
         let drawWidth, drawHeight, drawX, drawY;
@@ -63,19 +74,33 @@ export default function Home() {
         }
 
         context.clearRect(0, 0, canvas.width, canvas.height);
+        
+        // Draw current frame
+        context.globalAlpha = 1;
         context.drawImage(img, drawX, drawY, drawWidth, drawHeight);
+
+        // Draw next frame over it with opacity = blend
+        if (blend > 0.01 && nextImg?.complete && nextImg.naturalWidth !== 0) {
+          context.globalAlpha = blend;
+          context.drawImage(nextImg, drawX, drawY, drawWidth, drawHeight);
+        }
+        
+        context.globalAlpha = 1;
       }
+
+      animationFrameId = window.requestAnimationFrame(render);
     };
 
     const handleResize = () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
-      render();
     };
 
     window.addEventListener("resize", handleResize);
 
-    images[0].onload = render;
+    images[0].onload = () => {
+      animationFrameId = window.requestAnimationFrame(render);
+    };
 
     let ticking = false;
 
@@ -84,27 +109,16 @@ export default function Home() {
         window.requestAnimationFrame(() => {
           const scrollTop = window.scrollY;
           
-          // Parallax effect for space dots - Boosted speed for higher visibility
           if (spaceRef.current) {
             spaceRef.current.style.transform = `translateY(${scrollTop * -0.35}px)`;
           }
           
-          // The canvas wrapper is 300vh.
           const canvasScrollableDistance = window.innerHeight * 2; 
-
           const scrollFraction = Math.min(1, Math.max(0, scrollTop / canvasScrollableDistance));
           
-          const frameIndex = Math.min(
-            totalFrames - 1,
-            Math.floor(scrollFraction * totalFrames)
-          );
-
-          if (frame !== frameIndex) {
-            frame = frameIndex;
-            render();
-          }
+          // Set target fractional frame based on scroll fraction
+          targetFrame = scrollFraction * (totalFrames - 1);
           
-          // Fade smoothly to black at the end of the intro using direct DOM manipulation to prevent re-renders
           if (canvasRef.current) {
             if (scrollFraction > 0.8) {
               const fade = 1 - ((scrollFraction - 0.8) / 0.2);
@@ -121,9 +135,15 @@ export default function Home() {
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
+    
+    if (images[0]?.complete) {
+      animationFrameId = window.requestAnimationFrame(render);
+    }
+
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
+      window.cancelAnimationFrame(animationFrameId);
     };
   }, [images]);
 

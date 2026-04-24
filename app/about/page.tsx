@@ -3,6 +3,7 @@ import Counter from "@/components/Counter";
 import SystemStatus from "@/components/SystemStatus";
 import ActivityGraph from "@/components/ActivityGraph";
 import HeadingBurst from "@/components/HeadingBurst";
+import Image from "next/image";
 
 export default function About() {
   return (
@@ -11,17 +12,39 @@ export default function About() {
       <div className="absolute top-0 right-0 w-[60vw] h-[60vh] bg-gradient-radial from-[var(--accent-cyan)]/5 to-transparent blur-[150px] pointer-events-none rounded-full" />
       <div className="absolute bottom-0 left-0 w-[50vw] h-[50vh] bg-gradient-radial from-[var(--accent-violet)]/5 to-transparent blur-[150px] pointer-events-none rounded-full" />
 
-      <div className="max-w-5xl mx-auto relative z-10 flex flex-col lg:flex-row gap-16">
+      <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
 
-        {/* Left Column Text Narrative */}
-        <div className="w-full lg:w-3/5">
+        {/* 1. Left Column: 3D Neon Portrait */}
+        <div className="lg:col-span-4 sticky top-40 perspective-[2000px]">
           <FadeIn delay={100}>
+            {/* The 3D container with hover tilt applied directly to the floating figure */}
+            <div className="relative group transition-all duration-1000 ease-out hover:scale-[1.05] [transform-style:preserve-3d] hover:rotate-y-[-10deg] hover:rotate-x-[5deg]">
+              
+              {/* Portrait Image (Cutout with neon drop shadow to give 3D border reflection) */}
+              <Image 
+                src="/about-portrait.png" 
+                alt="Saad Nizar" 
+                width={800} 
+                height={1000} 
+                className="relative z-10 w-full h-auto object-cover translate-y-[-20px] drop-shadow-[0_0_25px_rgba(0,210,255,0.4)] group-hover:drop-shadow-[0_0_40px_rgba(255,42,109,0.6)] transition-all duration-1000 filter contrast-[1.05] brightness-105" 
+                priority
+              />
+              
+              {/* Bottom fade mask to blend the bottom of the figure into the background */}
+              <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-[var(--background)] to-transparent z-20 pointer-events-none" />
+            </div>
+          </FadeIn>
+        </div>
+
+        {/* 2. Middle Column: Text Narrative */}
+        <div className="lg:col-span-5">
+          <FadeIn delay={200}>
             <div className="relative inline-block">
               <HeadingBurst />
-              <h1 className="text-4xl md:text-6xl font-extrabold tracking-tighter mb-4 leading-tight relative z-10">
+              <h1 className="text-4xl md:text-5xl font-extrabold tracking-tighter mb-4 leading-tight relative z-10">
                 I’m <span className="text-gradient">Saad Nizar</span>
               </h1>
-              <h2 className="text-xl md:text-2xl text-[var(--accent-cyan)] font-medium mb-12 max-w-lg">
+              <h2 className="text-lg md:text-xl text-[var(--accent-cyan)] font-medium mb-12 max-w-lg">
                 Freelance Digital Marketing Specialist & Graphic Designer
               </h2>
             </div>
@@ -124,8 +147,8 @@ export default function About() {
           </div>
         </div>
 
-        {/* Right Column Interactive Widgets */}
-        <div className="w-full lg:w-2/5 flex flex-col gap-6 pt-6">
+        {/* 3. Right Column: Interactive Widgets */}
+        <div className="lg:col-span-3 flex flex-col gap-6 pt-6">
 
           <FadeIn delay={300}>
             <SystemStatus />

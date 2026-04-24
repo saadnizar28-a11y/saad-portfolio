@@ -10,6 +10,8 @@ import SkillBar from "@/components/SkillBar";
 import HeadingBurst from "@/components/HeadingBurst";
 import LiveNewsTicker from "@/components/LiveNewsTicker";
 import AmoebaBackground from "@/components/AmoebaBackground";
+import Footer from "@/components/Footer";
+import SocialSidebar from "@/components/SocialSidebar";
 
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -149,6 +151,7 @@ export default function Home() {
 
   return (
     <>
+      <SocialSidebar />
       {/* Ambient Tiny Space Stars spanning the entire background */}
       <div ref={spaceRef} className="fixed top-0 left-0 w-full h-[300vh] z-0 pointer-events-none overflow-hidden mix-blend-screen">
         {/* Deep Space Dots */}

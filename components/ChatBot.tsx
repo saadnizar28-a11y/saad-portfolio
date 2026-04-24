@@ -3,6 +3,46 @@
 import { useState, useRef, useEffect } from "react";
 import FadeIn from "./FadeIn";
 
+const FormatBotMessage = ({ text }: { text: string }) => {
+  const lines = text.split('\n');
+
+  return (
+    <div className="flex flex-col gap-1.5">
+      {lines.map((line, i) => {
+        const trimmed = line.trim();
+        if (!trimmed) return null;
+
+        const isBullet = trimmed.startsWith('* ') || trimmed.startsWith('- ');
+        const content = isBullet ? trimmed.slice(2) : trimmed;
+
+        const parts = content.split(/(\*\*.*?\*\*)/g);
+
+        const renderedContent = parts.map((part, j) => {
+          if (part.startsWith('**') && part.endsWith('**')) {
+            return <strong key={j} className="text-white font-semibold">{part.slice(2, -2)}</strong>;
+          }
+          return <span key={j}>{part}</span>;
+        });
+
+        if (isBullet) {
+          return (
+            <div key={i} className="flex gap-2 pl-2 mt-1">
+              <span className="text-[var(--accent-cyan)] mt-0.5">•</span>
+              <span className="leading-relaxed">{renderedContent}</span>
+            </div>
+          );
+        }
+
+        return (
+          <div key={i} className="leading-relaxed">
+            {renderedContent}
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
   const [showBubble, setShowBubble] = useState(false);
@@ -124,18 +164,18 @@ export default function ChatBot() {
         </div>
 
         {/* Message Area */}
-        <div className="h-80 p-5 overflow-y-auto flex flex-col gap-4 scrollbar-thin">
+        <div data-lenis-prevent className="h-80 p-5 overflow-y-auto overscroll-contain flex flex-col gap-4 scrollbar-thin">
           {messages.map((msg, i) => (
             <FadeIn key={i}>
               <div className={`flex ${msg.isBot ? 'justify-start' : 'justify-end'}`}>
                 <div 
-                  className={`max-w-[80%] p-3 rounded-2xl text-sm ${
+                  className={`max-w-[85%] p-3.5 rounded-2xl text-sm ${
                     msg.isBot 
-                    ? 'bg-white/5 border border-white/10 text-white/90 rounded-tl-sm' 
+                    ? 'bg-white/5 border border-white/10 text-white/80 rounded-tl-sm shadow-md' 
                     : 'bg-gradient-to-r from-[var(--accent-violet)] to-[var(--accent-cyan)] text-white rounded-tr-sm shadow-[0_5px_15px_rgba(0,210,255,0.2)]'
                   }`}
                 >
-                  {msg.text}
+                  {msg.isBot ? <FormatBotMessage text={msg.text} /> : msg.text}
                 </div>
               </div>
             </FadeIn>

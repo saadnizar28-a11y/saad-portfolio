@@ -35,80 +35,113 @@ export default function Work() {
             
             {/* 1. Visual Campaigns */}
             <FadeIn delay={100}>
-              <Link href="/work/posters" className="glass-card flex flex-col justify-between p-10 rounded-[2.5rem] h-full min-h-[320px] group hover:border-[var(--accent-pink)]/30 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-500 overflow-hidden relative block">
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[var(--accent-pink)]/5 pointer-events-none group-hover:opacity-100 opacity-50 transition-opacity" />
-                <div className="absolute top-0 right-0 p-10 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-500 text-[var(--accent-pink)]">
+              <Link href="/work/posters" className="glass-card flex flex-col justify-between p-10 rounded-[2.5rem] h-full min-h-[360px] group hover:border-[var(--accent-pink)]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden relative block">
+                
+                {/* Floating Images Background */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center">
+                  <img src="/product_poster.png" className="absolute w-[50%] h-auto -rotate-12 -translate-x-[40%] translate-y-8 rounded-xl shadow-2xl group-hover:-translate-x-[50%] group-hover:-rotate-6 transition-all duration-700 object-cover" alt="Product Poster" />
+                  <img src="/new_year_poster.png" className="absolute w-[50%] h-auto rotate-12 translate-x-[40%] translate-y-8 rounded-xl shadow-2xl group-hover:translate-x-[50%] group-hover:rotate-6 transition-all duration-700 object-cover" alt="New Year Poster" />
+                  <img src="/abroad_study_poster.png" className="absolute w-[55%] h-auto z-10 rounded-xl shadow-[0_0_40px_rgba(0,0,0,0.8)] group-hover:-translate-y-4 transition-all duration-700 object-cover" alt="Abroad Study Poster" />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-[var(--background)]/80 to-transparent pointer-events-none z-10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[var(--accent-pink)]/10 pointer-events-none group-hover:opacity-100 opacity-50 transition-opacity z-10" />
+                
+                <div className="absolute top-0 right-0 p-10 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-500 text-[var(--accent-pink)] z-20">
                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                 </div>
                 
-                <div className="relative z-10 mb-auto">
-                  <div className="inline-block px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold tracking-widest text-[var(--accent-pink)] uppercase mb-6">
+                <div className="relative z-20 mb-auto">
+                  <div className="inline-block px-3 py-1.5 rounded-full border border-white/10 bg-black/40 backdrop-blur-md text-[10px] font-bold tracking-widest text-[var(--accent-pink)] uppercase mb-6">
                     WORK
                   </div>
                 </div>
-                <div className="relative z-10 mt-16">
-                  <h3 className="text-3xl font-extrabold tracking-tighter text-white mb-2 group-hover:text-[var(--accent-pink)] transition-colors">Visual Campaigns.</h3>
-                  <p className="text-white/50 text-sm">Posters & Social Design</p>
+                <div className="relative z-20 mt-16">
+                  <h3 className="text-3xl font-extrabold tracking-tighter text-white mb-2 group-hover:text-[var(--accent-pink)] transition-colors drop-shadow-lg">Visual Campaigns.</h3>
+                  <p className="text-white/60 text-sm drop-shadow-md">Posters & Social Design</p>
                 </div>
               </Link>
             </FadeIn>
 
             {/* 2. Brand Identity */}
             <FadeIn delay={200}>
-              <Link href="/work/branding" className="glass-card flex flex-col justify-between p-10 rounded-[2.5rem] h-full min-h-[320px] group hover:border-[var(--accent-violet)]/30 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-500 overflow-hidden relative block">
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[var(--accent-violet)]/5 pointer-events-none group-hover:opacity-100 opacity-50 transition-opacity" />
-                <div className="absolute top-0 right-0 p-10 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-500 text-[var(--accent-violet)]">
+              <Link href="/work/branding" className="glass-card flex flex-col justify-between p-10 rounded-[2.5rem] h-full min-h-[360px] group hover:border-[var(--accent-violet)]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden relative block">
+                
+                {/* Floating Images Background */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40 group-hover:opacity-100 transition-opacity duration-700">
+                  <img src="/branding_1.png" className="absolute top-[-5%] right-[-10%] w-[70%] h-auto rounded-2xl shadow-2xl rotate-6 group-hover:rotate-3 group-hover:scale-105 transition-all duration-700 object-cover" alt="Branding" />
+                  <img src="/branding_2.png" className="absolute bottom-[20%] left-[-10%] w-[60%] h-auto rounded-2xl shadow-2xl -rotate-6 group-hover:-rotate-3 group-hover:-translate-y-4 transition-all duration-700 object-cover" alt="Packaging" />
+                  <img src="/branding_3.png" className="absolute bottom-[5%] right-[10%] w-[50%] h-auto rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.8)] rotate-12 group-hover:rotate-6 group-hover:-translate-y-8 z-10 transition-all duration-700 object-cover" alt="Brand Book" />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-[var(--background)]/80 to-transparent pointer-events-none z-10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[var(--accent-violet)]/10 pointer-events-none group-hover:opacity-100 opacity-50 transition-opacity z-10" />
+
+                <div className="absolute top-0 right-0 p-10 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-500 text-[var(--accent-violet)] z-20">
                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                 </div>
                 
-                <div className="relative z-10 mb-auto">
-                  <div className="inline-block px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold tracking-widest text-[var(--accent-violet)] uppercase mb-6">
+                <div className="relative z-20 mb-auto">
+                  <div className="inline-block px-3 py-1.5 rounded-full border border-white/10 bg-black/40 backdrop-blur-md text-[10px] font-bold tracking-widest text-[var(--accent-violet)] uppercase mb-6">
                     WORK
                   </div>
                 </div>
-                <div className="relative z-10 mt-16">
-                  <h3 className="text-3xl font-extrabold tracking-tighter text-white mb-2 group-hover:text-[var(--accent-violet)] transition-colors">Brand Identity.</h3>
-                  <p className="text-white/50 text-sm">Logos & Brand Systems</p>
+                <div className="relative z-20 mt-16">
+                  <h3 className="text-3xl font-extrabold tracking-tighter text-white mb-2 group-hover:text-[var(--accent-violet)] transition-colors drop-shadow-lg">Brand Identity.</h3>
+                  <p className="text-white/60 text-sm drop-shadow-md">Logos & Brand Systems</p>
                 </div>
               </Link>
             </FadeIn>
 
             {/* 3. Logofolio */}
             <FadeIn delay={300}>
-              <Link href="/work/logo" className="glass-card flex flex-col justify-between p-10 rounded-[2.5rem] h-full min-h-[320px] group hover:border-[var(--accent-purple)]/30 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-500 overflow-hidden relative block">
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[var(--accent-purple)]/5 pointer-events-none group-hover:opacity-100 opacity-50 transition-opacity" />
-                <div className="absolute top-0 right-0 p-10 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-500 text-[var(--accent-purple)]">
+              <Link href="/work/logo" className="glass-card flex flex-col justify-between p-10 rounded-[2.5rem] h-full min-h-[360px] group hover:border-[var(--accent-purple)]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden relative block">
+                
+                {/* Floating Images Background */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center">
+                  <img src="/logo_design_1.png" className="absolute w-[70%] h-auto -translate-x-8 -translate-y-8 rounded-full shadow-[0_0_40px_rgba(0,240,255,0.2)] group-hover:-translate-x-12 transition-all duration-700 object-cover" alt="Logo 1" />
+                  <img src="/logo_design_2.png" className="absolute w-[70%] h-auto translate-x-8 translate-y-8 rounded-full shadow-[0_0_40px_rgba(188,24,136,0.2)] group-hover:translate-x-12 z-10 transition-all duration-700 object-cover mix-blend-screen" alt="Logo 2" />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-[var(--background)]/80 to-transparent pointer-events-none z-10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[var(--accent-purple)]/10 pointer-events-none group-hover:opacity-100 opacity-50 transition-opacity z-10" />
+
+                <div className="absolute top-0 right-0 p-10 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-500 text-[var(--accent-purple)] z-20">
                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                 </div>
                 
-                <div className="relative z-10 mb-auto">
-                  <div className="inline-block px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold tracking-widest text-[var(--accent-purple)] uppercase mb-6">
+                <div className="relative z-20 mb-auto">
+                  <div className="inline-block px-3 py-1.5 rounded-full border border-white/10 bg-black/40 backdrop-blur-md text-[10px] font-bold tracking-widest text-[var(--accent-purple)] uppercase mb-6">
                     WORK
                   </div>
                 </div>
-                <div className="relative z-10 mt-16">
-                  <h3 className="text-3xl font-extrabold tracking-tighter text-white mb-2 group-hover:text-[var(--accent-purple)] transition-colors">Logofolio.</h3>
-                  <p className="text-white/50 text-sm">Logo Exploration & Philosophy</p>
+                <div className="relative z-20 mt-16">
+                  <h3 className="text-3xl font-extrabold tracking-tighter text-white mb-2 group-hover:text-[var(--accent-purple)] transition-colors drop-shadow-lg">Logofolio.</h3>
+                  <p className="text-white/60 text-sm drop-shadow-md">Logo Exploration & Philosophy</p>
                 </div>
               </Link>
             </FadeIn>
 
             {/* 4. Digital Interfaces */}
             <FadeIn delay={400}>
-              <Link href="/work/ui-ux" className="glass-card flex flex-col justify-between p-10 rounded-[2.5rem] h-full min-h-[320px] group hover:border-[var(--accent-cyan)]/30 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-500 overflow-hidden relative block">
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[var(--accent-cyan)]/5 pointer-events-none group-hover:opacity-100 opacity-50 transition-opacity" />
-                <div className="absolute top-0 right-0 p-10 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-500 text-[var(--accent-cyan)]">
+              <Link href="/work/ui-ux" className="glass-card flex flex-col justify-between p-10 rounded-[2.5rem] h-full min-h-[360px] group hover:border-[var(--accent-cyan)]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden relative block">
+                
+                {/* Floating Images Background */}
+                <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center">
+                  <img src="/ui_mockup.png" className="absolute w-[120%] h-auto translate-y-12 rounded-xl shadow-[0_0_50px_rgba(0,0,0,0.9)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-700 object-cover" alt="UI Dashboard" />
+                </div>
+                <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-[var(--background)]/80 to-transparent pointer-events-none z-10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[var(--accent-cyan)]/10 pointer-events-none group-hover:opacity-100 opacity-50 transition-opacity z-10" />
+
+                <div className="absolute top-0 right-0 p-10 opacity-0 group-hover:opacity-100 transform translate-x-4 group-hover:translate-x-0 transition-all duration-500 text-[var(--accent-cyan)] z-20">
                   <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg>
                 </div>
                 
-                <div className="relative z-10 mb-auto">
-                  <div className="inline-block px-3 py-1.5 rounded-full border border-white/10 bg-white/5 text-[10px] font-bold tracking-widest text-[var(--accent-cyan)] uppercase mb-6">
+                <div className="relative z-20 mb-auto">
+                  <div className="inline-block px-3 py-1.5 rounded-full border border-white/10 bg-black/40 backdrop-blur-md text-[10px] font-bold tracking-widest text-[var(--accent-cyan)] uppercase mb-6">
                     WORK
                   </div>
                 </div>
-                <div className="relative z-10 mt-16">
-                  <h3 className="text-3xl font-extrabold tracking-tighter text-white mb-2 group-hover:text-[var(--accent-cyan)] transition-colors">Digital Interfaces.</h3>
-                  <p className="text-white/50 text-sm">Selected UI/UX Work</p>
+                <div className="relative z-20 mt-16">
+                  <h3 className="text-3xl font-extrabold tracking-tighter text-white mb-2 group-hover:text-[var(--accent-cyan)] transition-colors drop-shadow-lg">Digital Interfaces.</h3>
+                  <p className="text-white/60 text-sm drop-shadow-md">Selected UI/UX Work</p>
                 </div>
               </Link>
             </FadeIn>

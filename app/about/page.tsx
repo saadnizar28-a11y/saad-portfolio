@@ -3,6 +3,7 @@ import Counter from "@/components/Counter";
 import SystemStatus from "@/components/SystemStatus";
 import ActivityGraph from "@/components/ActivityGraph";
 import HeadingBurst from "@/components/HeadingBurst";
+import InteractivePortrait from "@/components/InteractivePortrait";
 import Image from "next/image";
 
 export default function About() {
@@ -12,27 +13,12 @@ export default function About() {
       <div className="absolute top-0 right-0 w-[60vw] h-[60vh] bg-gradient-radial from-[var(--accent-cyan)]/5 to-transparent blur-[150px] pointer-events-none rounded-full" />
       <div className="absolute bottom-0 left-0 w-[50vw] h-[50vh] bg-gradient-radial from-[var(--accent-violet)]/5 to-transparent blur-[150px] pointer-events-none rounded-full" />
 
-      <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
+      <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12">
 
-        {/* 1. Left Column: 3D Neon Portrait */}
-        <div className="lg:col-span-4 sticky top-40 perspective-[2000px]">
-          <FadeIn delay={100}>
-            {/* The 3D container with hover tilt applied directly to the floating figure */}
-            <div className="relative group transition-all duration-1000 ease-out hover:scale-[1.05] [transform-style:preserve-3d] hover:rotate-y-[-10deg] hover:rotate-x-[5deg]">
-              
-              {/* Portrait Image (Cutout with neon drop shadow to give 3D border reflection) */}
-              <Image 
-                src="/about-portrait.png" 
-                alt="Saad Nizar" 
-                width={800} 
-                height={1000} 
-                className="relative z-10 w-full h-auto object-cover translate-y-[-20px] drop-shadow-[0_0_25px_rgba(0,210,255,0.4)] group-hover:drop-shadow-[0_0_40px_rgba(255,42,109,0.6)] transition-all duration-1000 filter contrast-[1.05] brightness-105" 
-                priority
-              />
-              
-              {/* Bottom fade mask to blend the bottom of the figure into the background */}
-              <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-[var(--background)] to-transparent z-20 pointer-events-none" />
-            </div>
+        {/* 1. Left Column: 3D Interactive Portrait */}
+        <div className="lg:col-span-4 h-[600px] md:h-[800px] lg:h-auto relative">
+          <FadeIn delay={100} className="w-full h-full">
+            <InteractivePortrait />
           </FadeIn>
         </div>
 

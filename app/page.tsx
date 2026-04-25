@@ -276,120 +276,120 @@ export default function Home() {
           
           {/* Instagram Planet (Top Left, near "BUILDING") */}
           <div 
-            className="absolute top-[12%] left-[5%] md:left-[10%] opacity-95 mix-blend-screen group pointer-events-auto cursor-pointer" 
+            className="absolute top-[8%] left-[-5%] md:top-[12%] md:left-[5%] lg:left-[10%] opacity-95 mix-blend-screen group pointer-events-auto cursor-pointer" 
             style={{ transform: 'translateZ(100px)' }}
             onMouseEnter={playTechHover}
           >
-            <div className="animate-float">
+            <div className="animate-float w-32 h-32 md:w-48 md:h-48 lg:w-[220px] lg:h-[220px] relative">
               <Image 
-                src="/planet-instagram.jpg" alt="Instagram" width={220} height={220} 
+                src="/planet-instagram.jpg" alt="Instagram" fill 
                 className="rounded-full object-cover animate-[spin_120s_linear_infinite] brightness-90 contrast-125"
                 style={{ WebkitMaskImage: 'radial-gradient(circle at center, black 55%, transparent 68%)', maskImage: 'radial-gradient(circle at center, black 55%, transparent 68%)' }}
               />
             </div>
             {/* HUD Popup */}
-            <div className="absolute top-1/2 left-[85%] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center min-w-[200px] z-50">
-              <div className="w-12 h-[1px] bg-[var(--accent-pink)]/50" />
-              <div className="glass-card px-4 py-3 border border-[var(--accent-pink)]/30 rounded-r-lg rounded-bl-lg backdrop-blur-md shadow-[0_0_20px_rgba(217,76,241,0.2)]">
-                <p className="text-[10px] text-[var(--accent-pink)] font-mono font-bold tracking-[0.2em] uppercase mb-1">INSTAGRAM</p>
-                <p className="text-[9px] text-white/80 font-mono tracking-widest">POPULATION: 2.35B</p>
-                <p className="text-[8px] text-[var(--accent-pink)]/60 font-mono tracking-widest mt-0.5">STATUS: HIGH ENGAGEMENT</p>
+            <div className="absolute top-1/2 left-[85%] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center min-w-[150px] md:min-w-[200px] z-50">
+              <div className="w-6 md:w-12 h-[1px] bg-[var(--accent-pink)]/50" />
+              <div className="glass-card px-3 py-2 md:px-4 md:py-3 border border-[var(--accent-pink)]/30 rounded-r-lg rounded-bl-lg backdrop-blur-md shadow-[0_0_20px_rgba(217,76,241,0.2)]">
+                <p className="text-[8px] md:text-[10px] text-[var(--accent-pink)] font-mono font-bold tracking-[0.2em] uppercase mb-1">INSTAGRAM</p>
+                <p className="text-[7px] md:text-[9px] text-white/80 font-mono tracking-widest">POPULATION: 2.35B</p>
+                <p className="text-[6px] md:text-[8px] text-[var(--accent-pink)]/60 font-mono tracking-widest mt-0.5">STATUS: HIGH ENGAGEMENT</p>
               </div>
             </div>
           </div>
 
           {/* LinkedIn Planet (Swapped to Left, near "STRATEGY. DESIGN. EXECUTION.") */}
           <div 
-            className="absolute top-[65%] left-[8%] md:left-[12%] opacity-90 mix-blend-screen group pointer-events-auto cursor-pointer" 
+            className="absolute top-[55%] left-[-2%] md:top-[60%] md:left-[2%] lg:left-[5%] opacity-90 mix-blend-screen group pointer-events-auto cursor-pointer" 
             style={{ transform: 'translateZ(50px)' }}
             onMouseEnter={playTechHover}
           >
-            <div className="animate-float-fast">
+            <div className="animate-float-fast w-24 h-24 md:w-36 md:h-36 lg:w-[180px] lg:h-[180px] relative">
               <Image 
-                src="/planet-linkedin.jpg" alt="LinkedIn" width={180} height={180} 
+                src="/planet-linkedin.jpg" alt="LinkedIn" fill 
                 className="rounded-full object-cover animate-[spin_150s_linear_infinite] brightness-90 contrast-125"
                 style={{ WebkitMaskImage: 'radial-gradient(circle at center, black 55%, transparent 68%)', maskImage: 'radial-gradient(circle at center, black 55%, transparent 68%)' }}
               />
             </div>
             {/* HUD Popup */}
-            <div className="absolute top-1/2 left-[85%] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center min-w-[200px] z-50">
-              <div className="w-12 h-[1px] bg-[var(--accent-cyan)]/50" />
-              <div className="glass-card px-4 py-3 border border-[var(--accent-cyan)]/30 rounded-r-lg rounded-bl-lg backdrop-blur-md shadow-[0_0_20px_rgba(0,210,255,0.2)]">
-                <p className="text-[10px] text-[var(--accent-cyan)] font-mono font-bold tracking-[0.2em] uppercase mb-1">LINKEDIN</p>
-                <p className="text-[9px] text-white/80 font-mono tracking-widest">POPULATION: 900M</p>
-                <p className="text-[8px] text-[var(--accent-cyan)]/60 font-mono tracking-widest mt-0.5">STATUS: B2B FOCUSED</p>
+            <div className="absolute top-1/2 left-[85%] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center min-w-[150px] md:min-w-[200px] z-50">
+              <div className="w-6 md:w-12 h-[1px] bg-[var(--accent-cyan)]/50" />
+              <div className="glass-card px-3 py-2 md:px-4 md:py-3 border border-[var(--accent-cyan)]/30 rounded-r-lg rounded-bl-lg backdrop-blur-md shadow-[0_0_20px_rgba(0,210,255,0.2)]">
+                <p className="text-[8px] md:text-[10px] text-[var(--accent-cyan)] font-mono font-bold tracking-[0.2em] uppercase mb-1">LINKEDIN</p>
+                <p className="text-[7px] md:text-[9px] text-white/80 font-mono tracking-widest">POPULATION: 900M</p>
+                <p className="text-[6px] md:text-[8px] text-[var(--accent-cyan)]/60 font-mono tracking-widest mt-0.5">STATUS: B2B FOCUSED</p>
               </div>
             </div>
           </div>
 
           {/* Meta Planet (Top Right, extreme edge to avoid text overlap) */}
           <div 
-            className="absolute top-[25%] right-[2%] md:right-[5%] opacity-90 mix-blend-screen group pointer-events-auto cursor-pointer" 
+            className="absolute top-[20%] right-[-5%] md:top-[25%] md:right-[2%] lg:right-[5%] opacity-90 mix-blend-screen group pointer-events-auto cursor-pointer" 
             style={{ transform: 'translateZ(0px)' }}
             onMouseEnter={playTechHover}
           >
-            <div className="animate-float">
+            <div className="animate-float w-28 h-28 md:w-48 md:h-48 lg:w-[220px] lg:h-[220px] relative">
               <Image 
-                src="/planet-meta.jpg" alt="Meta" width={220} height={220} 
+                src="/planet-meta.jpg" alt="Meta" fill 
                 className="rounded-full object-cover animate-[spin_180s_linear_infinite] brightness-90 contrast-125"
                 style={{ WebkitMaskImage: 'radial-gradient(circle at center, black 55%, transparent 68%)', maskImage: 'radial-gradient(circle at center, black 55%, transparent 68%)' }}
               />
             </div>
             {/* HUD Popup (Opening to the LEFT) */}
-            <div className="absolute top-1/2 right-[85%] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center flex-row-reverse min-w-[200px] z-50">
-              <div className="w-12 h-[1px] bg-blue-500/50" />
-              <div className="glass-card px-4 py-3 border border-blue-500/30 rounded-l-lg rounded-br-lg backdrop-blur-md shadow-[0_0_20px_rgba(59,130,246,0.2)] text-right">
-                <p className="text-[10px] text-blue-400 font-mono font-bold tracking-[0.2em] uppercase mb-1">META (FB)</p>
-                <p className="text-[9px] text-white/80 font-mono tracking-widest">POPULATION: 3.03B</p>
-                <p className="text-[8px] text-blue-400/60 font-mono tracking-widest mt-0.5">STATUS: MASS REACH</p>
+            <div className="absolute top-1/2 right-[85%] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center flex-row-reverse min-w-[150px] md:min-w-[200px] z-50">
+              <div className="w-6 md:w-12 h-[1px] bg-blue-500/50" />
+              <div className="glass-card px-3 py-2 md:px-4 md:py-3 border border-blue-500/30 rounded-l-lg rounded-br-lg backdrop-blur-md shadow-[0_0_20px_rgba(59,130,246,0.2)] text-right">
+                <p className="text-[8px] md:text-[10px] text-blue-400 font-mono font-bold tracking-[0.2em] uppercase mb-1">META (FB)</p>
+                <p className="text-[7px] md:text-[9px] text-white/80 font-mono tracking-widest">POPULATION: 3.03B</p>
+                <p className="text-[6px] md:text-[8px] text-blue-400/60 font-mono tracking-widest mt-0.5">STATUS: MASS REACH</p>
               </div>
             </div>
           </div>
 
-          {/* WhatsApp Planet (Bottom Left, moved to avoid Live Updates widget) */}
+          {/* WhatsApp Planet (Bottom Right, under Live News widget) */}
           <div 
-            className="absolute bottom-[5%] left-[5%] md:left-[10%] opacity-85 mix-blend-screen group pointer-events-auto cursor-pointer" 
+            className="absolute bottom-[2%] right-[2%] md:bottom-[5%] lg:right-[8%] opacity-85 mix-blend-screen group pointer-events-auto cursor-pointer" 
             style={{ transform: 'translateZ(-50px)' }}
             onMouseEnter={playTechHover}
           >
-            <div className="animate-float-slow">
+            <div className="animate-float-slow w-20 h-20 md:w-32 md:h-32 lg:w-[160px] lg:h-[160px] relative">
               <Image 
-                src="/planet-whatsapp.jpg" alt="WhatsApp" width={160} height={160} 
+                src="/planet-whatsapp.jpg" alt="WhatsApp" fill 
                 className="rounded-full object-cover animate-[spin_100s_linear_infinite_reverse] brightness-90 contrast-125"
                 style={{ WebkitMaskImage: 'radial-gradient(circle at center, black 55%, transparent 68%)', maskImage: 'radial-gradient(circle at center, black 55%, transparent 68%)' }}
               />
             </div>
             {/* HUD Popup (Opening to the RIGHT) */}
-            <div className="absolute top-1/2 left-[85%] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center min-w-[200px] z-50">
-              <div className="w-12 h-[1px] bg-green-500/50" />
-              <div className="glass-card px-4 py-3 border border-green-500/30 rounded-r-lg rounded-bl-lg backdrop-blur-md shadow-[0_0_20px_rgba(34,197,94,0.2)]">
-                <p className="text-[10px] text-green-400 font-mono font-bold tracking-[0.2em] uppercase mb-1">WHATSAPP</p>
-                <p className="text-[9px] text-white/80 font-mono tracking-widest">POPULATION: 2.78B</p>
-                <p className="text-[8px] text-green-400/60 font-mono tracking-widest mt-0.5">STATUS: DIRECT ACCESS</p>
+            <div className="absolute top-1/2 left-[85%] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center min-w-[150px] md:min-w-[200px] z-50">
+              <div className="w-6 md:w-12 h-[1px] bg-green-500/50" />
+              <div className="glass-card px-3 py-2 md:px-4 md:py-3 border border-green-500/30 rounded-r-lg rounded-bl-lg backdrop-blur-md shadow-[0_0_20px_rgba(34,197,94,0.2)] text-left">
+                <p className="text-[8px] md:text-[10px] text-green-400 font-mono font-bold tracking-[0.2em] uppercase mb-1">WHATSAPP</p>
+                <p className="text-[7px] md:text-[9px] text-white/80 font-mono tracking-widest">POPULATION: 2.78B</p>
+                <p className="text-[6px] md:text-[8px] text-green-400/60 font-mono tracking-widest mt-0.5">STATUS: DIRECT ACCESS</p>
               </div>
             </div>
           </div>
 
           {/* Google Ads Planet (Middle Right, above the Live Updates widget) */}
           <div 
-            className="absolute bottom-[35%] right-[5%] md:right-[12%] opacity-70 mix-blend-screen group pointer-events-auto cursor-pointer" 
+            className="absolute top-[45%] right-[2%] md:top-[50%] lg:right-[5%] opacity-70 mix-blend-screen group pointer-events-auto cursor-pointer" 
             style={{ transform: 'translateZ(-200px)' }}
             onMouseEnter={playTechHover}
           >
-            <div className="animate-float-slow">
+            <div className="animate-float-slow w-16 h-16 md:w-24 md:h-24 lg:w-[120px] lg:h-[120px] relative">
               <Image 
-                src="/planet-google.jpg" alt="Google Ads" width={120} height={120} 
+                src="/planet-google.jpg" alt="Google Ads" fill 
                 className="rounded-full object-cover animate-[spin_80s_linear_infinite] brightness-90 contrast-125"
                 style={{ WebkitMaskImage: 'radial-gradient(circle at center, black 55%, transparent 68%)', maskImage: 'radial-gradient(circle at center, black 55%, transparent 68%)' }}
               />
             </div>
             {/* HUD Popup */}
-            <div className="absolute top-1/2 right-[85%] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center flex-row-reverse min-w-[200px] z-50">
-              <div className="w-12 h-[1px] bg-yellow-500/50" />
-              <div className="glass-card px-4 py-3 border border-yellow-500/30 rounded-l-lg rounded-br-lg backdrop-blur-md shadow-[0_0_20px_rgba(234,179,8,0.2)] text-right">
-                <p className="text-[10px] text-yellow-400 font-mono font-bold tracking-[0.2em] uppercase mb-1">GOOGLE ADS</p>
-                <p className="text-[9px] text-white/80 font-mono tracking-widest">POPULATION: 4.3B</p>
-                <p className="text-[8px] text-yellow-400/60 font-mono tracking-widest mt-0.5">STATUS: SEARCH INTENT</p>
+            <div className="absolute top-1/2 right-[85%] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center flex-row-reverse min-w-[150px] md:min-w-[200px] z-50">
+              <div className="w-6 md:w-12 h-[1px] bg-yellow-500/50" />
+              <div className="glass-card px-3 py-2 md:px-4 md:py-3 border border-yellow-500/30 rounded-l-lg rounded-br-lg backdrop-blur-md shadow-[0_0_20px_rgba(234,179,8,0.2)] text-right">
+                <p className="text-[8px] md:text-[10px] text-yellow-400 font-mono font-bold tracking-[0.2em] uppercase mb-1">GOOGLE ADS</p>
+                <p className="text-[7px] md:text-[9px] text-white/80 font-mono tracking-widest">POPULATION: 4.3B</p>
+                <p className="text-[6px] md:text-[8px] text-yellow-400/60 font-mono tracking-widest mt-0.5">STATUS: SEARCH INTENT</p>
               </div>
             </div>
           </div>

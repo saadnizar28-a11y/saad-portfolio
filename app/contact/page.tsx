@@ -1,10 +1,40 @@
+import { Metadata } from "next";
 import FadeIn from "@/components/FadeIn";
 import SystemStatus from "@/components/SystemStatus";
 import HeadingBurst from "@/components/HeadingBurst";
 
+export const metadata: Metadata = {
+  title: "Contact Saad Nizar | Digital Marketing & Design Inquiries",
+  description: "Get in touch with Saad Nizar for digital marketing strategies, web design projects, or branding consultations in Dubai and the UAE.",
+  keywords: ["Contact Saad Nizar", "Hire Digital Marketer Dubai", "Creative Designer Contact UAE", "Freelance Marketing Consultant"],
+  openGraph: {
+    title: "Contact Saad Nizar | Digital Marketing & Design",
+    description: "Get in touch with Saad Nizar for digital marketing strategies and branding consultations in Dubai.",
+    url: "https://saadnizar.com/contact",
+  }
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "ContactPage",
+  "name": "Contact Saad Nizar",
+  "description": "Contact page for Saad Nizar's digital marketing and design services.",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Saad Nizar",
+    "jobTitle": "Digital Marketing Strategist",
+    "email": "hello@saadnizar.com", 
+    "url": "https://saadnizar.com"
+  }
+};
+
 export default function Contact() {
   return (
     <main className="min-h-screen pt-40 pb-32 px-6 relative overflow-hidden flex items-center bg-[var(--background)]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-[var(--accent-purple)]/10 pointer-events-none" />
       <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[60vw] h-[40vh] bg-[var(--accent-cyan)]/5 blur-[120px] pointer-events-none rounded-full" />
 

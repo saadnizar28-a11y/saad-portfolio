@@ -1,7 +1,66 @@
+import { Metadata } from "next";
 import FadeIn from "@/components/FadeIn";
 import TechMarquee from "@/components/TechMarquee";
 import HeadingBurst from "@/components/HeadingBurst";
 import PricingSection from "@/components/PricingSection";
+
+export const metadata: Metadata = {
+  title: "Digital Marketing & Design Services | Saad Nizar",
+  description: "Explore premium digital marketing, SEO, social media management, and web design services by Saad Nizar in Dubai, UAE.",
+  keywords: ["Digital Marketing Services", "SEO Services Dubai", "Web Design UAE", "Social Media Management Dubai", "Brand Identity Design"],
+  openGraph: {
+    title: "Digital Marketing & Design Services | Saad Nizar",
+    description: "Premium digital marketing, SEO, and web design services in Dubai.",
+    url: "https://saadnizar.com/services",
+  }
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "serviceType": "Digital Marketing & Design",
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Waura Marketing & Design Studio",
+    "image": "https://saadnizar.com/saad-working.jpg",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Dubai",
+      "addressCountry": "AE"
+    }
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "United Arab Emirates"
+  },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Digital Services",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "SEO Optimization"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Social Media Management"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "Brand Visual Design"
+        }
+      }
+    ]
+  }
+};
 
 export default function Services() {
   const services = [
@@ -21,6 +80,10 @@ export default function Services() {
 
   return (
     <main className="min-h-screen pt-40 pb-0 relative overflow-x-hidden bg-[var(--background)]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="absolute top-1/2 right-1/4 w-[50vw] h-[50vh] bg-[var(--accent-purple)]/10 blur-[180px] pointer-events-none rounded-full" />
       <div className="absolute top-1/4 left-0 w-[40vw] h-[40vh] bg-[var(--accent-cyan)]/5 blur-[150px] pointer-events-none rounded-full" />
 

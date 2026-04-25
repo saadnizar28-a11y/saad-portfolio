@@ -1,12 +1,51 @@
+import { Metadata } from "next";
 import Link from "next/link";
+import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 import SystemStatus from "@/components/SystemStatus";
 import TechMarquee from "@/components/TechMarquee";
 import HeadingBurst from "@/components/HeadingBurst";
 
+export const metadata: Metadata = {
+  title: "Selected Work & Portfolio | Saad Nizar",
+  description: "Explore the selected design, branding, and system-driven work by Saad Nizar. Featuring visual campaigns, brand identity, logofolios, and digital interfaces.",
+  keywords: ["Portfolio", "Design Portfolio", "Saad Nizar Work", "UI/UX Portfolio", "Branding Portfolio", "Graphic Designer Dubai", "Creative Director"],
+  openGraph: {
+    title: "Selected Work & Portfolio | Saad Nizar",
+    description: "Explore the selected design, branding, and system-driven work by Saad Nizar.",
+    url: "https://saadnizar.com/work",
+    siteName: "Saad Nizar Portfolio",
+    images: [
+      {
+        url: "/poster_real_2.png", // Using one of the best realistic images
+        width: 1200,
+        height: 630,
+        alt: "Saad Nizar Selected Work Portfolio",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
+};
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Saad Nizar Selected Work Portfolio",
+  "description": "A collection of design, branding, and system-driven work.",
+  "author": {
+    "@type": "Person",
+    "name": "Saad Nizar"
+  }
+};
+
 export default function Work() {
   return (
     <main className="min-h-screen pt-40 pb-0 relative overflow-hidden bg-[var(--background)]">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
       <div className="absolute top-0 right-0 w-[50vw] h-[50vh] bg-gradient-radial from-[var(--accent-violet)]/10 to-transparent blur-[150px] pointer-events-none rounded-full" />
       <div className="absolute bottom-0 left-0 w-[40vw] h-[40vh] bg-gradient-radial from-[var(--accent-cyan)]/10 to-transparent blur-[150px] pointer-events-none rounded-full" />
 
@@ -35,13 +74,13 @@ export default function Work() {
             
             {/* 1. Visual Campaigns */}
             <FadeIn delay={100}>
-              <Link href="/work/posters" className="glass-card flex flex-col justify-between p-10 rounded-[2.5rem] h-full min-h-[360px] group hover:border-[var(--accent-pink)]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden relative block">
+              <Link href="/work/posters" className="glass-card flex flex-col justify-between p-10 rounded-[2.5rem] h-full min-h-[360px] group hover:border-[var(--accent-pink)]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden relative block bg-white/5">
                 
                 {/* Floating Images Background */}
-                <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center">
-                  <img src="/product_poster.png" className="absolute w-[50%] h-auto -rotate-12 -translate-x-[40%] translate-y-8 rounded-xl shadow-2xl group-hover:-translate-x-[50%] group-hover:-rotate-6 transition-all duration-700 object-cover" alt="Product Poster" />
-                  <img src="/new_year_poster.png" className="absolute w-[50%] h-auto rotate-12 translate-x-[40%] translate-y-8 rounded-xl shadow-2xl group-hover:translate-x-[50%] group-hover:rotate-6 transition-all duration-700 object-cover" alt="New Year Poster" />
-                  <img src="/abroad_study_poster.png" className="absolute w-[55%] h-auto z-10 rounded-xl shadow-[0_0_40px_rgba(0,0,0,0.8)] group-hover:-translate-y-4 transition-all duration-700 object-cover" alt="Abroad Study Poster" />
+                <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-60 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center">
+                  <Image src="/poster_real_2.png" width={800} height={1000} className="absolute w-[50%] h-auto -rotate-12 -translate-x-[40%] translate-y-8 rounded-xl shadow-2xl group-hover:-translate-x-[50%] group-hover:-rotate-6 transition-all duration-700 object-cover" alt="Product Poster" />
+                  <Image src="/poster_real_3.png" width={800} height={1000} className="absolute w-[50%] h-auto rotate-12 translate-x-[40%] translate-y-8 rounded-xl shadow-2xl group-hover:translate-x-[50%] group-hover:rotate-6 transition-all duration-700 object-cover" alt="Education Poster" />
+                  <Image src="/poster_real_1.png" width={800} height={1000} className="absolute w-[55%] h-auto z-10 rounded-xl shadow-[0_0_40px_rgba(0,0,0,0.8)] group-hover:-translate-y-4 transition-all duration-700 object-cover" alt="Swiss Poster" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-[var(--background)]/80 to-transparent pointer-events-none z-10" />
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[var(--accent-pink)]/10 pointer-events-none group-hover:opacity-100 opacity-50 transition-opacity z-10" />
@@ -64,13 +103,13 @@ export default function Work() {
 
             {/* 2. Brand Identity */}
             <FadeIn delay={200}>
-              <Link href="/work/branding" className="glass-card flex flex-col justify-between p-10 rounded-[2.5rem] h-full min-h-[360px] group hover:border-[var(--accent-violet)]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden relative block">
+              <Link href="/work/branding" className="glass-card flex flex-col justify-between p-10 rounded-[2.5rem] h-full min-h-[360px] group hover:border-[var(--accent-violet)]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden relative block bg-white/5">
                 
                 {/* Floating Images Background */}
-                <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40 group-hover:opacity-100 transition-opacity duration-700">
-                  <img src="/branding_1.png" className="absolute top-[-5%] right-[-10%] w-[70%] h-auto rounded-2xl shadow-2xl rotate-6 group-hover:rotate-3 group-hover:scale-105 transition-all duration-700 object-cover" alt="Branding" />
-                  <img src="/branding_2.png" className="absolute bottom-[20%] left-[-10%] w-[60%] h-auto rounded-2xl shadow-2xl -rotate-6 group-hover:-rotate-3 group-hover:-translate-y-4 transition-all duration-700 object-cover" alt="Packaging" />
-                  <img src="/branding_3.png" className="absolute bottom-[5%] right-[10%] w-[50%] h-auto rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.8)] rotate-12 group-hover:rotate-6 group-hover:-translate-y-8 z-10 transition-all duration-700 object-cover" alt="Brand Book" />
+                <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-60 group-hover:opacity-100 transition-opacity duration-700">
+                  <Image src="/branding_real_1.png" width={800} height={1000} className="absolute top-[-5%] right-[-10%] w-[70%] h-auto rounded-2xl shadow-2xl rotate-6 group-hover:rotate-3 group-hover:scale-105 transition-all duration-700 object-cover" alt="Stationery Mockup" />
+                  <Image src="/branding_real_2.png" width={800} height={1000} className="absolute bottom-[20%] left-[-10%] w-[60%] h-auto rounded-2xl shadow-2xl -rotate-6 group-hover:-rotate-3 group-hover:-translate-y-4 transition-all duration-700 object-cover" alt="Skincare Packaging" />
+                  <Image src="/branding_real_3.png" width={800} height={1000} className="absolute bottom-[5%] right-[10%] w-[50%] h-auto rounded-2xl shadow-[0_0_40px_rgba(0,0,0,0.8)] rotate-12 group-hover:rotate-6 group-hover:-translate-y-8 z-10 transition-all duration-700 object-cover" alt="Coffee Branding" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-[var(--background)]/80 to-transparent pointer-events-none z-10" />
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[var(--accent-violet)]/10 pointer-events-none group-hover:opacity-100 opacity-50 transition-opacity z-10" />
@@ -93,12 +132,12 @@ export default function Work() {
 
             {/* 3. Logofolio */}
             <FadeIn delay={300}>
-              <Link href="/work/logo" className="glass-card flex flex-col justify-between p-10 rounded-[2.5rem] h-full min-h-[360px] group hover:border-[var(--accent-purple)]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden relative block">
+              <Link href="/work/logo" className="glass-card flex flex-col justify-between p-10 rounded-[2.5rem] h-full min-h-[360px] group hover:border-[var(--accent-purple)]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden relative block bg-white/5">
                 
                 {/* Floating Images Background */}
-                <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-30 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center">
-                  <img src="/logo_design_1.png" className="absolute w-[70%] h-auto -translate-x-8 -translate-y-8 rounded-full shadow-[0_0_40px_rgba(0,240,255,0.2)] group-hover:-translate-x-12 transition-all duration-700 object-cover" alt="Logo 1" />
-                  <img src="/logo_design_2.png" className="absolute w-[70%] h-auto translate-x-8 translate-y-8 rounded-full shadow-[0_0_40px_rgba(188,24,136,0.2)] group-hover:translate-x-12 z-10 transition-all duration-700 object-cover mix-blend-screen" alt="Logo 2" />
+                <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center">
+                  <Image src="/logo_real_1.png" width={800} height={800} className="absolute w-[60%] h-auto -translate-x-12 -translate-y-8 rounded-xl shadow-[0_0_40px_rgba(0,0,0,0.5)] group-hover:-translate-x-16 -rotate-6 transition-all duration-700 object-cover" alt="Corporate Logo" />
+                  <Image src="/logo_real_2.png" width={800} height={800} className="absolute w-[60%] h-auto translate-x-12 translate-y-8 rounded-xl shadow-[0_0_40px_rgba(0,0,0,0.5)] group-hover:translate-x-16 rotate-6 z-10 transition-all duration-700 object-cover" alt="Fashion Logo" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-[var(--background)]/80 to-transparent pointer-events-none z-10" />
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[var(--accent-purple)]/10 pointer-events-none group-hover:opacity-100 opacity-50 transition-opacity z-10" />
@@ -121,11 +160,12 @@ export default function Work() {
 
             {/* 4. Digital Interfaces */}
             <FadeIn delay={400}>
-              <Link href="/work/ui-ux" className="glass-card flex flex-col justify-between p-10 rounded-[2.5rem] h-full min-h-[360px] group hover:border-[var(--accent-cyan)]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden relative block">
+              <Link href="/work/ui-ux" className="glass-card flex flex-col justify-between p-10 rounded-[2.5rem] h-full min-h-[360px] group hover:border-[var(--accent-cyan)]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden relative block bg-white/5">
                 
                 {/* Floating Images Background */}
-                <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-40 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center">
-                  <img src="/ui_mockup.png" className="absolute w-[120%] h-auto translate-y-12 rounded-xl shadow-[0_0_50px_rgba(0,0,0,0.9)] group-hover:-translate-y-4 group-hover:scale-105 transition-all duration-700 object-cover" alt="UI Dashboard" />
+                <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-60 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center">
+                  <Image src="/ui_real_2.png" width={800} height={1000} className="absolute w-[60%] h-auto -translate-x-16 -rotate-12 rounded-xl shadow-[0_0_50px_rgba(0,0,0,0.6)] group-hover:-translate-x-20 group-hover:scale-105 transition-all duration-700 object-cover" alt="Mobile App UI" />
+                  <Image src="/ui_real_1.png" width={1000} height={800} className="absolute w-[80%] h-auto translate-x-12 translate-y-8 rounded-xl shadow-[0_0_50px_rgba(0,0,0,0.9)] group-hover:translate-x-16 group-hover:-translate-y-4 group-hover:scale-105 z-10 transition-all duration-700 object-cover" alt="SaaS Dashboard" />
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-[var(--background)] via-[var(--background)]/80 to-transparent pointer-events-none z-10" />
                 <div className="absolute inset-0 bg-gradient-to-br from-transparent to-[var(--accent-cyan)]/10 pointer-events-none group-hover:opacity-100 opacity-50 transition-opacity z-10" />

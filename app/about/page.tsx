@@ -1,3 +1,4 @@
+import { Metadata } from "next";
 import FadeIn from "@/components/FadeIn";
 import Counter from "@/components/Counter";
 import SystemStatus from "@/components/SystemStatus";
@@ -5,6 +6,18 @@ import ActivityGraph from "@/components/ActivityGraph";
 import HeadingBurst from "@/components/HeadingBurst";
 import InteractivePortrait from "@/components/InteractivePortrait";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "About Saad Nizar | Digital Marketing Strategist",
+  description: "Learn about Saad Nizar, a Dubai-based Digital Marketing Strategist and Creative Designer with expertise in SEO, personal branding, and high-converting design.",
+  keywords: ["About Saad Nizar", "Digital Marketer Dubai", "Creative Designer UAE", "SEO Expert Background"],
+  openGraph: {
+    title: "About Saad Nizar | Digital Marketing Strategist",
+    description: "Learn about Saad Nizar, a Dubai-based Digital Marketing Strategist and Creative Designer.",
+    url: "https://saadnizar.com/about",
+    images: [{ url: "/saad.png", width: 800, height: 1000 }],
+  }
+};
 
 export default function About() {
   return (

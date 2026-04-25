@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, MouseEvent, useEffect } from 'react';
+import { useState, useRef, MouseEvent as ReactMouseEvent, TouchEvent, useEffect } from 'react';
 
 export default function InteractivePortrait() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -18,13 +18,28 @@ export default function InteractivePortrait() {
     return () => clearTimeout(timer);
   }, []);
 
-  const handleMouseMove = (e: MouseEvent) => {
+  const handleMouseMove = (e: ReactMouseEvent) => {
     if (!containerRef.current) return;
     const rect = containerRef.current.getBoundingClientRect();
     setMousePos({
       x: e.clientX - rect.left,
       y: e.clientY - rect.top,
     });
+  };
+
+  const handleTouchMove = (e: TouchEvent) => {
+    if (!containerRef.current || e.touches.length === 0) return;
+    const touch = e.touches[0];
+    const rect = containerRef.current.getBoundingClientRect();
+    setMousePos({
+      x: touch.clientX - rect.left,
+      y: touch.clientY - rect.top,
+    });
+  };
+
+  const handleTouchStart = (e: TouchEvent) => {
+    setIsHovering(true);
+    handleTouchMove(e);
   };
 
   return (
@@ -41,6 +56,10 @@ export default function InteractivePortrait() {
       onMouseMove={handleMouseMove}
       onMouseEnter={() => setIsHovering(true)}
       onMouseLeave={() => setIsHovering(false)}
+      onTouchStart={handleTouchStart}
+      onTouchMove={handleTouchMove}
+      onTouchEnd={() => setIsHovering(false)}
+      onTouchCancel={() => setIsHovering(false)}
     >
       {/* Background/Base Image (Unmasked Person) */}
       <img 

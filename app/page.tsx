@@ -25,10 +25,10 @@ let windAudio: HTMLAudioElement | null = null;
 let isWindPlaying = false;
 
 if (typeof window !== 'undefined') {
-  hoverAudio = new Audio('/hover.wav');
+  hoverAudio = new Audio('/hover.mp3');
   hoverAudio.volume = 0.5;
   
-  windAudio = new Audio('/wind.wav');
+  windAudio = new Audio('/wind.mp3');
   windAudio.loop = true;
   windAudio.volume = 0;
 }
@@ -40,40 +40,18 @@ const playTechHover = () => {
   }
 };
 
+const stopTechHover = () => {
+  if (hoverAudio) {
+    hoverAudio.pause();
+  }
+};
+
 const startAmbientWind = () => {
-  if (isWindPlaying || !windAudio) return;
-  isWindPlaying = true;
-  windAudio.play().catch(() => { isWindPlaying = false; });
-  
-  let vol = windAudio.volume;
-  const fade = setInterval(() => {
-    vol += 0.05;
-    if (vol >= 0.4) {
-      clearInterval(fade);
-      if (windAudio) windAudio.volume = 0.4;
-    } else {
-      if (windAudio) windAudio.volume = vol;
-    }
-  }, 200);
+  // Disabled per user request (only hover sound)
 };
 
 const stopAmbientWind = () => {
-  if (!isWindPlaying || !windAudio) return;
-  
-  let vol = windAudio.volume;
-  const fade = setInterval(() => {
-    vol -= 0.05;
-    if (vol <= 0) {
-      clearInterval(fade);
-      if (windAudio) {
-        windAudio.pause();
-        windAudio.volume = 0;
-      }
-      isWindPlaying = false;
-    } else {
-      if (windAudio) windAudio.volume = vol;
-    }
-  }, 100);
+  // Disabled per user request (only hover sound)
 };
 
 export default function Home() {
@@ -279,6 +257,7 @@ export default function Home() {
             className="absolute top-[8%] left-[-5%] md:top-[12%] md:left-[5%] lg:left-[10%] opacity-95 mix-blend-screen group pointer-events-auto cursor-pointer" 
             style={{ transform: 'translateZ(100px)' }}
             onMouseEnter={playTechHover}
+            onMouseLeave={stopTechHover}
           >
             <div className="animate-float w-32 h-32 md:w-48 md:h-48 lg:w-[220px] lg:h-[220px] relative">
               <Image 
@@ -303,6 +282,7 @@ export default function Home() {
             className="absolute top-[55%] left-[-2%] md:top-[60%] md:left-[2%] lg:left-[5%] opacity-90 mix-blend-screen group pointer-events-auto cursor-pointer" 
             style={{ transform: 'translateZ(50px)' }}
             onMouseEnter={playTechHover}
+            onMouseLeave={stopTechHover}
           >
             <div className="animate-float-fast w-24 h-24 md:w-36 md:h-36 lg:w-[180px] lg:h-[180px] relative">
               <Image 
@@ -327,6 +307,7 @@ export default function Home() {
             className="absolute top-[20%] right-[-5%] md:top-[25%] md:right-[2%] lg:right-[5%] opacity-90 mix-blend-screen group pointer-events-auto cursor-pointer" 
             style={{ transform: 'translateZ(0px)' }}
             onMouseEnter={playTechHover}
+            onMouseLeave={stopTechHover}
           >
             <div className="animate-float w-28 h-28 md:w-48 md:h-48 lg:w-[220px] lg:h-[220px] relative">
               <Image 
@@ -351,6 +332,7 @@ export default function Home() {
             className="absolute bottom-[2%] right-[2%] md:bottom-[5%] lg:right-[8%] opacity-85 mix-blend-screen group pointer-events-auto cursor-pointer" 
             style={{ transform: 'translateZ(-50px)' }}
             onMouseEnter={playTechHover}
+            onMouseLeave={stopTechHover}
           >
             <div className="animate-float-slow w-20 h-20 md:w-32 md:h-32 lg:w-[160px] lg:h-[160px] relative">
               <Image 
@@ -375,6 +357,7 @@ export default function Home() {
             className="absolute top-[45%] right-[2%] md:top-[50%] lg:right-[5%] opacity-70 mix-blend-screen group pointer-events-auto cursor-pointer" 
             style={{ transform: 'translateZ(-200px)' }}
             onMouseEnter={playTechHover}
+            onMouseLeave={stopTechHover}
           >
             <div className="animate-float-slow w-16 h-16 md:w-24 md:h-24 lg:w-[120px] lg:h-[120px] relative">
               <Image 
@@ -384,9 +367,9 @@ export default function Home() {
               />
             </div>
             {/* HUD Popup */}
-            <div className="absolute top-1/2 right-[85%] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center flex-row-reverse min-w-[150px] md:min-w-[200px] z-50">
+            <div className="absolute top-1/2 left-[85%] -translate-y-1/2 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none flex items-center min-w-[150px] md:min-w-[200px] z-50">
               <div className="w-6 md:w-12 h-[1px] bg-yellow-500/50" />
-              <div className="glass-card px-3 py-2 md:px-4 md:py-3 border border-yellow-500/30 rounded-l-lg rounded-br-lg backdrop-blur-md shadow-[0_0_20px_rgba(234,179,8,0.2)] text-right">
+              <div className="glass-card px-3 py-2 md:px-4 md:py-3 border border-yellow-500/30 rounded-r-lg rounded-bl-lg backdrop-blur-md shadow-[0_0_20px_rgba(234,179,8,0.2)] text-left">
                 <p className="text-[8px] md:text-[10px] text-yellow-400 font-mono font-bold tracking-[0.2em] uppercase mb-1">GOOGLE ADS</p>
                 <p className="text-[7px] md:text-[9px] text-white/80 font-mono tracking-widest">POPULATION: 4.3B</p>
                 <p className="text-[6px] md:text-[8px] text-yellow-400/60 font-mono tracking-widest mt-0.5">STATUS: SEARCH INTENT</p>

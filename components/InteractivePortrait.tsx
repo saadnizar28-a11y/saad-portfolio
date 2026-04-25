@@ -9,8 +9,15 @@ export default function InteractivePortrait() {
   
   // Simple popup entrance animation state
   const [isVisible, setIsVisible] = useState(false);
+  
+  // Audio ref for the hover sound
+  const hoverAudioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
+    if (typeof window !== 'undefined') {
+      hoverAudioRef.current = new Audio('/lens.mp3');
+      hoverAudioRef.current.volume = 0.5;
+    }
     // Trigger the slide-up animation shortly after mount for a smooth entrance
     const timer = setTimeout(() => {
       setIsVisible(true);
@@ -39,6 +46,10 @@ export default function InteractivePortrait() {
 
   const handleTouchStart = (e: TouchEvent) => {
     setIsHovering(true);
+    if (hoverAudioRef.current) {
+      hoverAudioRef.current.currentTime = 0;
+      hoverAudioRef.current.play().catch(() => {});
+    }
     handleTouchMove(e);
   };
 
@@ -54,12 +65,33 @@ export default function InteractivePortrait() {
         transition: 'all 1.8s cubic-bezier(0.16, 1, 0.3, 1)' 
       }}
       onMouseMove={handleMouseMove}
-      onMouseEnter={() => setIsHovering(true)}
-      onMouseLeave={() => setIsHovering(false)}
+      onMouseEnter={() => {
+        setIsHovering(true);
+        if (hoverAudioRef.current) {
+          hoverAudioRef.current.currentTime = 0;
+          hoverAudioRef.current.play().catch(() => {});
+        }
+      }}
+      onMouseLeave={() => {
+        setIsHovering(false);
+        if (hoverAudioRef.current) {
+          hoverAudioRef.current.pause();
+        }
+      }}
       onTouchStart={handleTouchStart}
       onTouchMove={handleTouchMove}
-      onTouchEnd={() => setIsHovering(false)}
-      onTouchCancel={() => setIsHovering(false)}
+      onTouchEnd={() => {
+        setIsHovering(false);
+        if (hoverAudioRef.current) {
+          hoverAudioRef.current.pause();
+        }
+      }}
+      onTouchCancel={() => {
+        setIsHovering(false);
+        if (hoverAudioRef.current) {
+          hoverAudioRef.current.pause();
+        }
+      }}
     >
       {/* Background/Base Image (Unmasked Person) */}
       <img 

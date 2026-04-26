@@ -15,9 +15,8 @@ export default function Footer() {
             
             {/* Brand */}
             <div className="col-span-1 md:col-span-2">
-              <Link href="/" className="text-white font-extrabold tracking-[0.2em] uppercase text-xl flex items-center gap-4 mb-6">
-                <div className="w-3 h-3 rounded-full bg-[var(--accent-cyan)] shadow-[0_0_20px_rgba(0,210,255,0.8)]" />
-                <span>SAAD.</span>
+              <Link href="/" className="flex items-center gap-4 mb-6 group w-12 h-12">
+                <img src="/logo.png" alt="Logo" className="w-full h-full object-contain drop-shadow-[0_0_10px_rgba(0,240,255,0.3)] group-hover:drop-shadow-[0_0_20px_rgba(0,240,255,0.8)] transition-all duration-300 group-hover:scale-110" />
               </Link>
               <p className="text-white/40 text-sm leading-relaxed max-w-sm">
                 Designing future experiences. Bridging the gap between sophisticated aesthetics and high-performance engineering.

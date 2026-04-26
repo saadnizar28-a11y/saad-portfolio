@@ -47,7 +47,7 @@ export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
   const [showBubble, setShowBubble] = useState(false);
   const [messages, setMessages] = useState<{ text: string; isBot: boolean }[]>([
-    { text: "Hi! I'm SYRO, Saad's AI assistant. How can I help you today?", isBot: true }
+    { text: "Hey… I’m Syro 🤖\nI was the one you were trying to catch — but I’m a bit faster 😉\nAnyway, how can I help you today?", isBot: true }
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);

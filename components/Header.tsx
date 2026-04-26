@@ -64,9 +64,8 @@ export default function Header() {
         <div className="relative w-full h-24 md:h-full md:w-full px-6 md:px-0 flex md:flex-col items-center justify-between md:justify-center pointer-events-auto">
           
           {/* Mobile Logo */}
-          <Link href="/" className="md:hidden text-white font-extrabold tracking-[0.2em] uppercase text-sm z-10 flex items-center gap-3 group">
-            <div className="w-2 h-2 rounded-full bg-[var(--accent-cyan)] group-hover:shadow-[0_0_20px_rgba(0,240,255,1)] transition-shadow duration-500" />
-            <span className="opacity-80 group-hover:opacity-100 transition-opacity duration-300">SN</span>
+          <Link href="/" className="md:hidden z-10 flex items-center group w-8 h-8">
+            <img src="/logo.png" alt="Logo" className="w-full h-full object-contain drop-shadow-[0_0_10px_rgba(0,240,255,0.3)] group-hover:drop-shadow-[0_0_20px_rgba(0,240,255,0.8)] transition-all duration-300 group-hover:scale-110" />
           </Link>
 
           {/* Minimized Desktop Menu Icon */}
@@ -84,9 +83,8 @@ export default function Header() {
           <div className="hidden md:flex flex-col items-start justify-center h-full w-64 absolute top-0 left-0 opacity-0 -translate-x-10 group-hover/desktop:opacity-100 group-hover/desktop:translate-x-0 transition-all duration-300 ease-in-out pointer-events-none group-hover/desktop:pointer-events-auto pl-12">
             
             {/* Logo inside expanded menu */}
-            <Link href="/" className="absolute top-12 left-12 text-white font-extrabold tracking-[0.2em] uppercase text-sm z-10 flex items-center gap-3 group">
-              <div className="w-2 h-2 rounded-full bg-[var(--accent-cyan)] group-hover:shadow-[0_0_20px_rgba(0,240,255,1)] transition-shadow duration-500" />
-              <span className="opacity-80 group-hover:opacity-100 transition-opacity duration-300">SN</span>
+            <Link href="/" className="absolute top-12 left-12 z-10 flex items-center group w-10 h-10">
+              <img src="/logo.png" alt="Logo" className="w-full h-full object-contain drop-shadow-[0_0_10px_rgba(0,240,255,0.3)] group-hover:drop-shadow-[0_0_20px_rgba(0,240,255,0.8)] transition-all duration-300 group-hover:scale-110" />
             </Link>
 
             <nav className="flex flex-col items-start gap-10 z-10 w-full mt-4">

@@ -46,9 +46,8 @@ const FormatBotMessage = ({ text }: { text: string }) => {
 export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
   const [showBubble, setShowBubble] = useState(false);
-  const [messages, setMessages] = useState<{ text: string; isBot: boolean }[]>([
-    { text: "Hey… I’m Syro 🤖\nI was the one you were trying to catch — but I’m a bit faster 😉\nAnyway, how can I help you today?", isBot: true }
-  ]);
+  const [messages, setMessages] = useState<{ text: string; isBot: boolean }[]>([]);
+  const [hasSentInitial, setHasSentInitial] = useState(false);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
@@ -60,6 +59,17 @@ export default function ChatBot() {
   useEffect(() => {
     scrollToBottom();
   }, [messages]);
+
+  useEffect(() => {
+    if (isOpen && !hasSentInitial) {
+      setHasSentInitial(true);
+      setTimeout(() => {
+        setMessages([
+          { text: "Hey… I’m Syro 🤖\nI was the one you were trying to catch — but I’m a bit faster 😉\nAnyway, how can I help you today?", isBot: true }
+        ]);
+      }, 500); // Wait half a second after opening to pop the message in
+    }
+  }, [isOpen, hasSentInitial]);
 
   useEffect(() => {
     // Show popup bubble once after 3 seconds if never opened
@@ -122,9 +132,15 @@ export default function ChatBot() {
         
         {/* One-time Pop-up Bubble */}
         <div className={`transition-all duration-500 origin-bottom-right ${showBubble ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}>
-          <div className="bg-white text-black px-4 py-3 rounded-2xl rounded-br-none shadow-[0_10px_30px_rgba(0,210,255,0.3)] border border-[var(--accent-cyan)]/30 font-medium text-sm flex items-center gap-2 cursor-pointer" onClick={toggleChat}>
-             <span className="w-2 h-2 rounded-full bg-[var(--accent-pink)] animate-pulse" />
-             Hey! How can I help you?
+          <div className="bg-white text-black px-4 py-3 rounded-2xl rounded-br-none shadow-[0_10px_30px_rgba(0,210,255,0.3)] border border-[var(--accent-cyan)]/30 font-medium text-sm flex flex-col items-start gap-1 cursor-pointer max-w-[280px]" onClick={toggleChat}>
+             <div className="flex items-center gap-2">
+               <span className="w-2 h-2 rounded-full bg-[var(--accent-pink)] animate-pulse" />
+               <span className="font-bold">Hey… I’m Syro 🤖</span>
+             </div>
+             <span className="text-xs text-gray-800 leading-relaxed mt-1">
+               I was the one you were trying to catch — but I’m a bit faster 😉<br/>
+               Anyway, how can I help you today?
+             </span>
           </div>
         </div>
 

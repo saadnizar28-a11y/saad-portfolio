@@ -666,8 +666,42 @@ export default function Home() {
               </div>
             </FadeIn>
 
-            {/* Bento Block 3: Prompt Gallery / Work showcase */}
+            {/* NEW: Branding Gallery Showcase Block */}
             <FadeIn delay={400} className="md:col-span-3">
+              <div className="glass-card h-full min-h-[400px] rounded-[2.5rem] p-10 group hover:border-[var(--accent-violet)]/40 hover:shadow-[0_0_40px_rgba(142,45,226,0.1)] transition-all bg-gradient-to-br from-[rgba(20,20,25,0.4)] to-[rgba(142,45,226,0.05)] relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
+                <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-[var(--accent-violet)]/10 blur-3xl rounded-full pointer-events-none" />
+                
+                {/* Left: Text Content */}
+                <div className="w-full md:w-1/3 z-10">
+                  <div className="text-[var(--accent-violet)] font-bold tracking-widest text-xs uppercase mb-6 bg-[var(--accent-violet)]/10 inline-block px-3 py-1 rounded-full border border-[var(--accent-violet)]/30 shadow-[0_0_10px_rgba(142,45,226,0.2)]">Case Studies</div>
+                  <h3 className="text-4xl md:text-5xl font-bold mb-6 leading-tight group-hover:text-[var(--accent-violet)] transition-colors">
+                    Brand <br/> Identity.
+                  </h3>
+                  <p className="text-white/50 text-base leading-relaxed mb-8">
+                    Complete brand ecosystems, luxury packaging, and visual identities crafted for high-end conversion.
+                  </p>
+                  <Link href="/work/branding" className="inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-white tracking-[0.1em] uppercase transition-all duration-300 bg-[var(--accent-violet)]/20 border border-[var(--accent-violet)]/50 hover:bg-[var(--accent-violet)] hover:shadow-[0_0_30px_rgba(142,45,226,0.5)]">
+                    View Gallery <span className="ml-2">→</span>
+                  </Link>
+                </div>
+
+                {/* Right: Tiny Scroll Carousel */}
+                <div className="w-full md:w-2/3 relative flex items-center justify-center z-10">
+                  <div className="flex gap-4 overflow-x-auto scrollbar-none w-full py-4 px-2 scroll-smooth" style={{ maskImage: "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)", WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)" }}>
+                    {['/branding_gallery_1.png', '/branding_gallery_2.png', '/branding_gallery_3.png', '/branding_gallery_4.png', '/branding_gallery_5.png', '/branding_gallery_6.png', '/branding_gallery_7.png'].map((src, i) => (
+                      <Link href="/work/branding" key={i} className="shrink-0 w-36 h-56 rounded-2xl overflow-hidden border border-white/10 shadow-xl hover:scale-105 hover:border-[var(--accent-violet)]/50 transition-all duration-500 cursor-pointer block relative">
+                        <Image src={src} alt={`Brand Identity ${i + 1}`} fill className="object-cover" sizes="144px" />
+                      </Link>
+                    ))}
+                    <div className="shrink-0 w-12" /> {/* Spacer */}
+                  </div>
+                </div>
+
+              </div>
+            </FadeIn>
+
+            {/* Bento Block 3: Prompt Gallery / Work showcase */}
+            <FadeIn delay={500} className="md:col-span-3">
               <div className="glass-card h-full min-h-[400px] rounded-[2.5rem] p-10 group hover:border-[var(--accent-cyan)]/40 hover:shadow-[0_0_40px_rgba(0,210,255,0.1)] transition-all bg-gradient-to-br from-[rgba(20,20,25,0.4)] to-[rgba(0,210,255,0.05)] relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
                 <div className="absolute top-1/2 right-0 -translate-y-1/2 w-96 h-96 bg-[var(--accent-cyan)]/10 blur-3xl rounded-full pointer-events-none" />
                 

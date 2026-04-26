@@ -12,6 +12,7 @@ import LiveNewsTicker from "@/components/LiveNewsTicker";
 import AmoebaBackground from "@/components/AmoebaBackground";
 import Footer from "@/components/Footer";
 import SocialSidebar from "@/components/SocialSidebar";
+import FloatingRobot from "@/components/FloatingRobot";
 
 declare global {
   interface Window {
@@ -236,6 +237,7 @@ export default function Home() {
   return (
     <>
       <SocialSidebar />
+      <FloatingRobot />
       {/* Ambient Tiny Space Stars spanning the entire background */}
       <div ref={spaceRef} className="fixed top-0 left-0 w-full h-[300vh] z-0 pointer-events-none overflow-hidden mix-blend-screen">
         {/* Deep Space Dots */}

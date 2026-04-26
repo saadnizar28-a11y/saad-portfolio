@@ -4,7 +4,7 @@ import Link from "next/link";
 
 export default function SocialSidebar() {
   return (
-    <div className="fixed left-4 md:left-8 top-1/2 -translate-y-1/2 z-50 pointer-events-auto mix-blend-screen">
+    <div className="fixed right-4 md:right-8 top-1/2 -translate-y-1/2 z-50 pointer-events-auto mix-blend-screen">
       
       {/* Interactive Hit Area */}
       <div className="relative w-16 h-16 flex items-center justify-center group">

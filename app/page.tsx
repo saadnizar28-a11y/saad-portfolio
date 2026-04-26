@@ -47,11 +47,39 @@ const stopTechHover = () => {
 };
 
 const startAmbientWind = () => {
-  // Disabled per user request (only hover sound)
+  if (isWindPlaying || !windAudio) return;
+  isWindPlaying = true;
+  windAudio.play().catch(() => { isWindPlaying = false; });
+  
+  let vol = windAudio.volume;
+  const fade = setInterval(() => {
+    vol += 0.05;
+    if (vol >= 0.4) {
+      clearInterval(fade);
+      if (windAudio) windAudio.volume = 0.4;
+    } else {
+      if (windAudio) windAudio.volume = vol;
+    }
+  }, 200);
 };
 
 const stopAmbientWind = () => {
-  // Disabled per user request (only hover sound)
+  if (!isWindPlaying || !windAudio) return;
+  
+  let vol = windAudio.volume;
+  const fade = setInterval(() => {
+    vol -= 0.05;
+    if (vol <= 0) {
+      clearInterval(fade);
+      if (windAudio) {
+        windAudio.pause();
+        windAudio.volume = 0;
+      }
+      isWindPlaying = false;
+    } else {
+      if (windAudio) windAudio.volume = vol;
+    }
+  }, 100);
 };
 
 export default function Home() {

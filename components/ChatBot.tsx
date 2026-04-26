@@ -47,7 +47,7 @@ export default function ChatBot() {
   const [isOpen, setIsOpen] = useState(false);
   const [showBubble, setShowBubble] = useState(false);
   const [messages, setMessages] = useState<{ text: string; isBot: boolean }[]>([
-    { text: "Hi! I'm Saad's AI. How can I help you today?", isBot: true }
+    { text: "Hi! I'm SYRO, Saad's AI assistant. How can I help you today?", isBot: true }
   ]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
@@ -159,7 +159,7 @@ export default function ChatBot() {
           
           <div className="flex items-center gap-3 relative z-10">
             <div className="w-3 h-3 rounded-full bg-[var(--accent-cyan)] animate-pulse shadow-[0_0_10px_var(--accent-cyan)]" />
-            <h3 className="font-bold text-white tracking-widest text-sm uppercase">Saad Assistant</h3>
+            <h3 className="font-bold text-white tracking-widest text-sm uppercase">SYRO AI</h3>
           </div>
         </div>
 

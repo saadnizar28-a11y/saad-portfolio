@@ -120,3 +120,20 @@ body {
 @utility animate-float-fast {
   animation: float 4s ease-in-out infinite;
 }
+
+@keyframes travelDot {
+  0% { 
+    background-color: var(--accent-cyan); 
+    box-shadow: 0 0 8px rgba(0,240,255,0.8); 
+    border-color: transparent; 
+  }
+  25%, 100% { 
+    background-color: transparent; 
+    box-shadow: none; 
+    border-color: rgba(255,255,255,0.4); 
+  }
+}
+
+@utility animate-travel-dot {
+  animation: travelDot 2s infinite;
+}

@@ -121,6 +121,7 @@ export default function RootLayout({
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
+        <link rel="preload" href="/hover.mp3" as="audio" type="audio/mpeg" />
       </head>
       <body className="min-h-full flex flex-col bg-[#050505] text-white">
         <LenisScroll />

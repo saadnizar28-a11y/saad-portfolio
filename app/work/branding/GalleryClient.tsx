@@ -111,7 +111,7 @@ export default function GalleryClient() {
       </AnimatePresence>
 
       {/* Subtle gradient overlays for text readability */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/10 to-transparent z-10 pointer-events-none" />
+      <div className="absolute bottom-0 left-0 w-full h-1/4 bg-gradient-to-t from-black/90 to-transparent z-10 pointer-events-none" />
       <div className="absolute inset-0 bg-gradient-to-r from-black/80 via-transparent to-transparent z-10 pointer-events-none" />
 
       {/* Foreground Content */}
@@ -139,7 +139,7 @@ export default function GalleryClient() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -10 }}
               transition={{ duration: 0.4 }}
-              className="bg-black/60 backdrop-blur-md border border-white/10 p-5 md:p-6 rounded-2xl flex flex-col gap-2 w-[75vw] md:w-[360px] shadow-[0_10px_40px_rgba(0,0,0,0.5)]"
+              className="bg-black/60 backdrop-blur-md border border-white/10 p-5 md:p-6 rounded-2xl flex flex-col gap-2 w-[65vw] max-w-[280px] md:w-[360px] md:max-w-none shadow-[0_10px_40px_rgba(0,0,0,0.5)]"
             >
               <div className="flex flex-wrap gap-1">
                 <span className="px-3 py-1 rounded-full bg-[var(--accent-cyan)]/10 text-[10px] uppercase tracking-wider font-bold text-[var(--accent-cyan)] border border-[var(--accent-cyan)]/30">

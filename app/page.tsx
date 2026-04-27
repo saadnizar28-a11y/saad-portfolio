@@ -83,6 +83,8 @@ const stopAmbientWind = () => {
   }, 100);
 };
 
+import TestimonialCarousel from "@/components/TestimonialCarousel";
+
 export default function Home() {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const spaceRef = useRef<HTMLDivElement>(null);
@@ -856,115 +858,33 @@ export default function Home() {
       </section>
 
       {/* Scattered Spread Testimonials */}
-      <section className="bg-[var(--background)] py-32 px-6 border-t border-[rgba(255,255,255,0.02)] relative overflow-hidden flex flex-col items-center">
-        {/* Glow */}
-        <div className="absolute top-1/2 right-1/4 w-[40vw] h-[40vh] bg-[var(--accent-cyan)]/5 blur-[150px] pointer-events-none rounded-full" />
-        
-        <div className="max-w-7xl mx-auto w-full relative z-10">
+      <TestimonialCarousel />
+
+      {/* Deep SEO FAQ Section */}
+      <section className="bg-[var(--background)] py-24 px-6 relative z-10">
+        <div className="max-w-4xl mx-auto border-t border-[var(--accent-cyan)]/20 pt-20">
           <FadeIn>
-             <h2 className="text-4xl md:text-5xl font-bold tracking-tight mb-24 text-center">Client <span className="text-[var(--accent-cyan)]">Proof.</span></h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Digital Growth <span className="text-[var(--accent-cyan)]">FAQ</span></h2>
           </FadeIn>
-
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6 mt-12 w-full">
-            
-            {/* Card 1: Large & Impactful */}
-            <FadeIn delay={100} className="break-inside-avoid">
-              <div className="glass-card p-10 rounded-3xl relative border border-[rgba(255,255,255,0.05)] hover:border-[var(--accent-cyan)]/30 transition-colors shadow-2xl backdrop-blur-xl group">
-                <span className="text-[var(--accent-cyan)] font-serif text-5xl absolute top-4 left-6 opacity-20 hidden md:block">"</span>
-                <p className="text-white/90 text-xl leading-relaxed relative z-10 font-bold mb-8">
-                  SAAD completely overhauled our entire lead system. <span className="text-white">We hit 200+ leads in weeks</span> with perfectly targeted ad spending. Highly recommended.
-                </p>
-                <div className="flex items-center gap-4 border-t border-[rgba(255,255,255,0.05)] pt-6">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center text-white/50 text-xs font-bold">TM</div>
-                  <div>
-                    <h5 className="font-bold text-base">Tariq Mansoor</h5>
-                    <p className="text-[var(--accent-cyan)] text-[10px] tracking-widest uppercase mt-0.5">Founder, Real Estate Co.</p>
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
-
-            {/* Card 2: Short & Punchy */}
-            <FadeIn delay={200} className="break-inside-avoid">
-              <div className="glass-card p-8 rounded-3xl relative border border-[rgba(255,255,255,0.05)] hover:border-[var(--accent-pink)]/30 transition-colors shadow-lg backdrop-blur-xl group">
-                <p className="text-white/80 text-base leading-relaxed relative z-10 mb-6 font-medium">
-                  "No fluff. He actually focused on exactly what drove revenue for our brand. The attention to detail is just unmatched."
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center text-white/50 text-xs font-bold">PP</div>
-                  <div>
-                    <h5 className="font-bold text-sm">Priya Patel</h5>
-                    <p className="text-[var(--accent-pink)] text-[10px] tracking-widest uppercase mt-0.5">CEO, HealthTech</p>
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
-
-            {/* Card 3: Medium */}
-            <FadeIn delay={300} className="break-inside-avoid">
-              <div className="glass-card p-8 rounded-3xl relative border border-[rgba(255,255,255,0.05)] hover:border-[var(--accent-violet)]/30 transition-colors shadow-xl backdrop-blur-xl group">
-                <p className="text-white/80 text-lg leading-relaxed relative z-10 mb-6">
-                  The most cinematic brand experience I've ever seen. Outstanding UI/UX skills that immediately set us apart.
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center text-white/50 text-xs font-bold">SJ</div>
-                  <div>
-                    <h5 className="font-bold text-sm">Sarah Jenkins</h5>
-                    <p className="text-[var(--accent-violet)] text-[10px] tracking-widest uppercase mt-0.5">CMO, SaaS Platform</p>
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
-
-            {/* Card 4: Glowing Highlight */}
-            <FadeIn delay={400} className="break-inside-avoid">
-              <div className="glass-card p-10 rounded-3xl relative border border-[rgba(255,255,255,0.05)] hover:border-[var(--accent-cyan)]/30 transition-colors shadow-[0_0_30px_rgba(0,240,255,0.1)] backdrop-blur-xl group overflow-hidden">
-                <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--accent-cyan)]/10 blur-3xl rounded-full" />
-                <p className="text-white/90 text-xl leading-relaxed relative z-10 font-bold mb-8">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-cyan)] to-[var(--accent-violet)]">Tripled our conversion rate overnight.</span> Easily the best digital strategist I've ever worked with. Truly Awwwards level.
-                </p>
-                <div className="flex items-center gap-4 border-t border-[rgba(255,255,255,0.05)] pt-6">
-                  <div className="w-12 h-12 rounded-full bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center text-white/50 text-xs font-bold">AR</div>
-                  <div>
-                    <h5 className="font-bold text-base">Aisha Rahman</h5>
-                    <p className="text-[var(--accent-cyan)] text-[10px] tracking-widest uppercase mt-0.5">Director of Growth</p>
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
-
-            {/* Card 5: Short */}
-            <FadeIn delay={500} className="break-inside-avoid">
-              <div className="glass-card p-6 rounded-3xl relative border border-[rgba(255,255,255,0.05)] hover:border-[var(--accent-pink)]/30 transition-colors shadow-md backdrop-blur-xl group">
-                <p className="text-white/70 text-sm leading-relaxed relative z-10 mb-4">
-                  "Fast, brilliant, and deeply strategic. Every pixel has a purpose."
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center text-white/50 text-[10px] font-bold">RS</div>
-                  <div>
-                    <h5 className="font-bold text-xs">Rohan Sharma</h5>
-                    <p className="text-white/40 text-[10px] tracking-widest uppercase mt-0.5">E-commerce</p>
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
-
-            {/* Card 6: Medium */}
-            <FadeIn delay={600} className="break-inside-avoid">
-              <div className="glass-card p-8 rounded-3xl relative border border-[rgba(255,255,255,0.05)] hover:border-[var(--accent-violet)]/30 transition-colors shadow-lg backdrop-blur-xl group">
-                <p className="text-white/80 text-base leading-relaxed relative z-10 mb-6">
-                  His understanding of modern aesthetic trends combined with his grip on SEO gives you a devastatingly unfair advantage.
-                </p>
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center text-white/50 text-xs font-bold">MA</div>
-                  <div>
-                    <h5 className="font-bold text-sm">Marcus Aurelius</h5>
-                    <p className="text-[var(--accent-violet)] text-[10px] tracking-widest uppercase mt-0.5">Angel Investor</p>
-                  </div>
-                </div>
-              </div>
-            </FadeIn>
-
+          <div className="space-y-6">
+            {[
+              { q: "What does Saad Nizar do?", a: "Saad Nizar is a Freelance Digital Marketing Specialist, UI/UX Designer, and Brand Strategist based in Dubai. He builds scalable digital ecosystems that combine high-end cinematic design with data-driven performance marketing for clients across the UAE and GCC." },
+              { q: "Do you offer SEO and Lead Generation services in the UAE?", a: "Yes. I specialize in complete Search Engine Optimization (SEO), advanced technical SEO, and aggressive Lead Generation campaigns using platforms like Google Ads and Meta, specifically targeted to local demographics in Dubai and the broader Middle East." },
+              { q: "What is included in your Branding and Design services?", a: "My branding services cover everything from logo design and complete visual identity systems to high-end UI/UX digital interfaces (websites, SaaS dashboards) and engaging social media creative assets that align with modern, premium aesthetics." },
+              { q: "Why should I hire a freelance strategist instead of an agency?", a: "Hiring me gives you direct access to a dedicated specialist without the overhead costs or communication barriers of a large agency. I personally architect, design, and execute your campaigns, ensuring a cohesive and highly optimized result." }
+            ].map((faq, i) => (
+              <FadeIn key={i} delay={i * 100}>
+                <details className="glass-card p-6 rounded-2xl group cursor-pointer border-[rgba(255,255,255,0.05)] hover:border-[var(--accent-violet)]/40 transition-colors">
+                  <summary className="text-xl font-medium text-white flex justify-between items-center outline-none list-none">
+                    {faq.q}
+                    <span className="text-[var(--accent-cyan)] opacity-70 group-hover:opacity-100 transition-opacity">+</span>
+                  </summary>
+                  <p className="mt-4 text-white/60 text-lg leading-relaxed pt-4 border-t border-white/5">
+                    {faq.a}
+                  </p>
+                </details>
+              </FadeIn>
+            ))}
           </div>
         </div>
       </section>

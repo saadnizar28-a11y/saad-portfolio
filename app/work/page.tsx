@@ -5,6 +5,7 @@ import FadeIn from "@/components/FadeIn";
 import SystemStatus from "@/components/SystemStatus";
 import TechMarquee from "@/components/TechMarquee";
 import HeadingBurst from "@/components/HeadingBurst";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
 
 export const metadata: Metadata = {
   title: "Selected Work & Portfolio | Saad Nizar",
@@ -38,6 +39,13 @@ const jsonLd = {
     "name": "Saad Nizar"
   }
 };
+
+const faqs = [
+  { q: "What types of design projects do you take on?", a: "My portfolio includes brand identity (logos, typography, color systems), UI/UX design for web and mobile apps, and highly visual social media campaigns tailored to specific market demographics in the UAE." },
+  { q: "Do you only do design, or also development?", a: "I focus primarily on strategic design, digital marketing, and front-end implementations. For complex backend systems, I collaborate with specialized developers, ensuring the visual integrity of the product is maintained." },
+  { q: "How do you integrate SEO into your UI/UX work?", a: "Good UI/UX naturally complements SEO by improving user retention, reducing bounce rates, and creating logical content hierarchies. I design with semantic structure in mind so search engines can easily parse your content." },
+  { q: "What makes your design style unique?", a: "I specialize in modern, cinematic, and highly interactive 'glassmorphism' aesthetics combined with functional minimalism. It’s designed to create a premium, high-end feel that drives conversions." }
+];
 
 export default function Work() {
   return (
@@ -246,6 +254,34 @@ export default function Work() {
             </Link>
           </FadeIn>
 
+      </div>
+
+      {/* FAQ Section */}
+      <div className="max-w-4xl mx-auto px-6 mb-32">
+        <div className="border-t border-[var(--accent-cyan)]/20 pt-20">
+          <FadeIn>
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Design & Portfolio <span className="text-[var(--accent-cyan)]">FAQ</span></h2>
+          </FadeIn>
+          <div className="space-y-6">
+            {faqs.map((faq, i) => (
+              <FadeIn key={i} delay={i * 100}>
+                <details className="glass-card p-6 rounded-2xl group cursor-pointer border-[rgba(255,255,255,0.05)] hover:border-[var(--accent-violet)]/40 transition-colors">
+                  <summary className="text-xl font-medium text-white flex justify-between items-center outline-none list-none">
+                    {faq.q}
+                    <span className="text-[var(--accent-cyan)] opacity-70 group-hover:opacity-100 transition-opacity">+</span>
+                  </summary>
+                  <p className="mt-4 text-white/60 text-lg leading-relaxed pt-4 border-t border-white/5">
+                    {faq.a}
+                  </p>
+                </details>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      <div className="mb-32">
+        <TestimonialCarousel />
       </div>
 
       <TechMarquee />

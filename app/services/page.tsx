@@ -3,6 +3,7 @@ import FadeIn from "@/components/FadeIn";
 import TechMarquee from "@/components/TechMarquee";
 import HeadingBurst from "@/components/HeadingBurst";
 import PricingSection from "@/components/PricingSection";
+import TestimonialCarousel from "@/components/TestimonialCarousel";
 
 export const metadata: Metadata = {
   title: "Digital Marketing & Design Services | Saad Nizar",
@@ -73,9 +74,11 @@ export default function Services() {
   ];
 
   const faqs = [
-    { q: "How long does a project take?", a: "Typically 1–3 weeks depending on scope." },
-    { q: "Do you provide ongoing support?", a: "Yes, maintenance and growth support are available." },
-    { q: "Can you handle both design and marketing?", a: "Yes, I combine both for better results." }
+    { q: "What digital marketing services does Saad Nizar offer in Dubai?", a: "I provide end-to-end digital marketing solutions including SEO optimization, performance marketing, social media management, and conversion-focused campaign strategy specifically tailored for the UAE and GCC markets." },
+    { q: "Are you available for freelance graphic design projects in the GCC?", a: "Yes. I am based in Dubai and fully available for freelance graphic design, UI/UX, and branding projects across the UAE, Saudi Arabia, Qatar, and the wider GCC region." },
+    { q: "How do you approach personal branding?", a: "Personal branding is about creating a cohesive visual and narrative identity. I help founders, executives, and creators in Dubai build authority through custom visual identities, targeted social strategies, and structured content planning." },
+    { q: "Can you handle both design and marketing simultaneously?", a: "Absolutely. My expertise lies in bridging the gap between creative design and data-driven digital marketing. This ensures your brand not only looks cinematic but also converts effectively." },
+    { q: "How long does a standard branding or SEO project take?", a: "Visual identity and UI projects typically take 2-4 weeks. SEO is a long-term growth strategy, but initial technical setups and quick wins are delivered within the first month." }
   ];
 
   return (
@@ -117,9 +120,9 @@ export default function Services() {
         <PricingSection />
 
         {/* FAQ Section */}
-        <div className="max-w-3xl mx-auto border-t border-[var(--accent-cyan)]/20 pt-20">
+        <div className="max-w-4xl mx-auto border-t border-[var(--accent-cyan)]/20 pt-20">
           <FadeIn>
-            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">Frequently Asked</h2>
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">SEO & Services <span className="text-[var(--accent-cyan)]">FAQ</span></h2>
           </FadeIn>
           <div className="space-y-6">
             {faqs.map((faq, i) => (
@@ -129,7 +132,7 @@ export default function Services() {
                     {faq.q}
                     <span className="text-[var(--accent-cyan)] opacity-70 group-hover:opacity-100 transition-opacity">+</span>
                   </summary>
-                  <p className="mt-4 text-white/50 text-lg leading-relaxed pt-4 border-t border-white/5">
+                  <p className="mt-4 text-white/60 text-lg leading-relaxed pt-4 border-t border-white/5">
                     {faq.a}
                   </p>
                 </details>
@@ -137,6 +140,10 @@ export default function Services() {
             ))}
           </div>
         </div>
+      </div>
+
+      <div className="mb-32">
+        <TestimonialCarousel />
       </div>
 
       <TechMarquee />

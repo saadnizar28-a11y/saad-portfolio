@@ -194,6 +194,35 @@ export default function About() {
 
         </div>
       </div>
+
+      {/* Deep SEO FAQ Section */}
+      <div className="max-w-4xl mx-auto px-6 mt-32 mb-20 relative z-10">
+        <div className="border-t border-[var(--accent-cyan)]/20 pt-20">
+          <FadeIn>
+            <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">About Saad <span className="text-[var(--accent-cyan)]">FAQ</span></h2>
+          </FadeIn>
+          <div className="space-y-6">
+            {[
+              { q: "Where is Saad Nizar located, and is he available for hire in the GCC?", a: "I am based in Dubai, UAE, and fully available for freelance digital marketing, SEO, and graphic design projects across the GCC, including Saudi Arabia, Qatar, Oman, and Bahrain." },
+              { q: "What is Saad Nizar's background in Digital Marketing?", a: "With over 8 years of professional experience in the UAE, I specialize in performance marketing, SEO, and brand strategy. I've successfully managed campaigns for high-profile brands like OPPO, Xiaomi, and Nokia." },
+              { q: "Does Saad Nizar provide Personal Branding services?", a: "Yes, I offer comprehensive personal branding services for executives, founders, and creators in Dubai. This includes visual identity design, strategic content planning, and social media growth systems." },
+              { q: "What makes your approach to Digital Marketing unique?", a: "Having grown up in Dubai, I have an intuitive understanding of the GCC consumer mindset. I combine this deep cultural insight with hard data, striking a perfect balance between premium design and aggressive performance marketing." }
+            ].map((faq, i) => (
+              <FadeIn key={i} delay={i * 100}>
+                <details className="glass-card p-6 rounded-2xl group cursor-pointer border-[rgba(255,255,255,0.05)] hover:border-[var(--accent-violet)]/40 transition-colors">
+                  <summary className="text-xl font-medium text-white flex justify-between items-center outline-none list-none">
+                    {faq.q}
+                    <span className="text-[var(--accent-cyan)] opacity-70 group-hover:opacity-100 transition-opacity">+</span>
+                  </summary>
+                  <p className="mt-4 text-white/60 text-lg leading-relaxed pt-4 border-t border-white/5">
+                    {faq.a}
+                  </p>
+                </details>
+              </FadeIn>
+            ))}
+          </div>
+        </div>
+      </div>
     </main>
   );
 }

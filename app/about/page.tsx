@@ -29,7 +29,7 @@ export default function About() {
       <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12">
 
         {/* 1. Left Column: 3D Interactive Portrait */}
-        <div className="lg:col-span-4 h-[600px] md:h-[800px] lg:h-auto relative">
+        <div className="lg:col-span-4 h-[400px] md:h-[600px] lg:h-auto relative">
           <FadeIn delay={100} className="w-full h-full">
             <InteractivePortrait />
           </FadeIn>
@@ -70,13 +70,19 @@ export default function About() {
 
             <FadeIn delay={500}>
               <p className="border-l-2 border-[var(--accent-pink)] pl-4 py-1 my-6 text-white/90">
-                I also bring experience working with leading brands including <span className="text-[var(--accent-pink)] font-semibold">OPPO, Xiaomi, Nokia, HMD, and Emirates Exchange</span>, which has strengthened my understanding of customer psychology, market dynamics, and brand positioning in competitive environments.
+                I also bring experience working with leading brands including <span className="font-semibold text-white">OPPO, Xiaomi, Nokia, HMD, and Emirates Exchange</span>, which has strengthened my understanding of customer psychology, market dynamics, and brand positioning in competitive environments.
               </p>
             </FadeIn>
 
             <FadeIn delay={600}>
               <p>
                 Currently, I am working with a UAE-based company, Synosys, contributing to its subsidiary brand <span className="text-[var(--accent-cyan)] font-medium">Locator</span>, a GPS tracking and fleet management SaaS platform, as a Creative Marketing Strategist & Designer. I handle digital marketing, branding, and creative design initiatives aligned with GCC market standards, supporting solutions in AI, IoT, and intelligent fleet management systems.
+              </p>
+            </FadeIn>
+
+            <FadeIn delay={650}>
+              <p>
+                I also completed a 4-month internship with <span className="font-medium text-white">Wafe Group</span>, serving as a <span className="font-medium text-white">Team Leader</span> in their marketing agency, where I developed leadership and strategic campaign execution skills.
               </p>
             </FadeIn>
 
@@ -87,11 +93,15 @@ export default function About() {
                 <ul className="space-y-4">
                   <li className="flex gap-4 items-start">
                     <span className="text-[var(--accent-violet)] mt-1">⯌</span>
-                    <p>Bachelor of Business Administration (BBA) from International College of Law, Business Administration & Technology (ICLBAT), Ajman, an institution under the Atlas Group.</p>
+                    <p><span className="text-white font-bold">Bachelor of Business Administration (BBA)</span> from International College of Law, Business Administration & Technology (ICLBAT), Ajman, an institution under the Atlas Group.</p>
                   </li>
                   <li className="flex gap-4 items-start">
                     <span className="text-[var(--accent-violet)] mt-1">⯌</span>
-                    <p>MBA with specialization in Airline and Airport Management from Brillianz Institute of Management and Studies (BIMS), Dubai.</p>
+                    <p><span className="text-white font-bold">Master of Business Administration (MBA)</span> with specialization in Airline and Airport Management from Brillianz Institute of Management and Studies (BIMS), Dubai.</p>
+                  </li>
+                  <li className="flex gap-4 items-start">
+                    <span className="text-[var(--accent-violet)] mt-1">⯌</span>
+                    <p><span className="text-white font-medium">Certified in Digital Marketing & Graphic Design</span> — Trained at AdsIn Learning Hub through a 6-month professional program.</p>
                   </li>
                 </ul>
               </div>
@@ -188,7 +198,7 @@ export default function About() {
           </FadeIn>
 
           {/* Live Activity Graph */}
-          <FadeIn delay={800} className="flex-1 min-h-[250px]">
+          <FadeIn delay={800} className="flex-1 min-h-[150px]">
             <ActivityGraph />
           </FadeIn>
 

@@ -37,7 +37,7 @@ export default function ActivityGraph() {
         </div>
       </div>
       
-      <div className="flex items-end justify-between h-32 gap-1.5 w-full relative z-10">
+      <div className="flex items-end justify-between h-20 gap-1.5 w-full relative z-10">
         {bars.map((height, i) => (
           <div key={i} className="w-full bg-white/5 rounded-t-sm relative group overflow-hidden" style={{ height: '100%' }}>
             <div 

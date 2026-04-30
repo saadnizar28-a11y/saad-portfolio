@@ -14,6 +14,15 @@ const nextConfig: NextConfig = {
       },
     ],
   },
+  async redirects() {
+    return [
+      {
+        source: '/category/:path*',
+        destination: '/blog',
+        permanent: true, // 301 redirect
+      },
+    ];
+  },
 };
 
 export default nextConfig;

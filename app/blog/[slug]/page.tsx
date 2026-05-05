@@ -53,7 +53,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     notFound();
   }
 
-  // Generate Article Schema with CTR-Boosting AggregateRating
+  // Generate Article Schema
   const articleSchema = {
     "@context": "https://schema.org",
     "@type": "Article",
@@ -74,13 +74,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
         "url": "https://saadnizar.com/saad-working.jpg"
       }
     },
-    "description": post.metaDescription || post.content.substring(0, 160).replace(/\n/g, ' ') + '...',
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "5.0",
-      "bestRating": "5",
-      "ratingCount": Math.floor(Math.random() * (150 - 45 + 1) + 45).toString() // Generates a realistic rating count between 45 and 150
-    }
+    "description": post.metaDescription || post.content.substring(0, 160).replace(/\n/g, ' ') + '...'
   };
 
   // Formatting content lines into paragraphs

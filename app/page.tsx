@@ -13,6 +13,7 @@ import AmoebaBackground from "@/components/AmoebaBackground";
 import Footer from "@/components/Footer";
 import SocialSidebar from "@/components/SocialSidebar";
 import FloatingRobot from "@/components/FloatingRobot";
+import BlogGrid from "@/components/BlogGrid";
 
 declare global {
   interface Window {
@@ -859,6 +860,8 @@ export default function Home() {
 
       {/* Scattered Spread Testimonials */}
       <TestimonialCarousel />
+
+      <BlogGrid limit={3} title="Latest Insights" />
 
       {/* Deep SEO FAQ Section */}
       <section className="bg-[var(--background)] py-24 px-6 relative z-10">

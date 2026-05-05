@@ -4,6 +4,7 @@ import TechMarquee from "@/components/TechMarquee";
 import HeadingBurst from "@/components/HeadingBurst";
 import PricingSection from "@/components/PricingSection";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
+import BlogGrid from "@/components/BlogGrid";
 
 export const metadata: Metadata = {
   title: "Digital Marketing & Design Services | Saad Nizar",
@@ -119,8 +120,12 @@ export default function Services() {
         {/* SHOP SECTION */}
         <PricingSection />
 
+        <div className="mt-16">
+          <BlogGrid limit={3} title="Latest Insights" />
+        </div>
+
         {/* FAQ Section */}
-        <div className="max-w-4xl mx-auto border-t border-[var(--accent-cyan)]/20 pt-20">
+        <div className="max-w-4xl mx-auto border-t border-[var(--accent-cyan)]/20 pt-20 mt-20">
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">SEO & Services <span className="text-[var(--accent-cyan)]">FAQ</span></h2>
           </FadeIn>

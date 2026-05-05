@@ -5,6 +5,7 @@ import SystemStatus from "@/components/SystemStatus";
 import ActivityGraph from "@/components/ActivityGraph";
 import HeadingBurst from "@/components/HeadingBurst";
 import InteractivePortrait from "@/components/InteractivePortrait";
+import BlogGrid from "@/components/BlogGrid";
 import Image from "next/image";
 
 export const metadata: Metadata = {
@@ -28,11 +29,31 @@ export default function About() {
 
       <div className="max-w-7xl mx-auto relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-12">
 
-        {/* 1. Left Column: 3D Interactive Portrait */}
-        <div className="lg:col-span-4 h-[400px] md:h-[600px] lg:h-auto relative">
-          <FadeIn delay={100} className="w-full h-full">
-            <InteractivePortrait />
-          </FadeIn>
+        {/* 1. Left Column: 3D Interactive Portrait & Location */}
+        <div className="lg:col-span-4 relative flex flex-col gap-6">
+          <FadeIn delay={100} className="w-full aspect-[3/4] md:aspect-auto md:h-[500px]">
+              <InteractivePortrait />
+            </FadeIn>
+            
+            {/* NEW: Added something else to the left side as requested */}
+            <FadeIn delay={200}>
+              <div className="glass-card p-6 rounded-3xl border border-[rgba(255,255,255,0.05)] shadow-xl relative overflow-hidden group hover:border-[var(--accent-violet)]/30 transition-colors">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--accent-violet)]/10 blur-3xl rounded-full" />
+                <div className="relative z-10 flex items-center justify-between">
+                  <div>
+                    <p className="text-[var(--accent-violet)] text-[10px] tracking-widest uppercase font-bold mb-1">Base of Operations</p>
+                    <h3 className="text-xl font-bold text-white tracking-tight">Dubai, UAE</h3>
+                  </div>
+                  <div className="flex items-center gap-2">
+                    <span className="relative flex h-2 w-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10b981] opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-[#10b981]"></span>
+                    </span>
+                    <span className="text-white/60 text-[10px] font-bold tracking-widest uppercase">Available</span>
+                  </div>
+                </div>
+              </div>
+            </FadeIn>
         </div>
 
         {/* 2. Middle Column: Text Narrative */}
@@ -160,53 +181,57 @@ export default function About() {
         <div className="lg:col-span-3 flex flex-col gap-6 pt-6">
 
           <FadeIn delay={300}>
-            <SystemStatus />
-          </FadeIn>
+              <SystemStatus />
+            </FadeIn>
 
-          {/* Stats Box */}
-          <FadeIn delay={400}>
-            <div className="glass-card p-8 rounded-3xl border border-[rgba(255,255,255,0.05)] shadow-xl relative overflow-hidden group hover:border-[var(--accent-cyan)]/30 transition-colors">
-              <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--accent-cyan)]/10 blur-3xl rounded-full" />
-              <div className="grid grid-cols-2 gap-6 relative z-10">
-                <div>
-                  <h4 className="text-4xl font-black text-white tracking-tighter mb-1"><Counter end={50} suffix="+" /></h4>
-                  <p className="text-[var(--accent-cyan)] text-[10px] tracking-widest uppercase font-bold">Projects Built</p>
-                </div>
-                <div>
-                  <h4 className="text-4xl font-black text-white tracking-tighter mb-1"><Counter end={30} suffix="+" /></h4>
-                  <p className="text-[var(--accent-violet)] text-[10px] tracking-widest uppercase font-bold">Happy Clients</p>
-                </div>
-                <div className="col-span-2 border-t border-white/5 pt-6 mt-2">
-                  <h4 className="text-4xl font-black text-white tracking-tighter mb-1"><Counter end={10} prefix="₹" suffix="k" /> <span className="text-xl text-white/30 font-light">to</span> <Counter end={230} suffix="+" /></h4>
-                  <p className="text-[#10b981] text-[10px] tracking-widest uppercase font-bold mt-1">Lead Generation Metrics</p>
+            {/* Stats Box */}
+            <FadeIn delay={400}>
+              <div className="glass-card p-8 rounded-3xl border border-[rgba(255,255,255,0.05)] shadow-xl relative overflow-hidden group hover:border-[var(--accent-cyan)]/30 transition-colors">
+                <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--accent-cyan)]/10 blur-3xl rounded-full" />
+                <div className="grid grid-cols-2 gap-6 relative z-10">
+                  <div>
+                    <h4 className="text-4xl font-black text-white tracking-tighter mb-1"><Counter end={50} suffix="+" /></h4>
+                    <p className="text-[var(--accent-cyan)] text-[10px] tracking-widest uppercase font-bold">Projects Built</p>
+                  </div>
+                  <div>
+                    <h4 className="text-4xl font-black text-white tracking-tighter mb-1"><Counter end={30} suffix="+" /></h4>
+                    <p className="text-[var(--accent-violet)] text-[10px] tracking-widest uppercase font-bold">Happy Clients</p>
+                  </div>
+                  <div className="col-span-2 border-t border-white/5 pt-6 mt-2">
+                    <h4 className="text-4xl font-black text-white tracking-tighter mb-1"><Counter end={10} prefix="₹" suffix="k" /> <span className="text-xl text-white/30 font-light">to</span> <Counter end={230} suffix="+" /></h4>
+                    <p className="text-[#10b981] text-[10px] tracking-widest uppercase font-bold mt-1">Lead Generation Metrics</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </FadeIn>
+            </FadeIn>
 
-          {/* Tools Expertise Box */}
-          <FadeIn delay={600}>
-            <div className="glass-card p-8 rounded-3xl border border-[rgba(255,255,255,0.05)] shadow-xl relative overflow-hidden group hover:border-[var(--accent-pink)]/30 transition-colors">
-              <div className="absolute bottom-0 right-0 w-40 h-40 bg-[var(--accent-pink)]/10 blur-3xl rounded-full" />
-              <h3 className="text-xl font-bold mb-6 text-white relative z-10">Platforms & Stack.</h3>
-              <div className="flex flex-wrap gap-2 relative z-10">
-                {['Meta', 'Google Ads', 'Adobe Photoshop', 'Adobe Illustrator', 'Google Search Console', 'SEMrush', 'Ahrefs', 'Moz Pro', 'Surfer SEO', 'WordPress', 'Claude AI', 'Gemini Pro', 'ChatGPT', 'Antigravity', 'Google Flow'].map(tool => (
-                  <span key={tool} className="text-[10px] font-semibold px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-white/80 hover:bg-[var(--accent-pink)]/20 hover:border-[var(--accent-pink)]/50 transition-colors cursor-default">{tool}</span>
-                ))}
+            {/* Tools Expertise Box */}
+            <FadeIn delay={600}>
+              <div className="glass-card p-8 rounded-3xl border border-[rgba(255,255,255,0.05)] shadow-xl relative overflow-hidden group hover:border-[var(--accent-pink)]/30 transition-colors">
+                <div className="absolute bottom-0 right-0 w-40 h-40 bg-[var(--accent-pink)]/10 blur-3xl rounded-full" />
+                <h3 className="text-xl font-bold mb-6 text-white relative z-10">Platforms & Stack.</h3>
+                <div className="flex flex-wrap gap-2 relative z-10">
+                  {['Meta', 'Google Ads', 'Adobe Photoshop', 'Adobe Illustrator', 'Google Search Console', 'SEMrush', 'Ahrefs', 'Moz Pro', 'Surfer SEO', 'WordPress', 'Claude AI', 'Gemini Pro', 'ChatGPT', 'Antigravity', 'Google Flow'].map(tool => (
+                    <span key={tool} className="text-[10px] font-semibold px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-white/80 hover:bg-[var(--accent-pink)]/20 hover:border-[var(--accent-pink)]/50 transition-colors cursor-default">{tool}</span>
+                  ))}
+                </div>
               </div>
-            </div>
-          </FadeIn>
+            </FadeIn>
 
-          {/* Live Activity Graph */}
-          <FadeIn delay={800} className="flex-1 min-h-[150px]">
-            <ActivityGraph />
-          </FadeIn>
+            {/* Live Activity Graph */}
+            <FadeIn delay={800} className="w-full">
+              <ActivityGraph />
+            </FadeIn>
 
-        </div>
+          </div>
+      </div>
+
+      <div className="mt-16">
+        <BlogGrid limit={3} title="Latest Insights" />
       </div>
 
       {/* Deep SEO FAQ Section */}
-      <div className="max-w-4xl mx-auto px-6 mt-32 mb-20 relative z-10">
+      <div className="max-w-4xl mx-auto px-6 mt-20 mb-20 relative z-10">
         <div className="border-t border-[var(--accent-cyan)]/20 pt-20">
           <FadeIn>
             <h2 className="text-4xl md:text-5xl font-bold mb-12 text-center">About Saad <span className="text-[var(--accent-cyan)]">FAQ</span></h2>

@@ -157,6 +157,17 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
               );
             })}
           </article>
+
+          {/* Minimal EEAT Author Box */}
+          <div className="mt-16 pt-8 border-t border-white/5 flex items-center gap-4 opacity-40 hover:opacity-100 transition-opacity duration-500 relative z-10">
+            <div className="w-10 h-10 rounded-full overflow-hidden shrink-0 relative filter grayscale opacity-80">
+              <Image src="/saad.png" alt="Saad Nizar" fill className="object-cover object-top" />
+            </div>
+            <div>
+              <p className="text-xs text-white font-bold tracking-widest uppercase mb-0.5">Written by Saad Nizar</p>
+              <p className="text-[10px] text-white/50 tracking-wider">Digital Marketing Strategist & Graphic Designer (GCC)</p>
+            </div>
+          </div>
         </FadeIn>
 
         {post.conclusion && (

@@ -430,7 +430,6 @@ export default function Home() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[50vw] h-[50vh] bg-[var(--accent-purple)]/5 blur-[150px] pointer-events-none rounded-full" />
         
         <div className="max-w-6xl mx-auto relative z-10 py-10">
-          <FadeIn delay={100}>
             <div className="relative inline-block w-full md:text-center mt-10">
               <span className="block mb-10 tracking-[0.3em] text-xs font-bold uppercase text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-cyan)] via-[var(--accent-violet)] to-[var(--accent-pink)] drop-shadow-[0_0_10px_rgba(142,45,226,0.3)]">
                 Waura Marketing & Design Studio
@@ -448,7 +447,6 @@ export default function Home() {
                 </span>
               </h1>
             </div>
-          </FadeIn>
           
           <FadeIn delay={300}>
             <div className="flex flex-col items-center justify-center space-y-8 mt-20 mb-24 relative">

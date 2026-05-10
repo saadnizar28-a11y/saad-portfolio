@@ -26,34 +26,47 @@ let hoverAudio: HTMLAudioElement | null = null;
 let windAudio: HTMLAudioElement | null = null;
 let isWindPlaying = false;
 
-if (typeof window !== 'undefined') {
-  hoverAudio = new Audio('/hover.mp3');
-  hoverAudio.volume = 0.5;
-  
-  windAudio = new Audio('/wind.mp3');
-  windAudio.loop = true;
-  windAudio.volume = 0;
-}
+const getHoverAudio = () => {
+  if (typeof window === 'undefined') return null;
+  if (!hoverAudio) {
+    hoverAudio = new Audio('/hover.mp3');
+    hoverAudio.volume = 0.5;
+  }
+  return hoverAudio;
+};
+
+const getWindAudio = () => {
+  if (typeof window === 'undefined') return null;
+  if (!windAudio) {
+    windAudio = new Audio('/wind.mp3');
+    windAudio.loop = true;
+    windAudio.volume = 0;
+  }
+  return windAudio;
+};
 
 const playTechHover = () => {
-  if (hoverAudio) {
-    hoverAudio.currentTime = 0;
-    hoverAudio.play().catch(() => {});
+  const audio = getHoverAudio();
+  if (audio) {
+    audio.currentTime = 0;
+    audio.play().catch(() => {});
   }
 };
 
 const stopTechHover = () => {
-  if (hoverAudio) {
-    hoverAudio.pause();
+  const audio = getHoverAudio();
+  if (audio) {
+    audio.pause();
   }
 };
 
 const startAmbientWind = () => {
-  if (isWindPlaying || !windAudio) return;
+  const audio = getWindAudio();
+  if (isWindPlaying || !audio) return;
   isWindPlaying = true;
-  windAudio.play().catch(() => { isWindPlaying = false; });
+  audio.play().catch(() => { isWindPlaying = false; });
   
-  let vol = windAudio.volume;
+  let vol = audio.volume;
   const fade = setInterval(() => {
     vol += 0.05;
     if (vol >= 0.4) {

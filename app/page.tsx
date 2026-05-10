@@ -282,7 +282,7 @@ export default function Home() {
         <div className="absolute top-[85%] left-[15%] w-[4px] h-[4px] rounded-full bg-[var(--accent-violet)] tiny-star" style={{ animationDelay: '6s' }} />
       </div>
 
-      <div style={{ height: "300vh", background: "#050505" }}>
+      <div className="hidden md:block" style={{ height: "300vh", background: "#050505" }}>
         <canvas
           ref={canvasRef}
           style={{
@@ -302,8 +302,7 @@ export default function Home() {
 
       {/* Main Home Content Below Intro */}
       <section 
-        className="min-h-screen bg-transparent flex flex-col items-center justify-center text-center px-6 py-32 relative z-10 w-full"
-        style={{ marginTop: "-30vh", paddingTop: "30vh" }}
+        className="min-h-screen bg-transparent flex flex-col items-center justify-center text-center px-6 pb-32 relative z-10 w-full md:-mt-[30vh] md:pt-[30vh] mt-8 pt-24"
       >
         
         {/* Floating 3D Social Planets with Interactive HUD */}

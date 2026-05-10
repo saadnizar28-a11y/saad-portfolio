@@ -190,7 +190,12 @@ export default function Home() {
     window.addEventListener("resize", handleResize);
 
     images[0].onload = () => {
-      animationFrameId = window.requestAnimationFrame(render);
+      // Defer auto-start if onload fires late
+      setTimeout(() => {
+        if (!animationFrameId) {
+          animationFrameId = window.requestAnimationFrame(render);
+        }
+      }, 3000);
     };
 
     // Unlock audio on first interaction
@@ -242,13 +247,16 @@ export default function Home() {
 
     window.addEventListener("scroll", handleScroll, { passive: true });
     
-    if (images[0]?.complete) {
-      animationFrameId = window.requestAnimationFrame(render);
-    }
+    const startTimeout = setTimeout(() => {
+      if (images[0]?.complete) {
+        animationFrameId = window.requestAnimationFrame(render);
+      }
+    }, 3000);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       window.removeEventListener("resize", handleResize);
+      clearTimeout(startTimeout);
       window.cancelAnimationFrame(animationFrameId);
     };
   }, [images]);

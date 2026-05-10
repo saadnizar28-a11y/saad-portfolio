@@ -184,13 +184,16 @@ export default function AmoebaBackground() {
     window.addEventListener("mousemove", handleMouseMove);
     window.addEventListener("touchmove", handleTouchMove, { passive: true });
 
-    resize();
-    draw();
+    const startTimeout = setTimeout(() => {
+      resize();
+      draw();
+    }, 3000);
 
     return () => {
       window.removeEventListener("resize", resize);
       window.removeEventListener("mousemove", handleMouseMove);
       window.removeEventListener("touchmove", handleTouchMove);
+      clearTimeout(startTimeout);
       cancelAnimationFrame(animationFrameId);
     };
   }, []);

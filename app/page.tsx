@@ -504,7 +504,6 @@ export default function Home() {
       {/* Short About Section / Container */}
       <section className="bg-[var(--background)] py-16 px-6 relative z-10 w-full overflow-hidden">
         <div className="max-w-6xl mx-auto">
-          <FadeIn delay={100}>
             <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 relative overflow-hidden">
               
               {/* Deep Blue Ambient Glow */}
@@ -538,7 +537,6 @@ export default function Home() {
                 </Link>
               </div>
             </div>
-          </FadeIn>
         </div>
       </section>
 

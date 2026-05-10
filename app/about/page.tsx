@@ -190,15 +190,15 @@ export default function About() {
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--accent-cyan)]/10 blur-3xl rounded-full" />
                 <div className="grid grid-cols-2 gap-6 relative z-10">
                   <div>
-                    <h4 className="text-4xl font-black text-white tracking-tighter mb-1"><Counter end={50} suffix="+" /></h4>
+                    <div className="text-4xl font-black text-white tracking-tighter mb-1"><Counter end={50} suffix="+" /></div>
                     <p className="text-[var(--accent-cyan)] text-[10px] tracking-widest uppercase font-bold">Projects Built</p>
                   </div>
                   <div>
-                    <h4 className="text-4xl font-black text-white tracking-tighter mb-1"><Counter end={30} suffix="+" /></h4>
+                    <div className="text-4xl font-black text-white tracking-tighter mb-1"><Counter end={30} suffix="+" /></div>
                     <p className="text-[var(--accent-violet)] text-[10px] tracking-widest uppercase font-bold">Happy Clients</p>
                   </div>
                   <div className="col-span-2 border-t border-white/5 pt-6 mt-2">
-                    <h4 className="text-4xl font-black text-white tracking-tighter mb-1"><Counter end={10} prefix="₹" suffix="k" /> <span className="text-xl text-white/30 font-light">to</span> <Counter end={230} suffix="+" /></h4>
+                    <div className="text-4xl font-black text-white tracking-tighter mb-1"><Counter end={10} prefix="₹" suffix="k" /> <span className="text-xl text-white/30 font-light">to</span> <Counter end={230} suffix="+" /></div>
                     <p className="text-[#10b981] text-[10px] tracking-widest uppercase font-bold mt-1">Lead Generation Metrics</p>
                   </div>
                 </div>

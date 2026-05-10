@@ -499,7 +499,7 @@ export default function Home() {
               {/* Portrait Box */}
               <div className="w-full md:w-[40%] relative">
                 <div className="relative overflow-hidden aspect-[4/5] group">
-                  <Image src="/saad-new.png" alt="Saad Nizar" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 40vw" priority unoptimized />
+                  <Image src="/saad-new.png" alt="Saad Nizar" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 40vw" priority />
                   <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90" />
                   <div className="absolute bottom-0 left-0 p-8 z-20">
                     <div className="text-[var(--accent-cyan)] font-bold tracking-widest text-[10px] uppercase mb-1">Founder / Strategist</div>
@@ -536,15 +536,15 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-[rgba(255,255,255,0.05)]">
             <FadeIn delay={100} className="py-4">
-              <h4 className="text-5xl font-black text-white tracking-tighter mb-2"><Counter end={50} suffix="+" /></h4>
+              <div className="text-5xl font-black text-white tracking-tighter mb-2"><Counter end={50} suffix="+" /></div>
               <p className="text-[var(--accent-cyan)] text-sm tracking-widest uppercase font-bold">Projects Built</p>
             </FadeIn>
             <FadeIn delay={300} className="py-4">
-              <h4 className="text-5xl font-black text-white tracking-tighter mb-2"><Counter end={30} suffix="+" /></h4>
+              <div className="text-5xl font-black text-white tracking-tighter mb-2"><Counter end={30} suffix="+" /></div>
               <p className="text-[var(--accent-violet)] text-sm tracking-widest uppercase font-bold">Happy Clients</p>
             </FadeIn>
             <FadeIn delay={500} className="py-4">
-              <h4 className="text-5xl font-black text-white tracking-tighter mb-2"><Counter end={100} suffix="%" /></h4>
+              <div className="text-5xl font-black text-white tracking-tighter mb-2"><Counter end={100} suffix="%" /></div>
               <p className="text-[var(--accent-pink)] text-sm tracking-widest uppercase font-bold">Positive Feedback</p>
             </FadeIn>
           </div>
@@ -851,7 +851,7 @@ export default function Home() {
                   <div className={`w-12 h-12 rounded-full mb-6 bg-[var(--accent-${feature.color})]/10 border border-[var(--accent-${feature.color})]/30 flex items-center justify-center text-[var(--accent-${feature.color})] drop-shadow-[0_0_10px_var(--accent-${feature.color})] font-bold text-xl`}>
                     0{i+1}
                   </div>
-                  <h4 className="text-xl font-bold mb-4">{feature.title}</h4>
+                  <div className="text-xl font-bold mb-4">{feature.title}</div>
                   <p className="text-white/40 text-sm leading-relaxed">{feature.text}</p>
                 </div>
               </FadeIn>

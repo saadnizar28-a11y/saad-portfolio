@@ -106,7 +106,7 @@ export default function PricingSection() {
                   
                   <div className="flex-1 relative z-10">
                     <p className="text-xs font-black text-[var(--accent-pink)] tracking-widest uppercase mb-4">{pkg.title}</p>
-                    <h4 className="text-5xl font-black text-white mb-2 tracking-tighter drop-shadow-md">{pkg.followers}</h4>
+                    <div className="text-5xl font-black text-white mb-2 tracking-tighter drop-shadow-md">{pkg.followers}</div>
                     <p className="text-sm font-medium text-white/40 mb-8">Active Followers</p>
                     
                     <div className="space-y-4 mb-8">
@@ -175,7 +175,7 @@ export default function PricingSection() {
                   
                   <div className="flex-1 relative z-10">
                     <p className="text-xs font-black text-[var(--accent-cyan)] tracking-widest uppercase mb-4">{pkg.title}</p>
-                    <h4 className="text-5xl font-black text-white mb-2 tracking-tighter drop-shadow-md">{pkg.followers}</h4>
+                    <div className="text-5xl font-black text-white mb-2 tracking-tighter drop-shadow-md">{pkg.followers}</div>
                     <p className="text-sm font-medium text-white/30 mb-8">Followers</p>
                     
                     <div className="space-y-4 mb-8">

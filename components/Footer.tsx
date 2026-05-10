@@ -25,7 +25,7 @@ export default function Footer() {
 
             {/* Links */}
             <div>
-              <h4 className="text-[var(--accent-pink)] font-semibold tracking-widest text-xs uppercase mb-6 drop-shadow-[0_0_10px_rgba(217,76,241,0.5)]">Navigation</h4>
+              <h3 className="text-[var(--accent-pink)] font-semibold tracking-widest text-xs uppercase mb-6 drop-shadow-[0_0_10px_rgba(217,76,241,0.5)]">Navigation</h3>
               <ul className="space-y-4">
                 {['Home', 'About', 'Services', 'Work', 'Blog', 'Contact'].map((item) => (
                   <li key={item}>
@@ -39,7 +39,7 @@ export default function Footer() {
 
             {/* Socials */}
             <div>
-              <h4 className="text-[var(--accent-cyan)] font-semibold tracking-widest text-xs uppercase mb-6 drop-shadow-[0_0_10px_rgba(0,210,255,0.5)]">Connect</h4>
+              <h3 className="text-[var(--accent-cyan)] font-semibold tracking-widest text-xs uppercase mb-6 drop-shadow-[0_0_10px_rgba(0,210,255,0.5)]">Connect</h3>
               <ul className="space-y-4">
                 {['Twitter', 'LinkedIn', 'Instagram', 'Dribbble'].map((social) => (
                   <li key={social}>

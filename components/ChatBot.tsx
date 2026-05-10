@@ -146,6 +146,7 @@ export default function ChatBot() {
 
         <button 
           onClick={toggleChat}
+          aria-label={isOpen ? "Close Chat" : "Open Chat"}
           className="w-14 h-14 rounded-full bg-[var(--accent-cyan)] shadow-[0_0_30px_rgba(0,210,255,0.4)] flex items-center justify-center hover:scale-110 transition-transform duration-300 relative group"
         >
           {/* Pulsing glow indicator (no hard borders) */}
@@ -226,6 +227,7 @@ export default function ChatBot() {
             />
             <button 
               type="submit"
+              aria-label="Send message"
               disabled={isLoading}
               className="absolute right-2 top-1/2 -translate-y-1/2 w-8 h-8 rounded-full bg-[var(--accent-cyan)] flex items-center justify-center text-black hover:scale-110 transition-transform disabled:opacity-50 disabled:hover:scale-100"
             >

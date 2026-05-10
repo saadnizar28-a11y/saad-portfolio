@@ -108,7 +108,7 @@ export default function TestimonialCarousel() {
                       </div>
                     )}
                     <div className="flex flex-col">
-                      <h5 className="font-semibold text-white/90 text-[15px]">{review.name}</h5>
+                      <div className="font-semibold text-white/90 text-[15px]">{review.name}</div>
                       <div className="flex items-center gap-2">
                          <span className="text-white/50 text-[13px]">{review.time}</span>
                       </div>

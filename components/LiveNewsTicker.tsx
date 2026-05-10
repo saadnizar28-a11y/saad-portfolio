@@ -83,7 +83,7 @@ export default function LiveNewsTicker({ mini = false }: { mini?: boolean }) {
             <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#10b981] opacity-60"></span>
             <span className="relative inline-flex rounded-full h-3.5 w-3.5 bg-[#10b981] shadow-[0_0_12px_#10b981]"></span>
           </span>
-          <h3 className={`${mini ? 'text-sm' : 'text-xl'} font-bold tracking-tight text-white m-0`}>Live Updates</h3>
+          <h2 className={`${mini ? 'text-sm' : 'text-xl'} font-bold tracking-tight text-white m-0`}>Live Updates</h2>
         </div>
         <div className={`text-[8px] tracking-[0.2em] text-[#10b981] uppercase font-bold bg-[#10b981]/10 rounded-md border border-[#10b981]/20 ${mini ? 'px-2 py-1' : 'px-3 py-1.5'}`}>
           Syncing...
@@ -111,7 +111,7 @@ export default function LiveNewsTicker({ mini = false }: { mini?: boolean }) {
                 <div className={`${mini ? 'text-2xl' : 'text-3xl'} shrink-0 leading-none drop-shadow-md`}>{item.flag}</div>
                 <div className="flex flex-col gap-1 w-full">
                    <div className="flex justify-between items-start gap-2">
-                     <h4 className={`${mini ? 'text-[12px]' : 'text-[13px] md:text-sm'} font-bold text-white/90 leading-snug line-clamp-1`}>{item.title}</h4>
+                     <div className={`${mini ? 'text-[12px]' : 'text-[13px] md:text-sm'} font-bold text-white/90 leading-snug line-clamp-1`}>{item.title}</div>
                      <span className={`whitespace-nowrap text-[var(--accent-cyan)] font-mono shrink-0 font-bold bg-[var(--accent-cyan)]/10 rounded tracking-wider ${mini ? 'text-[8px] px-1.5 py-0.5' : 'text-[10px] px-2 py-0.5'}`}>
                        {item.timeAgo}s
                      </span>

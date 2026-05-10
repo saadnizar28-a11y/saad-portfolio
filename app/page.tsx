@@ -491,33 +491,35 @@ export default function Home() {
       <section className="bg-[var(--background)] py-16 px-6 relative z-10 w-full overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <FadeIn delay={100}>
-            <div className="glass-card rounded-[2.5rem] p-8 md:p-12 flex flex-col md:flex-row items-center gap-12 group hover:border-[var(--accent-cyan)]/30 transition-colors relative overflow-hidden backdrop-blur-xl">
-              <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--accent-cyan)]/5 blur-[100px] rounded-full pointer-events-none" />
+            <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 relative overflow-hidden">
               
+              {/* Deep Blue Ambient Glow */}
+              <div className="absolute top-1/2 right-1/4 -translate-y-1/2 w-[40%] h-[60%] bg-blue-500/10 blur-[120px] rounded-full pointer-events-none" />
+
               {/* Portrait Box */}
-              <div className="w-full md:w-1/3 relative perspective-[1000px]">
-                <div className="relative rounded-[2rem] overflow-hidden border border-white/5 shadow-2xl group-hover:rotate-y-[5deg] group-hover:rotate-x-[5deg] transition-all duration-700 aspect-[3/4]">
-                  <Image src="/saad.png" alt="Saad Nizar" fill className="object-cover object-top filter contrast-110 group-hover:scale-105 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 33vw" priority />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80" />
-                  <div className="absolute bottom-0 left-0 p-6 z-20">
-                    <div className="text-[var(--accent-cyan)] font-bold tracking-widest text-[10px] uppercase mb-1 drop-shadow-md">Founder / Strategist</div>
-                    <h3 className="text-3xl font-bold text-white tracking-tighter drop-shadow-lg">Saad Nizar</h3>
+              <div className="w-full md:w-[40%] relative">
+                <div className="relative overflow-hidden aspect-[4/5] group">
+                  <Image src="/saad-new.png" alt="Saad Nizar" fill className="object-cover object-center group-hover:scale-105 transition-transform duration-700" sizes="(max-width: 768px) 100vw, 40vw" priority unoptimized />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-90" />
+                  <div className="absolute bottom-0 left-0 p-8 z-20">
+                    <div className="text-[var(--accent-cyan)] font-bold tracking-widest text-[10px] uppercase mb-1">Founder / Strategist</div>
+                    <h3 className="text-3xl md:text-4xl font-bold text-white tracking-tighter">Saad Nizar</h3>
                   </div>
                 </div>
               </div>
 
               {/* Text Content */}
-              <div className="w-full md:w-2/3 relative z-10">
-                <div className="text-[var(--accent-cyan)] font-bold tracking-widest text-xs uppercase mb-4 bg-[var(--accent-cyan)]/10 inline-block px-3 py-1 rounded-full border border-[var(--accent-cyan)]/20 shadow-[0_0_10px_rgba(0,240,255,0.1)]">
+              <div className="w-full md:w-[60%] relative z-10 flex flex-col items-start md:pl-6">
+                <div className="text-[var(--accent-cyan)] font-bold tracking-widest text-[10px] uppercase mb-6 inline-flex px-4 py-1.5 rounded-full border border-[var(--accent-cyan)]/30 bg-[var(--accent-cyan)]/5">
                   About Me
                 </div>
-                <h2 className="text-4xl md:text-5xl font-bold mb-6 tracking-tight leading-[1.1]">
-                  Strategy. Design. <br className="hidden md:block"/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-cyan)] to-[var(--accent-violet)]">Execution.</span>
+                <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 tracking-tight leading-[1.1] text-white">
+                  Strategy. Design. <br className="hidden md:block"/> <span className="text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-cyan)] to-blue-600">Execution.</span>
                 </h2>
-                <p className="text-white/60 text-lg leading-relaxed mb-8 max-w-2xl font-light">
+                <p className="text-[#a0a0a0] text-base md:text-lg leading-relaxed mb-10 max-w-xl font-light relative z-10">
                   I don&apos;t believe in random design. From sales floors to digital spaces, I combine high-level strategy with cinematic aesthetics to orchestrate systems that don&apos;t just look pretty—they systematically convert attention into action and drive real business growth.
                 </p>
-                <Link href="/about" className="inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-white tracking-[0.1em] uppercase transition-all duration-300 border border-[var(--accent-cyan)]/50 hover:bg-[var(--accent-cyan)]/10 hover:shadow-[0_0_30px_rgba(0,240,255,0.2)]">
+                <Link href="/about" className="inline-flex items-center justify-center px-8 py-3.5 rounded-full font-bold text-white tracking-widest text-xs uppercase transition-all duration-300 border border-white/10 hover:border-white/30 hover:bg-white/5 relative z-10">
                   See More <span className="ml-2 group-hover:translate-x-1 transition-transform">→</span>
                 </Link>
               </div>

@@ -107,6 +107,9 @@ export default function Home() {
   const totalFrames = 8;
 
   useEffect(() => {
+    // Disable heavy image sequence on mobile to massively improve LCP
+    if (window.innerWidth < 768) return;
+
     const loadedImages: HTMLImageElement[] = [];
 
     for (let i = 0; i < totalFrames; i++) {

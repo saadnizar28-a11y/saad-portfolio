@@ -101,7 +101,7 @@ export default function PricingSection() {
                 whileHover={{ scale: 1.05, y: -10 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="w-full backdrop-blur-2xl bg-white/[0.03] p-8 rounded-3xl group border border-white/10 hover:border-[var(--accent-pink)]/50 transition-all duration-300 flex flex-col relative overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(236,72,153,0.15)]">
+                <div className="w-full backdrop-blur-2xl bg-white/[0.03] p-8 rounded-2xl group border border-white/10 hover:border-[var(--accent-pink)]/50 transition-all duration-300 flex flex-col relative overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.3)] hover:shadow-[0_20px_50px_rgba(236,72,153,0.15)]">
                   <div className="absolute -top-10 -right-10 w-40 h-40 bg-[var(--accent-pink)]/20 blur-[50px] rounded-full pointer-events-none group-hover:bg-[var(--accent-pink)]/30 transition-colors" />
                   
                   <div className="flex-1 relative z-10">
@@ -170,7 +170,7 @@ export default function PricingSection() {
                 whileHover={{ scale: 1.05, y: -10 }}
                 transition={{ duration: 0.3 }}
               >
-                <div className="w-full backdrop-blur-2xl bg-white/[0.02] p-8 rounded-3xl group border border-white/5 hover:border-[var(--accent-cyan)]/40 transition-all duration-300 flex flex-col relative overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_50px_rgba(0,240,255,0.1)]">
+                <div className="w-full backdrop-blur-2xl bg-white/[0.02] p-8 rounded-2xl group border border-white/5 hover:border-[var(--accent-cyan)]/40 transition-all duration-300 flex flex-col relative overflow-hidden shadow-[0_8px_32px_rgba(0,0,0,0.2)] hover:shadow-[0_20px_50px_rgba(0,240,255,0.1)]">
                   <div className="absolute -top-10 -right-10 w-40 h-40 bg-[var(--accent-cyan)]/10 blur-[50px] rounded-full pointer-events-none group-hover:bg-[var(--accent-cyan)]/20 transition-colors" />
                   
                   <div className="flex-1 relative z-10">

@@ -37,7 +37,7 @@ export default function BlogGrid({ limit = 3, title = "Latest Insights" }: BlogG
           {displayBlogs.map((blog, idx) => (
             <FadeIn delay={100 + idx * 100} key={blog.slug} className="h-[400px]">
               <Link href={`/blog/${blog.slug}`} className="block w-full h-full">
-                <div className="glass-card w-full h-full rounded-[2rem] p-0 relative overflow-hidden group cursor-pointer border border-white/5 hover:border-[var(--accent-cyan)]/40 hover:shadow-[0_0_30px_rgba(0,210,255,0.15)] transition-all flex flex-col justify-end">
+                <div className="glass-card w-full h-full rounded-2xl p-0 relative overflow-hidden group cursor-pointer border border-white/5 hover:border-[var(--accent-cyan)]/40 hover:shadow-[0_0_30px_rgba(0,210,255,0.15)] transition-all flex flex-col justify-end">
                   
                   {/* Background Image layer */}
                   <Image 

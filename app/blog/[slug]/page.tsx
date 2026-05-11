@@ -125,7 +125,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           </FadeIn>
         )}
 
-        <FadeIn delay={300} className="glass-card rounded-[2.5rem] p-8 md:p-16 border border-white/5 relative overflow-hidden">
+        <FadeIn delay={300} className="glass-card rounded-2xl p-8 md:p-16 border border-white/5 relative overflow-hidden">
           {/* Subtle inner card glow */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-[var(--accent-cyan)]/5 rounded-full blur-[100px]" />
           
@@ -166,7 +166,7 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
         {post.conclusion && (
           <FadeIn delay={400} className="mt-16 relative">
-            <div className="glass-card bg-gradient-to-br from-[var(--accent-pink)]/10 to-transparent rounded-[2rem] p-8 md:p-12 border border-[var(--accent-pink)]/20 shadow-[0_0_30px_rgba(255,0,255,0.05)]">
+            <div className="glass-card bg-gradient-to-br from-[var(--accent-pink)]/10 to-transparent rounded-2xl p-8 md:p-12 border border-[var(--accent-pink)]/20 shadow-[0_0_30px_rgba(255,0,255,0.05)]">
               <h3 className="text-sm font-bold tracking-widest text-[var(--accent-pink)] uppercase mb-6 flex items-center gap-3">
                 <span className="w-8 h-[1px] bg-[var(--accent-pink)] block"></span>
                 Final Thoughts

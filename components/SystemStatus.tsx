@@ -13,7 +13,7 @@ export default function SystemStatus() {
   }, []);
 
   return (
-    <div className="inline-flex items-center justify-between px-6 py-3.5 rounded-[2rem] bg-[#070707] border border-[#1f1f1f] shadow-[0_8px_30px_rgba(0,0,0,0.8)] backdrop-blur-xl">
+    <div className="inline-flex items-center justify-between px-6 py-3.5 rounded-2xl bg-[#070707] border border-[#1f1f1f] shadow-[0_8px_30px_rgba(0,0,0,0.8)] backdrop-blur-xl">
       
       {/* Node 1: Status */}
       <div className="flex items-center gap-3.5 mr-8">

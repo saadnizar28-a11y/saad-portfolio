@@ -22,7 +22,7 @@ export default function ActivityGraph() {
   }, []);
 
   return (
-    <div className="glass-card p-6 rounded-3xl border border-[rgba(255,255,255,0.05)] shadow-xl relative overflow-hidden group hover:border-[var(--accent-cyan)]/30 transition-colors h-full flex flex-col justify-between">
+    <div className="glass-card p-6 rounded-2xl border border-[rgba(255,255,255,0.05)] shadow-xl relative overflow-hidden group hover:border-[var(--accent-cyan)]/30 transition-colors h-full flex flex-col justify-between">
       <div className="flex justify-between items-end w-full mb-6 relative z-10">
         <div>
           <h3 className="text-xl font-bold text-white tracking-tight">Live Velocity</h3>

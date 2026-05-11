@@ -4,7 +4,7 @@ import { useEffect, useRef, useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
-import Marquee from "@/components/Marquee";
+import ServicesMarquee from "@/components/ServicesMarquee";
 import Counter from "@/components/Counter";
 import SkillBar from "@/components/SkillBar";
 import HeadingBurst from "@/components/HeadingBurst";
@@ -547,28 +547,8 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Marquee Section */}
-      <Marquee />
-
-      {/* High-Impact Stats Bar */}
-      <section className="bg-black/50 border-y border-[rgba(255,255,255,0.02)] relative z-10 w-full overflow-hidden py-10">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center divide-y md:divide-y-0 md:divide-x divide-[rgba(255,255,255,0.05)]">
-            <FadeIn delay={100} className="py-4">
-              <div className="text-5xl font-black text-white tracking-tighter mb-2"><Counter end={50} suffix="+" /></div>
-              <p className="text-[var(--accent-cyan)] text-sm tracking-widest uppercase font-bold">Projects Built</p>
-            </FadeIn>
-            <FadeIn delay={300} className="py-4">
-              <div className="text-5xl font-black text-white tracking-tighter mb-2"><Counter end={30} suffix="+" /></div>
-              <p className="text-[var(--accent-violet)] text-sm tracking-widest uppercase font-bold">Happy Clients</p>
-            </FadeIn>
-            <FadeIn delay={500} className="py-4">
-              <div className="text-5xl font-black text-white tracking-tighter mb-2"><Counter end={100} suffix="%" /></div>
-              <p className="text-[var(--accent-pink)] text-sm tracking-widest uppercase font-bold">Positive Feedback</p>
-            </FadeIn>
-          </div>
-        </div>
-      </section>
+      {/* New Sleek Marquee & Stats Section */}
+      <ServicesMarquee />
 
       {/* Premium Apple / Stripe Bento Box Grid */}
       <section className="bg-[var(--background)] pt-32 pb-20 px-6 relative z-10 w-full overflow-hidden">
@@ -587,7 +567,7 @@ export default function Home() {
             
             {/* Bento Block 1: About */}
             <FadeIn delay={100} className="md:col-span-1">
-              <div className="glass-card h-full rounded-[2.5rem] p-10 flex flex-col justify-between group hover:border-[var(--accent-violet)]/40 transition-colors relative overflow-hidden">
+              <div className="glass-card h-full rounded-2xl p-10 flex flex-col justify-between group hover:border-[var(--accent-violet)]/40 transition-colors relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--accent-violet)]/10 blur-3xl rounded-full" />
                 <div>
                   <div className="text-[var(--accent-violet)] font-bold tracking-widest text-xs uppercase mb-6 bg-[var(--accent-violet)]/10 inline-block px-3 py-1 rounded-full border border-[var(--accent-violet)]/20">The Creator</div>
@@ -602,7 +582,7 @@ export default function Home() {
 
             {/* Bento Block 2: Services Overview */}
             <FadeIn delay={300} className="md:col-span-2">
-              <div className="glass-card h-full rounded-[2.5rem] p-10 group hover:border-[var(--accent-pink)]/40 transition-colors relative overflow-hidden flex flex-col md:flex-row gap-8">
+              <div className="glass-card h-full rounded-2xl p-10 group hover:border-[var(--accent-pink)]/40 transition-colors relative overflow-hidden flex flex-col md:flex-row gap-8">
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-[var(--accent-pink)]/5 blur-3xl rounded-full" />
                 <div className="w-full md:w-1/2 flex flex-col justify-between">
                   <div>
@@ -632,7 +612,7 @@ export default function Home() {
 
             {/* NEW: Lead Generation Case Study Block (Now Half Size) */}
             <FadeIn delay={200} className="md:col-span-1">
-              <div className="glass-card h-full rounded-[2.5rem] p-10 group hover:border-[#10b981]/40 transition-colors relative overflow-hidden bg-gradient-to-b from-[rgba(20,20,25,0.8)] to-[#10b981]/10">
+              <div className="glass-card h-full rounded-2xl p-10 group hover:border-[#10b981]/40 transition-colors relative overflow-hidden bg-gradient-to-b from-[rgba(20,20,25,0.8)] to-[#10b981]/10">
                 <div className="absolute top-0 right-0 w-full h-[50%] bg-[#10b981]/5 blur-3xl pointer-events-none" />
                 
                 <div className="flex flex-col justify-between relative z-10 w-full h-full gap-8">
@@ -658,7 +638,7 @@ export default function Home() {
 
             {/* NEW: Growth Shop CTA Block (Taking the other half) */}
             <FadeIn delay={300} className="md:col-span-1">
-              <div className="glass-card h-full rounded-[2.5rem] p-10 group hover:border-[var(--accent-pink)]/40 hover:shadow-[0_0_40px_rgba(236,72,153,0.15)] transition-all relative overflow-hidden flex flex-col justify-between bg-gradient-to-b from-[rgba(20,20,25,0.6)] to-[rgba(236,72,153,0.05)]">
+              <div className="glass-card h-full rounded-2xl p-10 group hover:border-[var(--accent-pink)]/40 hover:shadow-[0_0_40px_rgba(236,72,153,0.15)] transition-all relative overflow-hidden flex flex-col justify-between bg-gradient-to-b from-[rgba(20,20,25,0.6)] to-[rgba(236,72,153,0.05)]">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[var(--accent-pink)]/10 blur-[80px] rounded-full pointer-events-none group-hover:bg-[var(--accent-pink)]/20 transition-all duration-700" />
                 
                 <div className="relative z-10">
@@ -680,7 +660,7 @@ export default function Home() {
 
             {/* NEW: Tools Expertise Block */}
             <FadeIn delay={400} className="md:col-span-1">
-              <div className="glass-card h-full rounded-[2.5rem] p-10 group hover:border-[var(--accent-blue)]/40 transition-colors relative overflow-hidden flex flex-col justify-center">
+              <div className="glass-card h-full rounded-2xl p-10 group hover:border-[var(--accent-blue)]/40 transition-colors relative overflow-hidden flex flex-col justify-center">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--accent-blue)]/10 blur-3xl rounded-full" />
                 <div className="text-[var(--accent-cyan)] font-bold tracking-widest text-[10px] uppercase mb-4 bg-[var(--accent-cyan)]/10 inline-block px-3 py-1 rounded-full border border-[var(--accent-cyan)]/20 place-self-start">Platforms & Stack</div>
                 <h3 className="text-2xl font-bold mb-6">Expertise.</h3>
@@ -694,7 +674,7 @@ export default function Home() {
 
             {/* NEW: Branding Gallery Showcase Block */}
             <FadeIn delay={400} className="md:col-span-3">
-              <div className="glass-card h-full min-h-[400px] rounded-[2.5rem] p-10 group hover:border-[var(--accent-violet)]/40 hover:shadow-[0_0_40px_rgba(142,45,226,0.1)] transition-all bg-gradient-to-br from-[rgba(20,20,25,0.4)] to-[rgba(142,45,226,0.05)] relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
+              <div className="glass-card h-full min-h-[400px] rounded-2xl p-10 group hover:border-[var(--accent-violet)]/40 hover:shadow-[0_0_40px_rgba(142,45,226,0.1)] transition-all bg-gradient-to-br from-[rgba(20,20,25,0.4)] to-[rgba(142,45,226,0.05)] relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
                 <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-[var(--accent-violet)]/10 blur-3xl rounded-full pointer-events-none" />
                 
                 {/* Left: Text Content */}
@@ -728,7 +708,7 @@ export default function Home() {
 
             {/* Bento Block 3: Prompt Gallery / Work showcase */}
             <FadeIn delay={500} className="md:col-span-3">
-              <div className="glass-card h-full min-h-[400px] rounded-[2.5rem] p-10 group hover:border-[var(--accent-cyan)]/40 hover:shadow-[0_0_40px_rgba(0,210,255,0.1)] transition-all bg-gradient-to-br from-[rgba(20,20,25,0.4)] to-[rgba(0,210,255,0.05)] relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
+              <div className="glass-card h-full min-h-[400px] rounded-2xl p-10 group hover:border-[var(--accent-cyan)]/40 hover:shadow-[0_0_40px_rgba(0,210,255,0.1)] transition-all bg-gradient-to-br from-[rgba(20,20,25,0.4)] to-[rgba(0,210,255,0.05)] relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
                 <div className="absolute top-1/2 right-0 -translate-y-1/2 w-96 h-96 bg-[var(--accent-cyan)]/10 blur-3xl rounded-full pointer-events-none" />
                 
                 <div className="w-full md:w-1/3 z-10">
@@ -793,11 +773,11 @@ export default function Home() {
             
             {/* Interactive Portrait Box */}
             <FadeIn delay={100} className="md:col-span-1">
-              <div className="glass-card h-full min-h-[400px] rounded-[2.5rem] p-4 group relative overflow-hidden perspective-[1000px] flex flex-col justify-end">
+              <div className="glass-card h-full min-h-[400px] rounded-2xl p-4 group relative overflow-hidden perspective-[1000px] flex flex-col justify-end">
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent z-10 opacity-60" />
                 
                 {/* Image Placeholder with Hover Tilt Effect */}
-                <div className="absolute inset-4 rounded-[2rem] overflow-hidden transform transition-all duration-700 group-hover:rotate-y-[5deg] group-hover:rotate-x-[5deg] group-hover:scale-105 border border-white/5">
+                <div className="absolute inset-4 rounded-2xl overflow-hidden transform transition-all duration-700 group-hover:rotate-y-[5deg] group-hover:rotate-x-[5deg] group-hover:scale-105 border border-white/5">
                   
                   {/* Gradual bottom fade to ensure text is readable */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-black/20 to-transparent z-10 opacity-90" />
@@ -825,7 +805,7 @@ export default function Home() {
 
             {/* Skill Arsenal Grid */}
             <FadeIn delay={200} className="md:col-span-3">
-              <div className="glass-card h-full rounded-[2.5rem] p-10 group hover:border-[var(--accent-pink)]/30 transition-colors relative overflow-hidden">
+              <div className="glass-card h-full rounded-2xl p-10 group hover:border-[var(--accent-pink)]/30 transition-colors relative overflow-hidden">
                 <div className="absolute bottom-0 right-0 w-[40%] h-full bg-[var(--accent-pink)]/5 blur-3xl pointer-events-none rounded-full" />
                 <h3 className="text-2xl font-bold mb-8 text-white relative z-10 tracking-tight">Core Arsenal.</h3>
                 
@@ -866,7 +846,7 @@ export default function Home() {
               { title: "Full Execution", text: "From initial concept mapping to final deployment, SEO, and social management.", color: "cyan" }
             ].map((feature, i) => (
               <FadeIn key={i} delay={i * 100}>
-                <div className="glass-card p-8 rounded-3xl h-full border-t border-[rgba(255,255,255,0.08)] group hover:-translate-y-2 transition-transform">
+                <div className="glass-card p-8 rounded-2xl h-full border-t border-[rgba(255,255,255,0.08)] group hover:-translate-y-2 transition-transform">
                   <div className={`w-12 h-12 rounded-full mb-6 bg-[var(--accent-${feature.color})]/10 border border-[var(--accent-${feature.color})]/30 flex items-center justify-center text-[var(--accent-${feature.color})] drop-shadow-[0_0_10px_var(--accent-${feature.color})] font-bold text-xl`}>
                     0{i+1}
                   </div>

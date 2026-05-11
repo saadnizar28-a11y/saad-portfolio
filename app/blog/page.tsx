@@ -73,7 +73,7 @@ export default function Blog() {
           {blogs.map((blog, idx) => (
             <FadeIn delay={100 + (idx * 50)} key={blog.slug} className="flex-shrink-0 snap-center w-[85vw] sm:w-[50vw] md:w-[35vw] xl:w-[25vw] h-full flex">
               <Link href={`/blog/${blog.slug}`} className="block w-full h-full">
-                <div className="glass-card w-full h-full rounded-[2rem] p-0 relative overflow-hidden group cursor-pointer border border-white/5 hover:border-[var(--accent-cyan)]/40 transition-colors shadow-2xl flex flex-col justify-end">
+                <div className="glass-card w-full h-full rounded-2xl p-0 relative overflow-hidden group cursor-pointer border border-white/5 hover:border-[var(--accent-cyan)]/40 transition-colors shadow-2xl flex flex-col justify-end">
                   
                   {/* Background Image layer */}
                   <Image 

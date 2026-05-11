@@ -82,7 +82,7 @@ export default function Work() {
             
             {/* 1. Visual Campaigns */}
             <FadeIn delay={100}>
-              <Link href="/work/posters" className="glass-card flex flex-col justify-between p-10 rounded-[2.5rem] h-full min-h-[360px] group hover:border-[var(--accent-pink)]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden relative block bg-white/5">
+              <Link href="/work/posters" className="glass-card flex flex-col justify-between p-10 rounded-2xl h-full min-h-[360px] group hover:border-[var(--accent-pink)]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden relative block bg-white/5">
                 
                 {/* Floating Images Background */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-60 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center">
@@ -111,7 +111,7 @@ export default function Work() {
 
             {/* 2. Brand Identity */}
             <FadeIn delay={200}>
-              <Link href="/work/branding" className="glass-card flex flex-col justify-between p-10 rounded-[2.5rem] h-full min-h-[360px] group hover:border-[var(--accent-violet)]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden relative block bg-white/5">
+              <Link href="/work/branding" className="glass-card flex flex-col justify-between p-10 rounded-2xl h-full min-h-[360px] group hover:border-[var(--accent-violet)]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden relative block bg-white/5">
                 
                 {/* Floating Images Background */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-60 group-hover:opacity-100 transition-opacity duration-700">
@@ -140,7 +140,7 @@ export default function Work() {
 
             {/* 3. Logofolio */}
             <FadeIn delay={300}>
-              <Link href="/work/logo" className="glass-card flex flex-col justify-between p-10 rounded-[2.5rem] h-full min-h-[360px] group hover:border-[var(--accent-purple)]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden relative block bg-white/5">
+              <Link href="/work/logo" className="glass-card flex flex-col justify-between p-10 rounded-2xl h-full min-h-[360px] group hover:border-[var(--accent-purple)]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden relative block bg-white/5">
                 
                 {/* Floating Images Background */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-50 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center">
@@ -168,7 +168,7 @@ export default function Work() {
 
             {/* 4. Digital Interfaces */}
             <FadeIn delay={400}>
-              <Link href="/work/ui-ux" className="glass-card flex flex-col justify-between p-10 rounded-[2.5rem] h-full min-h-[360px] group hover:border-[var(--accent-cyan)]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden relative block bg-white/5">
+              <Link href="/work/ui-ux" className="glass-card flex flex-col justify-between p-10 rounded-2xl h-full min-h-[360px] group hover:border-[var(--accent-cyan)]/40 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.6)] transition-all duration-500 overflow-hidden relative block bg-white/5">
                 
                 {/* Floating Images Background */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none opacity-60 group-hover:opacity-100 transition-opacity duration-700 flex items-center justify-center">
@@ -199,7 +199,7 @@ export default function Work() {
           {/* Right Column: Growth Systems (Very Tiny Sidebar) */}
           <div className="w-full md:w-56 shrink-0 flex flex-col">
             <FadeIn delay={500} className="h-full flex-1">
-              <div className="glass-card flex flex-col justify-between p-6 rounded-[2rem] h-full min-h-[320px] group hover:border-emerald-500/30 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-500 overflow-hidden relative">
+              <div className="glass-card flex flex-col justify-between p-6 rounded-2xl h-full min-h-[320px] group hover:border-emerald-500/30 hover:-translate-y-2 hover:shadow-[0_20px_40px_rgba(0,0,0,0.4)] transition-all duration-500 overflow-hidden relative">
                 <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-emerald-500/5 pointer-events-none group-hover:opacity-100 opacity-50 transition-opacity" />
                 
                 <div className="relative z-10 mb-auto flex flex-col items-center text-center">
@@ -233,7 +233,7 @@ export default function Work() {
 
         {/* Prompt Gallery Banner */}
         <FadeIn delay={600} className="mt-8">
-            <Link href="/prompt-gallery" className="glass-card relative overflow-hidden rounded-[2.5rem] p-10 flex flex-col md:flex-row items-center justify-between group hover:border-[var(--accent-cyan)]/40 transition-all cursor-pointer block">
+            <Link href="/prompt-gallery" className="glass-card relative overflow-hidden rounded-2xl p-10 flex flex-col md:flex-row items-center justify-between group hover:border-[var(--accent-cyan)]/40 transition-all cursor-pointer block">
               <div className="absolute top-0 right-0 w-[50%] h-[200%] bg-gradient-to-l from-[var(--accent-cyan)]/10 to-transparent blur-3xl transform rotate-12 pointer-events-none" />
               
               <div className="relative z-10 md:w-2/3">

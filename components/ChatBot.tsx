@@ -162,7 +162,7 @@ export default function ChatBot() {
 
       {/* Chat Window */}
       <div 
-        className={`fixed bottom-24 right-6 w-80 sm:w-96 glass-card rounded-3xl border-[rgba(0,210,255,0.3)] shadow-[0_10px_50px_rgba(0,0,0,0.8)] z-50 overflow-hidden flex flex-col transition-all duration-500 origin-bottom-right ${isOpen ? 'scale-100 opacity-100 pointer-events-auto' : 'scale-75 opacity-0 pointer-events-none'}`}
+        className={`fixed bottom-24 right-6 w-80 sm:w-96 glass-card rounded-2xl border-[rgba(0,210,255,0.3)] shadow-[0_10px_50px_rgba(0,0,0,0.8)] z-50 overflow-hidden flex flex-col transition-all duration-500 origin-bottom-right ${isOpen ? 'scale-100 opacity-100 pointer-events-auto' : 'scale-75 opacity-0 pointer-events-none'}`}
       >
         {/* Cinematic Header with glow and particles */}
         <div className="bg-gradient-to-r from-[rgba(20,20,25,0.9)] to-[var(--accent-cyan)]/20 p-5 border-b border-[rgba(255,255,255,0.05)] relative overflow-hidden group shrink-0">

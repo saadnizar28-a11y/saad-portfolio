@@ -37,7 +37,7 @@ export default function About() {
             
             {/* NEW: Added something else to the left side as requested */}
             <FadeIn delay={200}>
-              <div className="glass-card p-6 rounded-3xl border border-[rgba(255,255,255,0.05)] shadow-xl relative overflow-hidden group hover:border-[var(--accent-violet)]/30 transition-colors">
+              <div className="glass-card p-6 rounded-2xl border border-[rgba(255,255,255,0.05)] shadow-xl relative overflow-hidden group hover:border-[var(--accent-violet)]/30 transition-colors">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--accent-violet)]/10 blur-3xl rounded-full" />
                 <div className="relative z-10 flex items-center justify-between">
                   <div>
@@ -186,7 +186,7 @@ export default function About() {
 
             {/* Stats Box */}
             <FadeIn delay={400}>
-              <div className="glass-card p-8 rounded-3xl border border-[rgba(255,255,255,0.05)] shadow-xl relative overflow-hidden group hover:border-[var(--accent-cyan)]/30 transition-colors">
+              <div className="glass-card p-8 rounded-2xl border border-[rgba(255,255,255,0.05)] shadow-xl relative overflow-hidden group hover:border-[var(--accent-cyan)]/30 transition-colors">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--accent-cyan)]/10 blur-3xl rounded-full" />
                 <div className="grid grid-cols-2 gap-6 relative z-10">
                   <div>
@@ -207,7 +207,7 @@ export default function About() {
 
             {/* Tools Expertise Box */}
             <FadeIn delay={600}>
-              <div className="glass-card p-8 rounded-3xl border border-[rgba(255,255,255,0.05)] shadow-xl relative overflow-hidden group hover:border-[var(--accent-pink)]/30 transition-colors">
+              <div className="glass-card p-8 rounded-2xl border border-[rgba(255,255,255,0.05)] shadow-xl relative overflow-hidden group hover:border-[var(--accent-pink)]/30 transition-colors">
                 <div className="absolute bottom-0 right-0 w-40 h-40 bg-[var(--accent-pink)]/10 blur-3xl rounded-full" />
                 <h3 className="text-xl font-bold mb-6 text-white relative z-10">Platforms & Stack.</h3>
                 <div className="flex flex-wrap gap-2 relative z-10">

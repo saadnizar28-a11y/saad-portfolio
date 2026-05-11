@@ -90,7 +90,7 @@ export default function UiUxGallery() {
           
           {/* Item 1: Large Feature */}
           <FadeIn delay={100} className="md:col-span-12 group">
-            <div className="relative overflow-hidden rounded-[2rem] bg-white/5 border border-white/10 p-4 md:p-8 hover:border-[var(--accent-cyan)]/30 transition-colors">
+            <div className="relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-4 md:p-8 hover:border-[var(--accent-cyan)]/30 transition-colors">
               <Image 
                 src="/ui_real_1.png" 
                 alt="SaaS analytics dashboard UI mockup" 
@@ -113,7 +113,7 @@ export default function UiUxGallery() {
 
           {/* Item 2: Half Width */}
           <FadeIn delay={200} className="md:col-span-6 group">
-            <div className="relative overflow-hidden rounded-[2rem] bg-white/5 border border-white/10 p-4 md:p-8 hover:border-[var(--accent-cyan)]/30 transition-colors h-full flex flex-col">
+            <div className="relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-4 md:p-8 hover:border-[var(--accent-cyan)]/30 transition-colors h-full flex flex-col">
               <div className="flex-1 flex items-center justify-center overflow-hidden rounded-xl">
                 <Image 
                   src="/ui_real_2.png" 
@@ -132,7 +132,7 @@ export default function UiUxGallery() {
 
           {/* Item 3: Half Width */}
           <FadeIn delay={300} className="md:col-span-6 group">
-            <div className="relative overflow-hidden rounded-[2rem] bg-white/5 border border-white/10 p-4 md:p-8 hover:border-[var(--accent-cyan)]/30 transition-colors h-full flex flex-col">
+            <div className="relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-4 md:p-8 hover:border-[var(--accent-cyan)]/30 transition-colors h-full flex flex-col">
               <div className="flex-1 flex items-center justify-center overflow-hidden rounded-xl">
                 <Image 
                   src="/ui_real_3.png" 

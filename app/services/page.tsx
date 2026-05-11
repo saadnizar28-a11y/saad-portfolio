@@ -104,7 +104,7 @@ export default function Services() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-32">
           {services.map((s, i) => (
             <FadeIn key={i} delay={i * 100}>
-              <div className="glass-card hover:-translate-y-2 transition-all duration-500 p-10 rounded-3xl group hover:border-[rgba(0,240,255,0.4)] hover:shadow-[0_10px_40px_rgba(0,240,255,0.1)] h-full flex flex-col justify-center relative overflow-hidden">
+              <div className="glass-card hover:-translate-y-2 transition-all duration-500 p-10 rounded-2xl group hover:border-[rgba(0,240,255,0.4)] hover:shadow-[0_10px_40px_rgba(0,240,255,0.1)] h-full flex flex-col justify-center relative overflow-hidden">
                 {/* Ultra-premium faint watermark numbering instead of a pill */}
                 <div className="absolute -top-4 right-0 font-black text-8xl text-white/5 group-hover:text-[var(--accent-cyan)]/10 transition-colors pointer-events-none select-none transform -translate-y-4 translate-x-4">
                   0{i + 1}

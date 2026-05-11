@@ -26,7 +26,7 @@ export default function PromptCard({
 
   return (
     <div 
-      className="relative w-full aspect-[4/5] rounded-3xl overflow-hidden group cursor-crosshair shrink-0 max-w-[300px] border border-white/10 shadow-2xl bg-black"
+      className="relative w-full aspect-[4/5] rounded-2xl overflow-hidden group cursor-crosshair shrink-0 max-w-[300px] border border-white/10 shadow-2xl bg-black"
       style={style}
     >
       {/* Background Image */}
@@ -51,7 +51,7 @@ export default function PromptCard({
       </div>
 
       {/* Hover Overlay: Prompt Text and Copy Action */}
-      <div className="absolute inset-0 bg-black/80 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 border border-[var(--accent-cyan)]/30 rounded-3xl flex flex-col items-center justify-center p-8 text-center">
+      <div className="absolute inset-0 bg-black/80 backdrop-blur-md opacity-0 group-hover:opacity-100 transition-opacity duration-500 border border-[var(--accent-cyan)]/30 rounded-2xl flex flex-col items-center justify-center p-8 text-center">
         <p className="text-[var(--accent-cyan)] text-xs font-mono tracking-widest uppercase mb-4">AI Prompt</p>
         <p className="text-white/80 text-sm leading-relaxed mb-6 line-clamp-5">
            "{promptText}"

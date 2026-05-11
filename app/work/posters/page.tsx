@@ -90,7 +90,7 @@ export default function PostersGallery() {
           
           {/* Item 1: Large Feature */}
           <FadeIn delay={100} className="md:col-span-12 group">
-            <div className="relative overflow-hidden rounded-[2rem] bg-white/5 border border-white/10 p-4 md:p-8 hover:border-[var(--accent-pink)]/30 transition-colors">
+            <div className="relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-4 md:p-8 hover:border-[var(--accent-pink)]/30 transition-colors">
               <Image 
                 src="/poster_real_2.png" 
                 alt="High-end athletic sports shoe product poster" 
@@ -113,7 +113,7 @@ export default function PostersGallery() {
 
           {/* Item 2: Half Width */}
           <FadeIn delay={200} className="md:col-span-6 group">
-            <div className="relative overflow-hidden rounded-[2rem] bg-white/5 border border-white/10 p-4 md:p-8 hover:border-[var(--accent-pink)]/30 transition-colors h-full flex flex-col">
+            <div className="relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-4 md:p-8 hover:border-[var(--accent-pink)]/30 transition-colors h-full flex flex-col">
               <div className="flex-1 flex items-center justify-center overflow-hidden rounded-xl">
                 <Image 
                   src="/poster_real_1.png" 
@@ -132,7 +132,7 @@ export default function PostersGallery() {
 
           {/* Item 3: Half Width */}
           <FadeIn delay={300} className="md:col-span-6 group">
-            <div className="relative overflow-hidden rounded-[2rem] bg-white/5 border border-white/10 p-4 md:p-8 hover:border-[var(--accent-pink)]/30 transition-colors h-full flex flex-col">
+            <div className="relative overflow-hidden rounded-2xl bg-white/5 border border-white/10 p-4 md:p-8 hover:border-[var(--accent-pink)]/30 transition-colors h-full flex flex-col">
               <div className="flex-1 flex items-center justify-center overflow-hidden rounded-xl">
                 <Image 
                   src="/poster_real_3.png" 

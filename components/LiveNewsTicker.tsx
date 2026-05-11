@@ -74,7 +74,7 @@ export default function LiveNewsTicker({ mini = false }: { mini?: boolean }) {
   const jumpHeight = mini ? 104 : 132;
 
   return (
-    <div className={`glass-card rounded-[2rem] relative overflow-hidden flex flex-col border border-[var(--accent-cyan)]/20 shadow-[0_0_40px_rgba(0,240,255,0.05)] bg-[rgba(10,10,12,0.8)] w-full ${mini ? 'p-5 h-[170px]' : 'p-6 lg:p-8 h-full min-h-[450px] max-h-[600px]'}`}>
+    <div className={`glass-card rounded-2xl relative overflow-hidden flex flex-col border border-[var(--accent-cyan)]/20 shadow-[0_0_40px_rgba(0,240,255,0.05)] bg-[rgba(10,10,12,0.8)] w-full ${mini ? 'p-5 h-[170px]' : 'p-6 lg:p-8 h-full min-h-[450px] max-h-[600px]'}`}>
       
       {/* Header Container */}
       <div className={`flex items-center justify-between border-b border-white/5 relative z-10 shrink-0 ${mini ? 'mb-4 pb-3' : 'mb-6 pb-6'}`}>

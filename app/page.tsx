@@ -223,12 +223,12 @@ export default function Home() {
           // Set target fractional frame based on scroll fraction
           targetFrame = scrollFraction * (totalFrames - 1);
           
-          // Manage Audio based on scroll
-          if (scrollFraction > 0.8) {
-            startAmbientWind();
-          } else {
-            stopAmbientWind();
-          }
+          // Wind audio disabled per user request
+          // if (scrollFraction > 0.8) {
+          //   startAmbientWind();
+          // } else {
+          //   stopAmbientWind();
+          // }
 
           if (canvasRef.current) {
             if (scrollFraction > 0.8) {

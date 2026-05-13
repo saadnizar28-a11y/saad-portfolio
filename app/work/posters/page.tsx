@@ -4,12 +4,12 @@ import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Visual Campaigns & Poster Design | Saad Nizar Portfolio",
-  description: "Explore highly realistic, commercial-grade poster designs and visual campaigns by Saad Nizar. Featuring Swiss typography, product advertising, and cinematic layout design.",
-  keywords: ["Poster Design", "Visual Campaigns", "Advertising Design", "Swiss Typography", "Commercial Photography", "Saad Nizar", "Graphic Designer Dubai"],
+  title: "Visual Campaigns & Poster Design | Top Graphic Designer UAE - Saad Nizar",
+  description: "Explore highly realistic, commercial-grade poster designs and visual campaigns by Saad Nizar, the best graphic designer in Dubai. Specializing in advertising design.",
+  keywords: ["Poster Design", "Visual Campaigns", "Advertising Design", "Commercial Photography", "Saad Nizar", "Graphic Designer Dubai", "Top Creative Designer UAE", "Saad Nizar Graphic Designer", "Creative Designer Poster Dubai"],
   openGraph: {
-    title: "Visual Campaigns & Poster Design | Saad Nizar",
-    description: "Explore highly realistic, commercial-grade poster designs and visual campaigns.",
+    title: "Visual Campaigns & Poster Design | Saad Nizar Graphic Designer",
+    description: "Explore highly realistic, commercial-grade poster designs and visual campaigns by Saad Nizar.",
     url: "https://saadnizar.com/work/posters",
     siteName: "Saad Nizar Portfolio",
     images: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         url: "/poster_real_2.png",
         width: 1200,
         height: 630,
-        alt: "High-end product poster design",
+        alt: "High-end product poster design by Saad Nizar",
       },
     ],
     locale: "en_US",

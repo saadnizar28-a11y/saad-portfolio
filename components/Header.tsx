@@ -41,8 +41,15 @@ export default function Header() {
     { label: "Home", href: "/" },
     { label: "About", href: "/about" },
     { label: "Services", href: "/services" },
-    { label: "Work", href: "/work" },
+    { 
+      label: "Work", 
+      href: "/work",
+      subLinks: [
+        { label: "Brand Identity", href: "/work/branding" }
+      ]
+    },
     { label: "Blog", href: "/blog" },
+    { label: "Gallery", href: "/gallery" },
     { label: "Contact", href: "/contact" },
   ];
 
@@ -87,34 +94,49 @@ export default function Header() {
               <img src="/logo.png" alt="Logo" className="w-full h-full object-contain drop-shadow-[0_0_10px_rgba(0,240,255,0.3)] group-hover:drop-shadow-[0_0_20px_rgba(0,240,255,0.8)] transition-all duration-300 group-hover:scale-110" />
             </Link>
 
-            <nav className="flex flex-col items-start gap-10 z-10 w-full mt-4">
+            <nav className="flex flex-col items-start gap-8 z-10 w-full mt-4">
               {navLinks.map((link) => {
-                const isActive = pathname === link.href;
+                const isActive = pathname === link.href || (link.subLinks && link.subLinks.some(sub => pathname === sub.href));
                 return (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    className="relative flex items-center gap-6 group transition-all duration-300 w-full"
-                  >
-                    {/* Circle Icon */}
-                    <div className={`relative flex items-center justify-center w-4 h-4 rounded-full border transition-all duration-300 ${isActive ? 'border-[var(--accent-cyan)]' : 'border-white/40 group-hover:border-white/80'}`}>
-                      {isActive && (
-                        <div className="w-2 h-2 rounded-full bg-[var(--accent-cyan)] drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]" />
-                      )}
-                    </div>
+                  <div key={link.href} className="flex flex-col w-full group/navitem">
+                    <Link
+                      href={link.href}
+                      className="relative flex items-center gap-6 group transition-all duration-300 w-full"
+                    >
+                      {/* Circle Icon */}
+                      <div className={`relative flex items-center justify-center w-4 h-4 rounded-full border transition-all duration-300 ${isActive ? 'border-[var(--accent-cyan)]' : 'border-white/40 group-hover:border-white/80'}`}>
+                        {isActive && (
+                          <div className="w-2 h-2 rounded-full bg-[var(--accent-cyan)] drop-shadow-[0_0_8px_rgba(0,240,255,0.8)]" />
+                        )}
+                      </div>
 
-                    {/* Active Line Indicator */}
-                    <div className={`absolute left-4 h-[1px] bg-[var(--accent-cyan)] transition-all duration-500 ease-out ${isActive ? 'w-6 opacity-100' : 'w-0 opacity-0'}`} />
+                      {/* Active Line Indicator */}
+                      <div className={`absolute left-4 h-[1px] bg-[var(--accent-cyan)] transition-all duration-500 ease-out ${isActive ? 'w-6 opacity-100' : 'w-0 opacity-0'}`} />
 
-                    {/* Label */}
-                    <span className={`text-[10px] tracking-[0.3em] uppercase transition-all duration-500 ${
-                      isActive 
-                        ? "text-white font-medium drop-shadow-[0_0_12px_rgba(0,240,255,0.4)] translate-x-8" 
-                        : "text-white/40 hover:text-white translate-x-0"
-                    }`}>
-                      {link.label}
-                    </span>
-                  </Link>
+                      {/* Label */}
+                      <span className={`text-[10px] tracking-[0.3em] uppercase transition-all duration-500 ${
+                        isActive 
+                          ? "text-white font-medium drop-shadow-[0_0_12px_rgba(0,240,255,0.4)] translate-x-8" 
+                          : "text-white/40 hover:text-white translate-x-0"
+                      }`}>
+                        {link.label}
+                      </span>
+                    </Link>
+
+                    {/* Desktop Sublinks */}
+                    {link.subLinks && (
+                      <div className={`flex flex-col gap-4 overflow-hidden transition-all duration-500 ease-in-out pl-[2.25rem] ${isActive ? 'max-h-[200px] mt-6 opacity-100' : 'max-h-0 mt-0 opacity-0 group-hover/navitem:max-h-[200px] group-hover/navitem:mt-6 group-hover/navitem:opacity-100'}`}>
+                        {link.subLinks.map(sub => {
+                          const isSubActive = pathname === sub.href;
+                          return (
+                            <Link key={sub.href} href={sub.href} className={`text-[9px] tracking-[0.2em] uppercase transition-all duration-300 ${isSubActive ? 'text-[var(--accent-cyan)] font-bold' : 'text-white/30 hover:text-white/70 hover:translate-x-1'}`}>
+                              {sub.label}
+                            </Link>
+                          )
+                        })}
+                      </div>
+                    )}
+                  </div>
                 );
               })}
             </nav>
@@ -153,24 +175,47 @@ export default function Header() {
           </button>
         </div>
 
-        <nav className="flex flex-col items-start gap-8">
-          {navLinks.map((link, i) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              onClick={() => setIsMobileMenuOpen(false)}
-              className={`text-xl tracking-[0.2em] uppercase transition-all duration-500 transform ${
-                isMobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
-              } ${
-                pathname === link.href 
-                  ? "text-[var(--accent-cyan)] font-bold drop-shadow-[0_0_20px_rgba(0,240,255,0.8)]" 
-                  : "text-white/70 hover:text-white"
-              }`}
-              style={{ transitionDelay: `${isMobileMenuOpen ? i * 75 + 100 : 0}ms` }}
-            >
-              {link.label}
-            </Link>
-          ))}
+        <nav className="flex flex-col items-start gap-8 overflow-y-auto pb-10 w-full">
+          {navLinks.map((link, i) => {
+            const isActive = pathname === link.href || (link.subLinks && link.subLinks.some(sub => pathname === sub.href));
+            return (
+              <div key={link.href} className="flex flex-col w-full">
+                <Link
+                  href={link.href}
+                  onClick={() => !link.subLinks && setIsMobileMenuOpen(false)}
+                  className={`text-xl tracking-[0.2em] uppercase transition-all duration-500 transform ${
+                    isMobileMenuOpen ? "translate-x-0 opacity-100" : "translate-x-8 opacity-0"
+                  } ${
+                    isActive 
+                      ? "text-[var(--accent-cyan)] font-bold drop-shadow-[0_0_20px_rgba(0,240,255,0.8)]" 
+                      : "text-white/70 hover:text-white"
+                  }`}
+                  style={{ transitionDelay: `${isMobileMenuOpen ? i * 75 + 100 : 0}ms` }}
+                >
+                  {link.label}
+                </Link>
+
+                {/* Mobile Sublinks */}
+                {link.subLinks && (
+                  <div className={`flex flex-col gap-4 mt-4 pl-4 border-l border-white/10 overflow-hidden transition-all duration-500 ${isMobileMenuOpen ? "opacity-100" : "opacity-0"}`} style={{ transitionDelay: `${isMobileMenuOpen ? i * 75 + 300 : 0}ms` }}>
+                    {link.subLinks.map(sub => {
+                      const isSubActive = pathname === sub.href;
+                      return (
+                        <Link 
+                          key={sub.href} 
+                          href={sub.href} 
+                          onClick={() => setIsMobileMenuOpen(false)}
+                          className={`text-xs tracking-[0.15em] uppercase transition-colors ${isSubActive ? 'text-[var(--accent-cyan)]' : 'text-white/40 hover:text-white/80'}`}
+                        >
+                          {sub.label}
+                        </Link>
+                      )
+                    })}
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </nav>
       </div>
     </>

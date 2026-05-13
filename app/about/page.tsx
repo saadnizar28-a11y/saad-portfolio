@@ -9,12 +9,12 @@ import BlogGrid from "@/components/BlogGrid";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "About Saad Nizar | Digital Marketing Strategist",
-  description: "Learn about Saad Nizar, a Dubai-based Digital Marketing Strategist and Creative Designer with expertise in SEO, personal branding, and high-converting design.",
-  keywords: ["About Saad Nizar", "Digital Marketer Dubai", "Creative Designer UAE", "SEO Expert Background"],
+  title: "About Saad Nizar | Top Creative Designer & Digital Marketer in Dubai",
+  description: "Discover the journey of Saad Nizar, a premier Digital Marketer and Creative Graphic Designer based in Dubai, UAE. Expert in SEO, branding, and digital growth.",
+  keywords: ["About Saad Nizar", "Saad Nizar biography", "Digital Marketer Dubai", "Creative Designer UAE", "Saad Nizar Best Graphic Designer", "saad nizar creative designer dubai"],
   openGraph: {
-    title: "About Saad Nizar | Digital Marketing Strategist",
-    description: "Learn about Saad Nizar, a Dubai-based Digital Marketing Strategist and Creative Designer.",
+    title: "About Saad Nizar | Top Creative Designer & Digital Marketer in Dubai",
+    description: "Discover the journey of Saad Nizar, a premier Digital Marketer and Creative Graphic Designer based in Dubai.",
     url: "https://saadnizar.com/about",
     images: [{ url: "/saad.png", width: 800, height: 1000 }],
   }

@@ -4,12 +4,12 @@ import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Logofolio & Iconography | Saad Nizar Portfolio",
-  description: "A curated logofolio featuring minimalist corporate vector marks, typography-based fashion logos, and sleek tech app icons.",
-  keywords: ["Logo Design", "Logofolio", "Brand Marks", "Vector Graphics", "App Icons", "Saad Nizar", "Logo Designer Dubai"],
+  title: "Logofolio & Iconography | Best Logo Designer in Dubai - Saad Nizar",
+  description: "Explore the premium logofolio of Saad Nizar, top graphic designer in Dubai. Featuring minimalist corporate vector marks, fashion logos, and sleek tech app icons.",
+  keywords: ["Logo Design Dubai", "Logofolio", "Brand Marks", "Vector Graphics", "App Icons", "Saad Nizar", "Logo Designer Dubai", "Best Graphic Designer UAE Logo", "Saad Nizar Creative Designer Logo"],
   openGraph: {
-    title: "Logofolio & Iconography | Saad Nizar",
-    description: "A curated logofolio featuring minimalist corporate vector marks and modern app icons.",
+    title: "Logofolio & Iconography | Saad Nizar Graphic Designer",
+    description: "A curated logofolio featuring minimalist corporate vector marks and modern app icons by Saad Nizar.",
     url: "https://saadnizar.com/work/logo",
     siteName: "Saad Nizar Portfolio",
     images: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         url: "/logo_real_1.png",
         width: 1200,
         height: 630,
-        alt: "Abstract corporate logo design",
+        alt: "Abstract corporate logo design by Saad Nizar",
       },
     ],
     locale: "en_US",

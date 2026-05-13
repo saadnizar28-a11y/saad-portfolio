@@ -7,12 +7,16 @@ import TestimonialCarousel from "@/components/TestimonialCarousel";
 import BlogGrid from "@/components/BlogGrid";
 
 export const metadata: Metadata = {
-  title: "Digital Marketing & Design Services | Saad Nizar",
-  description: "Explore premium digital marketing, SEO, social media management, and web design services by Saad Nizar in Dubai, UAE.",
-  keywords: ["Digital Marketing Services", "SEO Services Dubai", "Web Design UAE", "Social Media Management Dubai", "Brand Identity Design"],
+  title: "Hire Saad Nizar | Top Digital Marketing & Creative Design Services Dubai",
+  description: "Boost your brand with Saad Nizar, the best digital marketer and creative graphic designer in Dubai, UAE. Expert SEO, UI/UX, and Social Media Marketing services across the GCC.",
+  keywords: [
+    "Digital Marketing Services Dubai", "Hire Saad Nizar", "SEO Services Dubai", "Web Design UAE", 
+    "Social Media Management Dubai", "Brand Identity Design", "Saad Nizar Graphic Designer", 
+    "Best Digital Marketer Dubai Saad", "Freelance Creative Designer UAE", "Saad Nizar Creative Designer"
+  ],
   openGraph: {
-    title: "Digital Marketing & Design Services | Saad Nizar",
-    description: "Premium digital marketing, SEO, and web design services in Dubai.",
+    title: "Hire Saad Nizar | Digital Marketing & Creative Design Services Dubai",
+    description: "Premium digital marketing, SEO, and web design services in Dubai by Saad Nizar.",
     url: "https://saadnizar.com/services",
   }
 };

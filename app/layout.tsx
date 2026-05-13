@@ -25,24 +25,27 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://saadnizar.com'),
   title: {
-    default: "Digital Marketing Strategist | Creative Designer | Personal Branding Specialist in Dubai, UAE & GCC",
-    template: "%s | Saad Nizar"
+    default: "Saad Nizar | Best Digital Marketer & Creative Graphic Designer in Dubai, UAE & GCC",
+    template: "%s | Saad Nizar - Digital Marketing & Design Expert"
   },
-  description: "Portfolio of Saad Nizarudeen, a results-driven Digital Marketer and Creative Designer specializing in SEO, branding, and personal branding solutions for businesses in Dubai, the UAE, and across the GCC.",
+  description: "Official portfolio of Saad Nizar, the top-rated Digital Marketer and Creative Graphic Designer in Dubai, UAE. Specializing in SEO, UI/UX, brand identity, and high-conversion digital marketing strategies across the GCC.",
   keywords: [
-    "Digital Marketer", "Digital Marketing Strategist", "Creative Designer", "Personal Branding Specialist",
-    "SEO Specialist", "Graphic Designer", "Branding Consultant", "Freelance Digital Marketer in Dubai",
-    "Digital Marketing Expert in UAE", "Creative Designer in Dubai", "Personal Branding Expert in UAE",
-    "SEO Expert in Dubai", "Graphic Designer in UAE", "Branding Specialist in GCC", "Digital Marketing Portfolio Dubai"
+    "Saad Nizar", "Saad", "Saad Nizar Dubai", "Saad Nizar UAE", "Saad Nizar portfolio", "Saad Nizar digital assets",
+    "best digital marketer dubai saad", "top digital marketer in uae", "digital marketing strategist dubai",
+    "saad nizar creative designer", "saad nizar best graphic designer", "creative graphic designer uae",
+    "best graphic designer in dubai", "top creative designer gcc", "hire graphic designer dubai",
+    "UI/UX designer dubai", "brand identity specialist uae", "SEO specialist dubai",
+    "freelance digital marketer dubai", "digital marketing expert middle east", "branding consultant uae",
+    "social media marketing expert dubai", "web designer dubai", "corporate branding uae"
   ],
-  authors: [{ name: "Saad Nizarudeen", url: "https://saadnizar.com" }],
-  creator: "Saad Nizarudeen",
+  authors: [{ name: "Saad Nizar", url: "https://saadnizar.com" }],
+  creator: "Saad Nizar",
   openGraph: {
     type: "website",
     locale: "en_AE",
     url: "https://saadnizar.com",
-    title: "Saad Nizar | Digital Marketing Strategist in Dubai & GCC",
-    description: "Results-driven Digital Marketer & Creative Designer specializing in SEO and branding solutions across the UAE.",
+    title: "Saad Nizar | Top Digital Marketer & Creative Designer in Dubai",
+    description: "Results-driven Digital Marketer & Creative Graphic Designer specializing in SEO, UI/UX, and elite branding solutions across the UAE & GCC.",
     siteName: "Saad Nizar Portfolio",
     images: [
       {

@@ -8,17 +8,21 @@ import HeadingBurst from "@/components/HeadingBurst";
 import TestimonialCarousel from "@/components/TestimonialCarousel";
 
 export const metadata: Metadata = {
-  title: "Selected Work & Portfolio | Saad Nizar",
-  description: "Explore the selected design, branding, and system-driven work by Saad Nizar. Featuring visual campaigns, brand identity, logofolios, and digital interfaces.",
-  keywords: ["Portfolio", "Design Portfolio", "Saad Nizar Work", "UI/UX Portfolio", "Branding Portfolio", "Graphic Designer Dubai", "Creative Director"],
+  title: "Saad Nizar Portfolio | Top Creative Designer & Digital Marketer Dubai",
+  description: "View the elite design and branding portfolio of Saad Nizar. Featuring UI/UX, brand identity, and high-performance digital marketing campaigns in the UAE.",
+  keywords: [
+    "Portfolio", "Design Portfolio", "Saad Nizar Work", "UI/UX Portfolio", "Branding Portfolio", 
+    "Graphic Designer Dubai", "Creative Director UAE", "Saad Nizar Portfolio", "Saad Nizar Graphic Designer", 
+    "Best Digital Marketer Dubai Portfolio", "Top Creative Designer GCC"
+  ],
   openGraph: {
-    title: "Selected Work & Portfolio | Saad Nizar",
-    description: "Explore the selected design, branding, and system-driven work by Saad Nizar.",
+    title: "Saad Nizar Portfolio | Top Creative Designer Dubai",
+    description: "Explore the elite design, branding, and digital marketing portfolio of Saad Nizar.",
     url: "https://saadnizar.com/work",
     siteName: "Saad Nizar Portfolio",
     images: [
       {
-        url: "/poster_real_2.png", // Using one of the best realistic images
+        url: "/poster_real_2.png",
         width: 1200,
         height: 630,
         alt: "Saad Nizar Selected Work Portfolio",

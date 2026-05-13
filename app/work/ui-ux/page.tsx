@@ -4,12 +4,12 @@ import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Digital Interfaces & UI/UX Design | Saad Nizar Portfolio",
-  description: "Explore highly functional, aesthetic digital interfaces. SaaS dashboards, fintech mobile apps, and e-commerce UI/UX designs by Saad Nizar.",
-  keywords: ["UI/UX Design", "Digital Interfaces", "App Design", "Dashboard UI", "Web Design", "Saad Nizar", "UI Designer Dubai"],
+  title: "UI/UX Design & Digital Interfaces | Top UI Designer Dubai - Saad Nizar",
+  description: "Explore highly functional, aesthetic digital interfaces. SaaS dashboards, fintech mobile apps, and e-commerce UI/UX designs by Saad Nizar, best creative designer in UAE.",
+  keywords: ["UI/UX Design Dubai", "Digital Interfaces", "App Design UAE", "Dashboard UI", "Web Design Dubai", "Saad Nizar", "UI Designer Dubai", "Best Graphic Designer UAE UI", "Creative Designer Saad Nizar UI/UX"],
   openGraph: {
-    title: "Digital Interfaces & UI/UX Design | Saad Nizar",
-    description: "Explore highly functional, aesthetic digital interfaces including SaaS dashboards and mobile apps.",
+    title: "UI/UX Design & Digital Interfaces | Saad Nizar UI Designer",
+    description: "Explore highly functional, aesthetic digital interfaces including SaaS dashboards and mobile apps by Saad Nizar.",
     url: "https://saadnizar.com/work/ui-ux",
     siteName: "Saad Nizar Portfolio",
     images: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         url: "/ui_real_1.png",
         width: 1200,
         height: 630,
-        alt: "Clean SaaS Analytics Dashboard UI",
+        alt: "Clean SaaS Analytics Dashboard UI by Saad Nizar",
       },
     ],
     locale: "en_US",

@@ -4,12 +4,12 @@ import Image from "next/image";
 import FadeIn from "@/components/FadeIn";
 
 export const metadata: Metadata = {
-  title: "Brand Identity & Packaging Design | Saad Nizar Portfolio",
-  description: "View ultra-realistic corporate branding mockups, packaging designs, and digital brand books. Premium brand identity design by Saad Nizar.",
-  keywords: ["Brand Identity", "Packaging Design", "Corporate Branding", "Stationery Design", "Mockups", "Saad Nizar", "Branding Agency Dubai"],
+  title: "Brand Identity & Packaging Design | Saad Nizar Graphic Designer Dubai",
+  description: "View ultra-realistic corporate branding mockups, packaging designs, and digital brand books. Premium brand identity design by Saad Nizar, top creative designer UAE.",
+  keywords: ["Brand Identity", "Packaging Design", "Corporate Branding", "Stationery Design", "Mockups", "Saad Nizar", "Branding Agency Dubai", "Best Graphic Designer UAE Brand Identity", "Creative Designer Branding Dubai"],
   openGraph: {
-    title: "Brand Identity Design | Saad Nizar",
-    description: "Ultra-realistic corporate branding mockups and packaging designs.",
+    title: "Brand Identity Design | Saad Nizar Graphic Designer",
+    description: "Ultra-realistic corporate branding mockups and packaging designs by Saad Nizar.",
     url: "https://saadnizar.com/work/branding",
     siteName: "Saad Nizar Portfolio",
     images: [
@@ -17,7 +17,7 @@ export const metadata: Metadata = {
         url: "/branding_real_1.png",
         width: 1200,
         height: 630,
-        alt: "Corporate stationery branding mockup",
+        alt: "Corporate stationery branding mockup by Saad Nizar",
       },
     ],
     locale: "en_US",

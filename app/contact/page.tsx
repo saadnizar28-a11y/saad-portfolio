@@ -4,12 +4,12 @@ import SystemStatus from "@/components/SystemStatus";
 import HeadingBurst from "@/components/HeadingBurst";
 
 export const metadata: Metadata = {
-  title: "Contact Saad Nizar | Digital Marketing & Design Inquiries",
-  description: "Get in touch with Saad Nizar for digital marketing strategies, web design projects, or branding consultations in Dubai and the UAE.",
-  keywords: ["Contact Saad Nizar", "Hire Digital Marketer Dubai", "Creative Designer Contact UAE", "Freelance Marketing Consultant"],
+  title: "Contact Saad Nizar | Hire Top Digital Marketer & Creative Designer in Dubai",
+  description: "Get in touch with Saad Nizar to scale your brand. Hire the best digital marketer and creative graphic designer in Dubai, UAE for elite SEO and UI/UX projects.",
+  keywords: ["Contact Saad Nizar", "Hire Digital Marketer Dubai", "Creative Designer Contact UAE", "Freelance Marketing Consultant Dubai", "Hire Graphic Designer UAE", "Saad Nizar Best Graphic Designer"],
   openGraph: {
-    title: "Contact Saad Nizar | Digital Marketing & Design",
-    description: "Get in touch with Saad Nizar for digital marketing strategies and branding consultations in Dubai.",
+    title: "Contact Saad Nizar | Hire Digital Marketer & Designer in Dubai",
+    description: "Get in touch with Saad Nizar for elite digital marketing strategies and creative design in Dubai.",
     url: "https://saadnizar.com/contact",
   }
 };

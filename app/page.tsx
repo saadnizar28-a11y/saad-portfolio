@@ -563,18 +563,18 @@ export default function Home() {
             </h2>
           </FadeIn>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(300px,_auto)]">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[minmax(250px,_auto)]">
             
             {/* Bento Block 1: About */}
             <FadeIn delay={100} className="md:col-span-1">
-              <div className="glass-card h-full rounded-2xl p-10 flex flex-col justify-between group hover:border-[var(--accent-violet)]/40 transition-colors relative overflow-hidden">
+              <div className="glass-card h-full rounded-2xl p-8 flex flex-col justify-between group hover:border-[var(--accent-violet)]/40 transition-colors relative overflow-hidden">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--accent-violet)]/10 blur-3xl rounded-full" />
                 <div>
-                  <div className="text-[var(--accent-violet)] font-bold tracking-widest text-xs uppercase mb-6 bg-[var(--accent-violet)]/10 inline-block px-3 py-1 rounded-full border border-[var(--accent-violet)]/20">The Creator</div>
-                  <h3 className="text-3xl font-bold mb-4 group-hover:text-[var(--accent-violet)] transition-colors">I don’t believe in random design.</h3>
+                  <div className="text-[var(--accent-violet)] font-semibold tracking-widest text-xs uppercase mb-4 bg-[var(--accent-violet)]/10 inline-block px-3 py-1 rounded-full border border-[var(--accent-violet)]/20">The Creator</div>
+                  <h3 className="text-2xl font-semibold mb-3 group-hover:text-[var(--accent-violet)] transition-colors">I don’t believe in random design.</h3>
                 </div>
-                <p className="text-white/50 text-base leading-relaxed mt-8">From sales floors to digital spaces, I combine strategy, design, and marketing to create systems that actually perform.</p>
-                <Link href="/about" className="mt-8 text-white/40 group-hover:text-white transition-colors text-sm tracking-widest uppercase flex items-center gap-2 font-semibold">
+                <p className="text-white/50 text-sm leading-relaxed mt-4">From sales floors to digital spaces, I combine strategy, design, and marketing to create systems that actually perform.</p>
+                <Link href="/about" className="mt-6 text-white/40 group-hover:text-white transition-colors text-sm tracking-widest uppercase flex items-center gap-2 font-semibold">
                   Read My Story <span className="group-hover:translate-x-1 transition-transform">→</span>
                 </Link>
               </div>
@@ -582,29 +582,29 @@ export default function Home() {
 
             {/* Bento Block 2: Services Overview */}
             <FadeIn delay={300} className="md:col-span-2">
-              <div className="glass-card h-full rounded-2xl p-10 group hover:border-[var(--accent-pink)]/40 transition-colors relative overflow-hidden flex flex-col md:flex-row gap-8">
+              <div className="glass-card h-full rounded-2xl p-8 group hover:border-[var(--accent-pink)]/40 transition-colors relative overflow-hidden flex flex-col md:flex-row gap-6">
                 <div className="absolute bottom-0 left-0 w-64 h-64 bg-[var(--accent-pink)]/5 blur-3xl rounded-full" />
                 <div className="w-full md:w-1/2 flex flex-col justify-between">
                   <div>
-                    <div className="text-[var(--accent-pink)] font-bold tracking-widest text-xs uppercase mb-6 bg-[var(--accent-pink)]/10 inline-block px-3 py-1 rounded-full border border-[var(--accent-pink)]/20">My Services</div>
-                    <h3 className="text-4xl font-bold mb-4 leading-tight group-hover:text-[var(--accent-pink)] transition-colors">Strategy-driven<br/>Execution.</h3>
+                    <div className="text-[var(--accent-pink)] font-semibold tracking-widest text-xs uppercase mb-4 bg-[var(--accent-pink)]/10 inline-block px-3 py-1 rounded-full border border-[var(--accent-pink)]/20">My Services</div>
+                    <h3 className="text-3xl font-semibold mb-3 leading-tight group-hover:text-[var(--accent-pink)] transition-colors">Strategy-driven<br/>Execution.</h3>
                   </div>
-                  <Link href="/services" className="mt-8 text-white/40 group-hover:text-white transition-colors text-sm tracking-widest uppercase flex items-center gap-2 font-semibold">
+                  <Link href="/services" className="mt-6 text-white/40 group-hover:text-white transition-colors text-sm tracking-widest uppercase flex items-center gap-2 font-semibold">
                     View All Services <span className="group-hover:translate-x-1 transition-transform">→</span>
                   </Link>
                 </div>
-                <div className="w-full md:w-1/2 relative space-y-4">
-                  <div className="glass-card p-4 rounded-xl border-[rgba(255,255,255,0.05)] shadow-lg -rotate-2 hover:rotate-0 transition-transform">
-                    <p className="text-white font-medium text-sm">✦ SEO Optimization</p>
+                <div className="w-full md:w-1/2 relative space-y-3">
+                  <div className="glass-card p-3 rounded-xl border-[rgba(255,255,255,0.05)] shadow-lg -rotate-2 hover:rotate-0 transition-transform">
+                    <p className="text-white font-medium text-xs">✦ SEO Optimization</p>
                   </div>
-                  <div className="glass-card p-4 rounded-xl border-[rgba(255,255,255,0.05)] shadow-lg rotate-1 hover:rotate-0 transition-transform ml-8">
-                    <p className="text-[var(--accent-cyan)] font-medium text-sm">✦ Poster Making</p>
+                  <div className="glass-card p-3 rounded-xl border-[rgba(255,255,255,0.05)] shadow-lg rotate-1 hover:rotate-0 transition-transform ml-6">
+                    <p className="text-[var(--accent-cyan)] font-medium text-xs">✦ Poster Making</p>
                   </div>
-                  <div className="glass-card p-4 rounded-xl border-[rgba(255,255,255,0.05)] shadow-lg -rotate-1 hover:rotate-0 transition-transform">
-                    <p className="text-[var(--accent-violet)] font-medium text-sm">✦ Social Media Management</p>
+                  <div className="glass-card p-3 rounded-xl border-[rgba(255,255,255,0.05)] shadow-lg -rotate-1 hover:rotate-0 transition-transform">
+                    <p className="text-[var(--accent-violet)] font-medium text-xs">✦ Social Media Management</p>
                   </div>
-                  <div className="glass-card p-4 rounded-xl border-[rgba(255,255,255,0.05)] shadow-lg rotate-2 hover:rotate-0 transition-transform ml-4">
-                    <p className="text-[var(--accent-pink)] font-medium text-sm">✦ Logo Creation</p>
+                  <div className="glass-card p-3 rounded-xl border-[rgba(255,255,255,0.05)] shadow-lg rotate-2 hover:rotate-0 transition-transform ml-4">
+                    <p className="text-[var(--accent-pink)] font-medium text-xs">✦ Logo Creation</p>
                   </div>
                 </div>
               </div>
@@ -612,24 +612,24 @@ export default function Home() {
 
             {/* NEW: Lead Generation Case Study Block (Now Half Size) */}
             <FadeIn delay={200} className="md:col-span-1">
-              <div className="glass-card h-full rounded-2xl p-10 group hover:border-[#10b981]/40 transition-colors relative overflow-hidden bg-gradient-to-b from-[rgba(20,20,25,0.8)] to-[#10b981]/10">
+              <div className="glass-card h-full rounded-2xl p-8 group hover:border-[#10b981]/40 transition-colors relative overflow-hidden bg-gradient-to-b from-[rgba(20,20,25,0.8)] to-[#10b981]/10">
                 <div className="absolute top-0 right-0 w-full h-[50%] bg-[#10b981]/5 blur-3xl pointer-events-none" />
                 
-                <div className="flex flex-col justify-between relative z-10 w-full h-full gap-8">
+                <div className="flex flex-col justify-between relative z-10 w-full h-full gap-6">
                   <div className="w-full">
-                    <div className="text-[#10b981] font-bold tracking-widest text-[10px] uppercase mb-6 bg-[#10b981]/10 inline-block px-3 py-1 rounded-full border border-[#10b981]/20 shadow-[0_0_15px_rgba(16,185,129,0.3)]">Case Study</div>
-                    <h3 className="text-3xl font-bold mb-2 leading-tight">Lead Gen.<br/>Mastery.</h3>
+                    <div className="text-[#10b981] font-semibold tracking-widest text-[10px] uppercase mb-4 bg-[#10b981]/10 inline-block px-3 py-1 rounded-full border border-[#10b981]/20 shadow-[0_0_15px_rgba(16,185,129,0.3)]">Case Study</div>
+                    <h3 className="text-2xl font-semibold mb-2 leading-tight">Lead Gen.<br/>Mastery.</h3>
                     <p className="text-white/60 font-medium text-[11px] uppercase tracking-widest">Real Estate, SaaS</p>
                   </div>
                   
                   <div className="w-full flex flex-col gap-3">
-                    <div className="glass-card p-4 rounded-2xl border border-[rgba(255,255,255,0.1)] flex flex-col justify-center items-center relative overflow-hidden pb-5">
-                      <p className="text-red-400/80 text-[10px] font-bold tracking-widest uppercase mb-1">Ad Spend 📉</p>
-                      <p className="text-xl font-bold text-white/90 tracking-tighter">₹<Counter end={10} suffix="k" /></p>
+                    <div className="glass-card p-3 rounded-2xl border border-[rgba(255,255,255,0.1)] flex flex-col justify-center items-center relative overflow-hidden pb-4">
+                      <p className="text-red-400/80 text-[10px] font-semibold tracking-widest uppercase mb-1">Ad Spend 📉</p>
+                      <p className="text-lg font-bold text-white/90 tracking-tighter">₹<Counter end={10} suffix="k" /></p>
                     </div>
-                    <div className="glass-card p-4 rounded-2xl border border-[#10b981]/30 shadow-[0_0_30px_rgba(16,185,129,0.15)] flex flex-col justify-center items-center relative overflow-hidden group-hover:bg-[#10b981]/10 transition-colors pt-5">
-                      <p className="text-[#10b981] text-[10px] font-bold tracking-widest uppercase mb-1">Leads Generated</p>
-                      <p className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-[#10b981] tracking-tighter drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]"><Counter end={230} suffix="+" /></p>
+                    <div className="glass-card p-3 rounded-2xl border border-[#10b981]/30 shadow-[0_0_30px_rgba(16,185,129,0.15)] flex flex-col justify-center items-center relative overflow-hidden group-hover:bg-[#10b981]/10 transition-colors pt-4">
+                      <p className="text-[#10b981] text-[10px] font-semibold tracking-widest uppercase mb-1">Leads Generated</p>
+                      <p className="text-3xl font-black text-transparent bg-clip-text bg-gradient-to-b from-white to-[#10b981] tracking-tighter drop-shadow-[0_0_10px_rgba(16,185,129,0.5)]"><Counter end={230} suffix="+" /></p>
                     </div>
                   </div>
                 </div>
@@ -638,12 +638,12 @@ export default function Home() {
 
             {/* NEW: Growth Shop CTA Block (Taking the other half) */}
             <FadeIn delay={300} className="md:col-span-1">
-              <div className="glass-card h-full rounded-2xl p-10 group hover:border-[var(--accent-pink)]/40 hover:shadow-[0_0_40px_rgba(236,72,153,0.15)] transition-all relative overflow-hidden flex flex-col justify-between bg-gradient-to-b from-[rgba(20,20,25,0.6)] to-[rgba(236,72,153,0.05)]">
+              <div className="glass-card h-full rounded-2xl p-8 group hover:border-[var(--accent-pink)]/40 hover:shadow-[0_0_40px_rgba(236,72,153,0.15)] transition-all relative overflow-hidden flex flex-col justify-between bg-gradient-to-b from-[rgba(20,20,25,0.6)] to-[rgba(236,72,153,0.05)]">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[var(--accent-pink)]/10 blur-[80px] rounded-full pointer-events-none group-hover:bg-[var(--accent-pink)]/20 transition-all duration-700" />
                 
                 <div className="relative z-10">
-                  <div className="text-[var(--accent-pink)] font-bold tracking-widest text-[10px] uppercase mb-6 bg-[var(--accent-pink)]/10 inline-block px-3 py-1 rounded-full border border-[var(--accent-pink)]/20 shadow-[0_0_15px_rgba(236,72,153,0.2)]">Growth Shop</div>
-                  <h3 className="text-3xl font-bold mb-4 leading-tight group-hover:text-[var(--accent-pink)] transition-colors">
+                  <div className="text-[var(--accent-pink)] font-semibold tracking-widest text-[10px] uppercase mb-4 bg-[var(--accent-pink)]/10 inline-block px-3 py-1 rounded-full border border-[var(--accent-pink)]/20 shadow-[0_0_15px_rgba(236,72,153,0.2)]">Growth Shop</div>
+                  <h3 className="text-2xl font-semibold mb-3 leading-tight group-hover:text-[var(--accent-pink)] transition-colors">
                     Need Insta<br/>Followers?
                   </h3>
                   <p className="text-white/50 text-[13px] leading-relaxed mb-6 font-medium">
@@ -651,7 +651,7 @@ export default function Home() {
                   </p>
                 </div>
 
-                <Link href="/services" className="relative z-10 w-full inline-flex items-center justify-between px-6 py-4 rounded-2xl font-bold text-white tracking-[0.1em] uppercase transition-all duration-300 border border-[var(--accent-pink)]/30 bg-[var(--accent-pink)]/10 hover:bg-[var(--accent-pink)] hover:shadow-[0_0_20px_rgba(236,72,153,0.4)] text-[10px] sm:text-xs group/btn">
+                <Link href="/services" className="relative z-10 w-full inline-flex items-center justify-between px-5 py-3 rounded-2xl font-semibold text-white tracking-[0.1em] uppercase transition-all duration-300 border border-[var(--accent-pink)]/30 bg-[var(--accent-pink)]/10 hover:bg-[var(--accent-pink)] hover:shadow-[0_0_20px_rgba(236,72,153,0.4)] text-[10px] sm:text-xs group/btn">
                   <span className="drop-shadow-sm">Explore Shop</span>
                   <span className="w-8 h-8 rounded-full bg-white/10 flex items-center justify-center group-hover/btn:bg-white text-white group-hover/btn:text-[var(--accent-pink)] transition-all transform group-hover/btn:translate-x-1">→</span>
                 </Link>
@@ -660,10 +660,10 @@ export default function Home() {
 
             {/* NEW: Tools Expertise Block */}
             <FadeIn delay={400} className="md:col-span-1">
-              <div className="glass-card h-full rounded-2xl p-10 group hover:border-[var(--accent-blue)]/40 transition-colors relative overflow-hidden flex flex-col justify-center">
+              <div className="glass-card h-full rounded-2xl p-8 group hover:border-[var(--accent-blue)]/40 transition-colors relative overflow-hidden flex flex-col justify-center">
                 <div className="absolute top-0 right-0 w-32 h-32 bg-[var(--accent-blue)]/10 blur-3xl rounded-full" />
-                <div className="text-[var(--accent-cyan)] font-bold tracking-widest text-[10px] uppercase mb-4 bg-[var(--accent-cyan)]/10 inline-block px-3 py-1 rounded-full border border-[var(--accent-cyan)]/20 place-self-start">Platforms & Stack</div>
-                <h3 className="text-2xl font-bold mb-6">Expertise.</h3>
+                <div className="text-[var(--accent-cyan)] font-semibold tracking-widest text-[10px] uppercase mb-3 bg-[var(--accent-cyan)]/10 inline-block px-3 py-1 rounded-full border border-[var(--accent-cyan)]/20 place-self-start">Platforms & Stack</div>
+                <h3 className="text-xl font-semibold mb-4">Expertise.</h3>
                 <div className="flex flex-wrap gap-2">
                   {['Meta', 'Google Ads', 'Adobe Photoshop', 'Adobe Illustrator', 'Google Search Console', 'SEMrush', 'Ahrefs', 'Moz Pro', 'Surfer SEO', 'WordPress', 'Claude AI', 'Gemini Pro', 'ChatGPT', 'Antigravity', 'Google Flow'].map(tool => (
                     <span key={tool} className="text-[10px] md:text-xs font-semibold px-3 py-1.5 rounded-full bg-white/5 border border-white/10 text-white/80 hover:bg-[var(--accent-cyan)]/20 hover:border-[var(--accent-cyan)]/50 transition-colors cursor-default">{tool}</span>
@@ -674,19 +674,19 @@ export default function Home() {
 
             {/* NEW: Branding Gallery Showcase Block */}
             <FadeIn delay={400} className="md:col-span-3">
-              <div className="glass-card h-full min-h-[400px] rounded-2xl p-10 group hover:border-[var(--accent-violet)]/40 hover:shadow-[0_0_40px_rgba(142,45,226,0.1)] transition-all bg-gradient-to-br from-[rgba(20,20,25,0.4)] to-[rgba(142,45,226,0.05)] relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
+              <div className="glass-card h-full min-h-[350px] rounded-2xl p-8 group hover:border-[var(--accent-violet)]/40 hover:shadow-[0_0_40px_rgba(142,45,226,0.1)] transition-all bg-gradient-to-br from-[rgba(20,20,25,0.4)] to-[rgba(142,45,226,0.05)] relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
                 <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-[var(--accent-violet)]/10 blur-3xl rounded-full pointer-events-none" />
                 
                 {/* Left: Text Content */}
                 <div className="w-full md:w-1/3 z-10">
-                  <div className="text-[var(--accent-violet)] font-bold tracking-widest text-xs uppercase mb-6 bg-[var(--accent-violet)]/10 inline-block px-3 py-1 rounded-full border border-[var(--accent-violet)]/30 shadow-[0_0_10px_rgba(142,45,226,0.2)]">Case Studies</div>
-                  <h3 className="text-4xl md:text-5xl font-bold mb-6 leading-tight group-hover:text-[var(--accent-violet)] transition-colors">
+                  <div className="text-[var(--accent-violet)] font-semibold tracking-widest text-xs uppercase mb-4 bg-[var(--accent-violet)]/10 inline-block px-3 py-1 rounded-full border border-[var(--accent-violet)]/30 shadow-[0_0_10px_rgba(142,45,226,0.2)]">Case Studies</div>
+                  <h3 className="text-3xl md:text-4xl font-semibold mb-4 leading-tight group-hover:text-[var(--accent-violet)] transition-colors">
                     Brand <br/> Identity.
                   </h3>
-                  <p className="text-white/50 text-base leading-relaxed mb-8">
+                  <p className="text-white/50 text-sm leading-relaxed mb-6">
                     Complete brand ecosystems, luxury packaging, and visual identities crafted for high-end conversion.
                   </p>
-                  <Link href="/work/branding" className="inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-white tracking-[0.1em] uppercase transition-all duration-300 bg-[var(--accent-violet)]/20 border border-[var(--accent-violet)]/50 hover:bg-[var(--accent-violet)] hover:shadow-[0_0_30px_rgba(142,45,226,0.5)]">
+                  <Link href="/work/branding" className="inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold text-white tracking-[0.1em] uppercase transition-all duration-300 bg-[var(--accent-violet)]/20 border border-[var(--accent-violet)]/50 hover:bg-[var(--accent-violet)] hover:shadow-[0_0_30px_rgba(142,45,226,0.5)]">
                     View Gallery <span className="ml-2">→</span>
                   </Link>
                 </div>
@@ -708,18 +708,18 @@ export default function Home() {
 
             {/* Bento Block 3: Prompt Gallery / Work showcase */}
             <FadeIn delay={500} className="md:col-span-3">
-              <div className="glass-card h-full min-h-[400px] rounded-2xl p-10 group hover:border-[var(--accent-cyan)]/40 hover:shadow-[0_0_40px_rgba(0,210,255,0.1)] transition-all bg-gradient-to-br from-[rgba(20,20,25,0.4)] to-[rgba(0,210,255,0.05)] relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
+              <div className="glass-card h-full min-h-[350px] rounded-2xl p-8 group hover:border-[var(--accent-cyan)]/40 hover:shadow-[0_0_40px_rgba(0,210,255,0.1)] transition-all bg-gradient-to-br from-[rgba(20,20,25,0.4)] to-[rgba(0,210,255,0.05)] relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
                 <div className="absolute top-1/2 right-0 -translate-y-1/2 w-96 h-96 bg-[var(--accent-cyan)]/10 blur-3xl rounded-full pointer-events-none" />
                 
                 <div className="w-full md:w-1/3 z-10">
-                  <div className="text-[var(--accent-cyan)] font-bold tracking-widest text-xs uppercase mb-6 bg-[var(--accent-cyan)]/10 inline-block px-3 py-1 rounded-full border border-[var(--accent-cyan)]/30 shadow-[0_0_10px_rgba(0,210,255,0.2)]">Gallery</div>
-                  <h3 className="text-4xl md:text-5xl font-bold mb-6 leading-tight group-hover:text-[var(--accent-cyan)] transition-colors">
+                  <div className="text-[var(--accent-cyan)] font-semibold tracking-widest text-xs uppercase mb-4 bg-[var(--accent-cyan)]/10 inline-block px-3 py-1 rounded-full border border-[var(--accent-cyan)]/30 shadow-[0_0_10px_rgba(0,210,255,0.2)]">Gallery</div>
+                  <h3 className="text-3xl md:text-4xl font-semibold mb-4 leading-tight group-hover:text-[var(--accent-cyan)] transition-colors">
                     Prompt <br/> Gallery.
                   </h3>
-                  <p className="text-white/50 text-base leading-relaxed mb-8">
+                  <p className="text-white/50 text-sm leading-relaxed mb-6">
                     Discover projects built with strategy, not just design. Premium outputs blending visuals and high-level AI prompt engineering.
                   </p>
-                  <Link href="/prompt-gallery" className="inline-flex items-center justify-center px-8 py-4 rounded-full font-bold text-[#050505] tracking-[0.1em] uppercase transition-all duration-300 bg-[var(--accent-cyan)] hover:shadow-[0_0_30px_rgba(0,210,255,0.5)]">
+                  <Link href="/prompt-gallery" className="inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold text-[#050505] tracking-[0.1em] uppercase transition-all duration-300 bg-[var(--accent-cyan)] hover:shadow-[0_0_30px_rgba(0,210,255,0.5)]">
                     Explore Gallery <span className="ml-2">→</span>
                   </Link>
                 </div>

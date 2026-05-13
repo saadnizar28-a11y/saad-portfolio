@@ -40,7 +40,7 @@ export default function PricingSection() {
   };
 
   return (
-    <div ref={containerRef} className="relative border-t border-[rgba(255,255,255,0.05)] pt-32 pb-32 overflow-hidden bg-gradient-to-b from-black via-[#0a0514] to-black">
+    <div ref={containerRef} className="relative border-t border-[rgba(255,255,255,0.05)] pt-32 pb-32 overflow-hidden bg-black">
       {/* Floating Particles Background */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {[...Array(15)].map((_, i) => (

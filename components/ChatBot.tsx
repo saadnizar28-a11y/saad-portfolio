@@ -132,12 +132,12 @@ export default function ChatBot() {
         
         {/* One-time Pop-up Bubble */}
         <div className={`transition-all duration-500 origin-bottom-right ${showBubble ? 'scale-100 opacity-100' : 'scale-0 opacity-0'}`}>
-          <div className="bg-white text-black px-4 py-3 rounded-2xl rounded-br-none shadow-[0_10px_30px_rgba(0,210,255,0.3)] border border-[var(--accent-cyan)]/30 font-medium text-sm flex flex-col items-start gap-1 cursor-pointer max-w-[280px]" onClick={toggleChat}>
+          <div className="glass-card text-white px-4 py-3 rounded-2xl rounded-br-none shadow-[0_10px_30px_rgba(0,210,255,0.3)] border border-[var(--accent-cyan)]/30 font-medium text-sm flex flex-col items-start gap-1 cursor-pointer max-w-[280px]" onClick={toggleChat}>
              <div className="flex items-center gap-2">
                <span className="w-2 h-2 rounded-full bg-[var(--accent-pink)] animate-pulse" />
                <span className="font-bold">Hey… I’m Syro 🤖</span>
              </div>
-             <span className="text-xs text-gray-800 leading-relaxed mt-1">
+             <span className="text-xs text-white/80 leading-relaxed mt-1">
                I was the one you were trying to catch — but I’m a bit faster 😉<br/>
                Anyway, how can I help you today?
              </span>
@@ -165,7 +165,7 @@ export default function ChatBot() {
         className={`fixed bottom-24 right-6 w-80 sm:w-96 glass-card rounded-2xl border-[rgba(0,210,255,0.3)] shadow-[0_10px_50px_rgba(0,0,0,0.8)] z-50 overflow-hidden flex flex-col transition-all duration-500 origin-bottom-right ${isOpen ? 'scale-100 opacity-100 pointer-events-auto' : 'scale-75 opacity-0 pointer-events-none'}`}
       >
         {/* Cinematic Header with glow and particles */}
-        <div className="bg-gradient-to-r from-[rgba(20,20,25,0.9)] to-[var(--accent-cyan)]/20 p-5 border-b border-[rgba(255,255,255,0.05)] relative overflow-hidden group shrink-0">
+        <div className="bg-gradient-to-r from-black/80 to-[var(--accent-cyan)]/10 p-5 border-b border-[rgba(255,255,255,0.05)] relative overflow-hidden group shrink-0">
           {/* Particles */}
           <div className="absolute inset-0 opacity-50">
              <div className="absolute top-2 left-10 w-1 h-1 bg-white rounded-full animate-ping [animation-duration:2s]" />

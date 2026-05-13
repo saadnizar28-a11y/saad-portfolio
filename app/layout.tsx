@@ -114,7 +114,7 @@ export default function RootLayout({
     <html
       lang="en"
       suppressHydrationWarning
-      className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} h-full antialiased bg-[#050505]`}
+      className={`${geistSans.variable} ${geistMono.variable} ${playfair.variable} h-full antialiased bg-black`}
     >
       <head>
         <script
@@ -123,7 +123,7 @@ export default function RootLayout({
         />
         <link rel="preload" href="/hover.mp3" as="audio" type="audio/mpeg" />
       </head>
-      <body className="min-h-full flex flex-col bg-[#050505] text-white">
+      <body className="min-h-full flex flex-col bg-black text-white">
         <LenisScroll />
         <MouseAura />
         <Header />

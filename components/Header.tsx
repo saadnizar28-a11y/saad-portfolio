@@ -57,7 +57,7 @@ export default function Header() {
         }`}
       >
         {/* Mobile Glassmorphism Background */}
-        <div className="absolute inset-0 bg-[#050505]/70 backdrop-blur-xl border-b border-[var(--accent-cyan)]/10 shadow-[0_4px_40px_rgba(0,0,0,0.5)] md:hidden pointer-events-auto" />
+        <div className="absolute inset-0 bg-black/30 backdrop-blur-[24px] border-b border-white/5 shadow-[0_4px_40px_rgba(0,0,0,0.5)] md:hidden pointer-events-auto" />
         
         {/* Removed transparent expanding background to eliminate the border */}
 
@@ -140,7 +140,7 @@ export default function Header() {
 
       {/* Mobile Menu Drawer (Right Side) */}
       <div 
-        className={`fixed top-0 right-0 w-[80vw] max-w-[320px] h-[100dvh] bg-[#050505]/95 backdrop-blur-3xl z-50 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] border-l border-white/10 flex flex-col pt-10 px-10 shadow-[-20px_0_40px_rgba(0,0,0,0.8)] ${
+        className={`fixed top-0 right-0 w-[80vw] max-w-[320px] h-[100dvh] bg-black/40 backdrop-blur-[24px] z-50 transition-transform duration-700 ease-[cubic-bezier(0.16,1,0.3,1)] border-l border-white/10 flex flex-col pt-10 px-10 shadow-[-20px_0_40px_rgba(0,0,0,0.8)] ${
           isMobileMenuOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >

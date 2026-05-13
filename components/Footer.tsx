@@ -9,9 +9,9 @@ export default function Footer() {
       <div className="absolute top-0 right-1/4 w-[50vw] h-[50vh] bg-gradient-radial from-[var(--accent-purple)]/10 to-transparent blur-[150px] pointer-events-none rounded-full" />
       <div className="absolute bottom-0 left-1/4 w-[40vw] h-[40vh] bg-gradient-radial from-[var(--accent-pink)]/5 to-transparent blur-[150px] pointer-events-none rounded-full" />
 
-      <div className="max-w-7xl mx-auto relative z-10">
+      <div className="max-w-7xl mx-auto relative z-10 glass-card rounded-3xl p-10 md:p-16 border-t-0 border-[rgba(255,255,255,0.02)]">
         <FadeIn>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
             
             {/* Brand */}
             <div className="col-span-1 md:col-span-2">

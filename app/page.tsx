@@ -14,6 +14,7 @@ import Footer from "@/components/Footer";
 import SocialSidebar from "@/components/SocialSidebar";
 import FloatingRobot from "@/components/FloatingRobot";
 import BlogGrid from "@/components/BlogGrid";
+import FanGallery from "@/components/FanGallery";
 
 declare global {
   interface Window {
@@ -612,7 +613,7 @@ export default function Home() {
 
             {/* NEW: Lead Generation Case Study Block (Now Half Size) */}
             <FadeIn delay={200} className="md:col-span-1">
-              <div className="glass-card h-full rounded-2xl p-8 group hover:border-[#10b981]/40 transition-colors relative overflow-hidden bg-gradient-to-b from-[rgba(20,20,25,0.8)] to-[#10b981]/10">
+              <div className="glass-card h-full rounded-2xl p-8 group hover:border-[#10b981]/40 transition-colors relative overflow-hidden bg-gradient-to-b from-black/60 to-[#10b981]/10">
                 <div className="absolute top-0 right-0 w-full h-[50%] bg-[#10b981]/5 blur-3xl pointer-events-none" />
                 
                 <div className="flex flex-col justify-between relative z-10 w-full h-full gap-6">
@@ -638,7 +639,7 @@ export default function Home() {
 
             {/* NEW: Growth Shop CTA Block (Taking the other half) */}
             <FadeIn delay={300} className="md:col-span-1">
-              <div className="glass-card h-full rounded-2xl p-8 group hover:border-[var(--accent-pink)]/40 hover:shadow-[0_0_40px_rgba(236,72,153,0.15)] transition-all relative overflow-hidden flex flex-col justify-between bg-gradient-to-b from-[rgba(20,20,25,0.6)] to-[rgba(236,72,153,0.05)]">
+              <div className="glass-card h-full rounded-2xl p-8 group hover:border-[var(--accent-pink)]/40 hover:shadow-[0_0_40px_rgba(236,72,153,0.15)] transition-all relative overflow-hidden flex flex-col justify-between bg-gradient-to-b from-black/50 to-[rgba(236,72,153,0.05)]">
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-[var(--accent-pink)]/10 blur-[80px] rounded-full pointer-events-none group-hover:bg-[var(--accent-pink)]/20 transition-all duration-700" />
                 
                 <div className="relative z-10">
@@ -674,7 +675,7 @@ export default function Home() {
 
             {/* NEW: Branding Gallery Showcase Block */}
             <FadeIn delay={400} className="md:col-span-3">
-              <div className="glass-card h-full min-h-[350px] rounded-2xl p-8 group hover:border-[var(--accent-violet)]/40 hover:shadow-[0_0_40px_rgba(142,45,226,0.1)] transition-all bg-gradient-to-br from-[rgba(20,20,25,0.4)] to-[rgba(142,45,226,0.05)] relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
+              <div className="glass-card h-full min-h-[350px] rounded-2xl p-8 group hover:border-[var(--accent-violet)]/40 hover:shadow-[0_0_40px_rgba(142,45,226,0.1)] transition-all bg-gradient-to-br from-black/40 to-[rgba(142,45,226,0.05)] relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
                 <div className="absolute top-1/2 left-0 -translate-y-1/2 w-96 h-96 bg-[var(--accent-violet)]/10 blur-3xl rounded-full pointer-events-none" />
                 
                 {/* Left: Text Content */}
@@ -691,16 +692,15 @@ export default function Home() {
                   </Link>
                 </div>
 
-                {/* Right: Tiny Scroll Carousel */}
-                <div className="w-full md:w-2/3 relative flex items-center justify-center z-10">
-                  <div className="flex gap-4 overflow-x-auto scrollbar-none w-full py-4 px-2 scroll-smooth" style={{ maskImage: "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)", WebkitMaskImage: "linear-gradient(to right, transparent 0%, black 10%, black 90%, transparent 100%)" }}>
-                    {['/branding_gallery_1.png', '/branding_gallery_2.png', '/branding_gallery_3.png', '/branding_gallery_4.png', '/branding_gallery_5.png', '/branding_gallery_6.png', '/branding_gallery_7.png'].map((src, i) => (
-                      <Link href="/work/branding" key={i} className="shrink-0 w-36 h-56 rounded-2xl overflow-hidden border border-white/10 shadow-xl hover:scale-105 hover:border-[var(--accent-violet)]/50 transition-all duration-500 cursor-pointer block relative">
-                        <Image src={src} alt={`Brand Identity ${i + 1}`} fill className="object-cover" sizes="144px" />
-                      </Link>
-                    ))}
-                    <div className="shrink-0 w-12" /> {/* Spacer */}
-                  </div>
+                {/* Right: Interactive Fan Gallery */}
+                <div className="w-full md:w-2/3 relative flex items-center justify-center z-10 mt-10 md:mt-0">
+                  <FanGallery images={[
+                    '/branding_gallery_1.png', 
+                    '/branding_gallery_2.png', 
+                    '/branding_gallery_3.png', 
+                    '/branding_gallery_4.png', 
+                    '/branding_gallery_5.png'
+                  ]} />
                 </div>
 
               </div>
@@ -708,7 +708,7 @@ export default function Home() {
 
             {/* Bento Block 3: Prompt Gallery / Work showcase */}
             <FadeIn delay={500} className="md:col-span-3">
-              <div className="glass-card h-full min-h-[350px] rounded-2xl p-8 group hover:border-[var(--accent-cyan)]/40 hover:shadow-[0_0_40px_rgba(0,210,255,0.1)] transition-all bg-gradient-to-br from-[rgba(20,20,25,0.4)] to-[rgba(0,210,255,0.05)] relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
+              <div className="glass-card h-full min-h-[350px] rounded-2xl p-8 group hover:border-[var(--accent-cyan)]/40 hover:shadow-[0_0_40px_rgba(0,210,255,0.1)] transition-all bg-gradient-to-br from-black/40 to-[rgba(0,210,255,0.05)] relative overflow-hidden flex flex-col md:flex-row items-center justify-between gap-12">
                 <div className="absolute top-1/2 right-0 -translate-y-1/2 w-96 h-96 bg-[var(--accent-cyan)]/10 blur-3xl rounded-full pointer-events-none" />
                 
                 <div className="w-full md:w-1/3 z-10">
@@ -725,42 +725,14 @@ export default function Home() {
                 </div>
 
                 {/* Abstract Showcase Visual */}
-                <div className="w-full md:w-2/3 h-64 md:h-full relative flex items-center justify-center z-10 perspective-[1000px]">
-                  <Link href="/prompt-gallery" className="grid grid-cols-2 gap-4 absolute w-[120%] rotate-y-[-10deg] rotate-x-[5deg] hover:rotate-y-0 hover:rotate-x-0 transition-transform duration-700 ease-out group/grid cursor-pointer">
-                     
-                     <div className="h-40 rounded-2xl relative overflow-hidden border border-[var(--accent-cyan)]/30 backdrop-blur-md shadow-2xl group-hover/grid:border-[var(--accent-cyan)]/60 transition-all">
-                        <Image src="/gta-art.png" alt="GTA VI Filter" fill className="object-cover object-center filter contrast-110" sizes="(max-width: 768px) 50vw, 20vw" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-                        <div className="absolute bottom-3 left-3 pointer-events-none">
-                           <p className="text-white font-black text-xs uppercase tracking-widest leading-tight drop-shadow-md">GTA VI<br/>Filter</p>
-                        </div>
-                     </div>
-                     
-                     <div className="h-40 rounded-2xl relative overflow-hidden border border-[var(--accent-violet)]/30 backdrop-blur-md shadow-2xl translate-y-8 group-hover/grid:border-[var(--accent-violet)]/60 transition-all">
-                        <Image src="https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=800&auto=format&fit=crop" alt="Natural Light" fill className="object-cover object-center filter contrast-110" sizes="(max-width: 768px) 50vw, 20vw" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-                        <div className="absolute bottom-3 left-3 pointer-events-none">
-                           <p className="text-white font-black text-xs uppercase tracking-widest leading-tight drop-shadow-md">Natural<br/>Light</p>
-                        </div>
-                     </div>
-                     
-                     <div className="h-40 rounded-2xl relative overflow-hidden border border-[var(--accent-pink)]/30 backdrop-blur-md shadow-2xl -translate-y-8 group-hover/grid:border-[var(--accent-pink)]/60 transition-all">
-                        <Image src="/gta-art-new.png" alt="GTA VI Art" fill className="object-cover object-center filter contrast-110" sizes="(max-width: 768px) 50vw, 20vw" />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-                        <div className="absolute bottom-3 left-3 pointer-events-none">
-                           <p className="text-white font-black text-xs uppercase tracking-widest leading-tight drop-shadow-md">GTA VI<br/>Art</p>
-                        </div>
-                     </div>
-
-                     <div className="h-40 rounded-2xl relative overflow-hidden border border-[rgba(255,255,255,0.05)] shadow-2xl flex flex-col items-center justify-center group-hover/grid:border-[var(--accent-cyan)]/40 transition-all group-hover/grid:shadow-[0_0_30px_rgba(0,210,255,0.2)]">
-                        <Image src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop" alt="Explore" fill className="object-cover blur-[10px] opacity-30 group-hover/grid:opacity-50 group-hover/grid:scale-110 transition-all duration-700" sizes="(max-width: 768px) 50vw, 20vw" />
-                        <div className="absolute inset-0 bg-gradient-to-b from-[#050505]/60 via-transparent to-[#050505]/80 pointer-events-none" />
-                        <div className="relative z-10 flex flex-col items-center justify-center">
-                           <span className="text-[var(--accent-cyan)] font-bold text-lg tracking-widest drop-shadow-[0_0_10px_rgba(0,210,255,0.5)]">+ EXPLORE</span>
-                           <span className="text-[var(--accent-cyan)]/70 font-bold text-xs tracking-widest mt-1">PROMPT GALLERY</span>
-                        </div>
-                     </div>
-                  </Link>
+                <div className="w-full md:w-2/3 h-64 md:h-full relative flex items-center justify-center z-10 mt-10 md:mt-0">
+                  <FanGallery images={[
+                    '/gta-art.png',
+                    'https://images.unsplash.com/photo-1502823403499-6ccfcf4fb453?q=80&w=800&auto=format&fit=crop',
+                    '/gta-art-new.png',
+                    'https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=800&auto=format&fit=crop',
+                    'https://images.unsplash.com/photo-1616499370260-485e3e5810e7?q=80&w=800'
+                  ]} href="/prompt-gallery" />
                 </div>
 
               </div>

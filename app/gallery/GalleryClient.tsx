@@ -16,62 +16,62 @@ const galleryPosts = [
     location: "Dubai, UAE",
     likes: "1,204",
     date: "2 HOURS AGO",
-    caption: "Launching the latest digital branding assets. A complete visual overhaul emphasizing minimalist luxury. #SaadNizar #DigitalAssets #BrandIdentity #UIUXDesign",
-    alt: "Saad Nizar digital assets - Brand Identity Showcase 1"
+    caption: "Commanding the digital landscape. As the leading digital marketer and creative designer in Dubai, I believe your personal brand is your strongest asset. Building empires through precision UI/UX and elite brand identity. #SaadNizar #DigitalMarketerDubai #CreativeDesigner #BrandIdentity",
+    alt: "Saad Nizar Best Digital Marketer Dubai - Professional Portrait in Red Studio"
   },
   {
     id: 2,
     image: "/saad-gallery-2.jpg",
-    location: "Creative Studio",
+    location: "Creative Studio, GCC",
     likes: "856",
     date: "1 DAY AGO",
-    caption: "Behind the scenes: Crafting premium glassmorphism interfaces for SaaS platforms. Every pixel matters when building a personal brand. #SaadNizarPortfolio #WebDesign #SaaS",
-    alt: "Saad Nizar UI/UX Design - Premium Glassmorphism Interface"
+    caption: "Vision meets execution. Crafting high-converting digital marketing campaigns and premium glassmorphism interfaces. Every pixel matters when you're designing for the top tier of the UAE market. #SaadNizarPortfolio #GraphicDesignerUAE #DigitalMarketingExpert",
+    alt: "Saad Nizar Top Graphic Designer UAE - Cinematic Black Shirt Portrait"
   },
   {
     id: 3,
     image: "/saad-gallery-3.jpg",
-    location: "GCC Region",
+    location: "Dubai Design District",
     likes: "2,341",
     date: "3 DAYS AGO",
-    caption: "Recent logo and typography exploration for a luxury real estate client. Typography speaks louder than words in corporate identity. #SaadNizarDigitalAssets #LogoDesign",
-    alt: "Saad Nizar Logo Design - Luxury Typography Concept"
+    caption: "Always moving forward. The digital space in the Middle East evolves rapidly. Staying ahead means constantly refining UI/UX strategies and SEO architecture for my clients. #SaadNizarCreativeDesigner #DubaiTech #SEOExpert",
+    alt: "Saad Nizar Creative Designer Dubai - Outdoor Walk White Hoodie"
   },
   {
     id: 4,
     image: "/saad-gallery-4.jpg",
-    location: "Dubai Design District",
+    location: "Downtown Dubai",
     likes: "1,112",
     date: "1 WEEK AGO",
-    caption: "Wireframing the future of mobile commerce. Focusing on seamless user journeys and intuitive interactions. #SaadNizar #AppDesign #UXDesign #DubaiTech",
-    alt: "Saad Nizar App Design - Mobile Commerce Wireframes"
+    caption: "Looking toward the future of web design and AI integrations. As a freelance digital marketer in Dubai, my goal is to seamlessly merge aesthetic branding with deep backend performance. #SaadNizar #WebDesignDubai #MarketingStrategist",
+    alt: "Saad Nizar Freelance Digital Marketer Dubai - Looking Away Outdoor"
   },
   {
     id: 5,
     image: "/saad-gallery-5.jpg",
-    location: "Global Remote",
+    location: "Corporate Space, UAE",
     likes: "945",
     date: "2 WEEKS AGO",
-    caption: "A comprehensive brand system delivered. From business cards to full digital presence. Consistency is key. #BrandGuidelines #SaadNizarPortfolio #DigitalMarketing",
-    alt: "Saad Nizar Brand System - Comprehensive Digital Identity"
+    caption: "Strategy is nothing without execution. Delivering comprehensive brand identity systems—from logofolios to full-scale enterprise websites. Consistency scales businesses. #SaadNizarBestGraphicDesigner #BrandGuidelines #DigitalGrowth",
+    alt: "Saad Nizar Brand Identity Specialist - Professional Stance Outdoors"
   },
   {
     id: 6,
     image: "/saad-gallery-6.jpg",
-    location: "Creative Setup",
+    location: "Business Bay, Dubai",
     likes: "3,012",
     date: "3 WEEKS AGO",
-    caption: "Dark mode everything. Creating deep, cinematic web experiences that capture attention immediately. #SaadNizarDigitalAssets #DarkMode #WebDevelopment",
-    alt: "Saad Nizar Web Development - Dark Mode Aesthetic UI"
+    caption: "The intersection of creativity and data. High-end graphic design combined with aggressive SEO marketing is what separates good brands from industry leaders in the GCC. #SaadNizarDigitalAssets #SocialMediaMarketing #DubaiBusiness",
+    alt: "Saad Nizar Social Media Marketing Expert Dubai - Red Shirt Professional"
   },
   {
     id: 7,
     image: "/saad-gallery-7.jpg",
-    location: "Client Presentation",
+    location: "Design Workspace",
     likes: "1,550",
     date: "1 MONTH AGO",
-    caption: "Packaging design concepts that bridge the gap between physical and digital. Real-world impact. #PackagingDesign #SaadNizar #CreativeDirection",
-    alt: "Saad Nizar Creative Direction - Physical Packaging Concept"
+    caption: "Casual moments, serious results. Whether it's drafting a new UI/UX dashboard or running a high-ROI ad campaign, comfort fuels creativity. Let's build something iconic. #CreativeDirectorUAE #SaadNizar #DigitalMarketer",
+    alt: "Saad Nizar UI UX Designer Dubai - Casual Red Hoodie Couch"
   },
   {
     id: 8,
@@ -79,26 +79,17 @@ const galleryPosts = [
     location: "Dubai, UAE",
     likes: "2,100",
     date: "1 MONTH AGO",
-    caption: "Interactive 3D elements in web design. Pushing the boundaries of what browsers can render smoothly. #SaadNizarPortfolio #3DWeb #FramerMotion",
-    alt: "Saad Nizar 3D Web Design - Interactive Digital Assets"
+    caption: "Pushing boundaries in visual campaigns. Modern aesthetics demand clean typography, interactive 3D elements, and lightning-fast web architecture. #SaadNizarPortfolio #TopDigitalMarketer #WebDevelopment",
+    alt: "Saad Nizar Top Digital Marketer UAE - Creative Lifestyle Portrait"
   },
   {
     id: 9,
     image: "/saad-gallery-9.jpg",
-    location: "Workspace",
+    location: "Exhibition",
     likes: "1,890",
     date: "2 MONTHS AGO",
-    caption: "The tools of the trade. Crafting pixel-perfect digital assets requires focus and the right setup. #SaadNizar #Workspace #DesignSetup",
-    alt: "Saad Nizar Workspace - Digital Asset Creation Setup"
-  },
-  {
-    id: 10,
-    image: "/saad-gallery-10.jpg",
-    location: "Exhibition",
-    likes: "4,521",
-    date: "3 MONTHS AGO",
-    caption: "Showcasing a year of digital marketing and design growth. The portfolio continues to expand. Thank you for the support! #SaadNizarDigitalAssets #Portfolio #DesignCommunity",
-    alt: "Saad Nizar Portfolio Exhibition - Digital Marketing Assets"
+    caption: "Showcasing a year of explosive digital growth and premium brand design. Thank you to all my clients across Dubai and the GCC for trusting me with your digital assets. The portfolio continues to expand! #SaadNizarDigitalAssets #Portfolio #DesignCommunity",
+    alt: "Saad Nizar Digital Marketing Portfolio Exhibition Dubai"
   }
 ];
 
@@ -133,6 +124,40 @@ const BookmarkIcon = ({ filled }: { filled: boolean }) => (
     <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
   </svg>
 );
+
+// Helper component for Next/Image to automatically fallback through formats
+const FallbackNextImage = ({ src, ...rest }: any) => {
+  const [imgSrc, setImgSrc] = useState(src);
+  return (
+    <Image
+      {...rest}
+      src={imgSrc}
+      onError={() => {
+        if (typeof imgSrc === 'string') {
+          if (imgSrc.endsWith('.jpg')) setImgSrc(imgSrc.replace('.jpg', '.png'));
+          else if (imgSrc.endsWith('.png')) setImgSrc(imgSrc.replace('.png', '.jpeg'));
+        }
+      }}
+    />
+  );
+};
+
+// Helper component for standard img to automatically fallback through formats
+const FallbackNativeImg = ({ src, ...rest }: any) => {
+  const [imgSrc, setImgSrc] = useState(src);
+  return (
+    <img
+      {...rest}
+      src={imgSrc}
+      onError={() => {
+        if (typeof imgSrc === 'string') {
+          if (imgSrc.endsWith('.jpg')) setImgSrc(imgSrc.replace('.jpg', '.png'));
+          else if (imgSrc.endsWith('.png')) setImgSrc(imgSrc.replace('.png', '.jpeg'));
+        }
+      }}
+    />
+  );
+};
 
 export default function GalleryClient() {
   const [viewMode, setViewMode] = useState<"grid" | "feed">("grid");
@@ -245,7 +270,7 @@ export default function GalleryClient() {
                 className="relative aspect-square bg-neutral-900 group cursor-pointer overflow-hidden"
                 onClick={() => handlePostClick(post.id)}
               >
-                <Image
+                <FallbackNextImage
                   src={post.image}
                   alt={post.alt}
                   fill
@@ -301,8 +326,8 @@ export default function GalleryClient() {
                 >
                   <h2 className="sr-only">{post.alt}</h2>
                   
-                  {/* We use standard img to allow natural height sizing */}
-                  <img
+                  {/* We use standard img with fallback to allow natural height sizing */}
+                  <FallbackNativeImg
                     src={post.image}
                     alt={post.alt}
                     className="w-full h-auto block object-contain max-h-[80vh]"

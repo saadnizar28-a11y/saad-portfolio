@@ -21,6 +21,11 @@ const nextConfig: NextConfig = {
         destination: '/blog',
         permanent: true, // 301 redirect
       },
+      {
+        source: '/home',
+        destination: '/',
+        permanent: true, // 301 redirect
+      },
     ];
   },
 };

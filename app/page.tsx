@@ -15,6 +15,7 @@ import SocialSidebar from "@/components/SocialSidebar";
 import FloatingRobot from "@/components/FloatingRobot";
 import BlogGrid from "@/components/BlogGrid";
 import FanGallery from "@/components/FanGallery";
+import SEOContent from "@/components/SEOContent";
 
 declare global {
   interface Window {
@@ -445,16 +446,16 @@ export default function Home() {
               <span className="block mb-10 tracking-[0.3em] text-xs font-bold uppercase text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-cyan)] via-[var(--accent-violet)] to-[var(--accent-pink)] drop-shadow-[0_0_10px_rgba(142,45,226,0.3)]">
                 Waura Marketing & Design Studio
               </span>
-              <h1 className="text-4xl md:text-7xl lg:text-[7rem] font-light mb-8 leading-[1.1] relative z-10 text-white flex flex-col md:items-center">
-                <span className="block uppercase tracking-tighter font-semibold">Building</span>
+              <h1 className="text-4xl md:text-6xl lg:text-[6rem] font-light mb-8 leading-[1.1] relative z-10 text-white flex flex-col md:items-center">
+                <span className="block uppercase tracking-tighter font-semibold">Digital Marketing</span>
                 <span className="block italic font-[family-name:var(--font-playfair)] tracking-normal text-transparent bg-clip-text bg-gradient-to-r from-[var(--accent-cyan)] to-[var(--accent-violet)] drop-shadow-[0_0_20px_rgba(0,210,255,0.3)] my-2" style={{ fontFamily: 'var(--font-playfair)' }}>
-                  Creative
+                  Strategist
                 </span>
-                <span className="block uppercase tracking-tight text-white/80 font-medium text-3xl md:text-5xl lg:text-6xl mt-4">
-                  Digital Ideas That
+                <span className="block uppercase tracking-tight text-white/80 font-medium text-2xl md:text-4xl lg:text-5xl mt-4">
+                  & Brand Designer
                 </span>
-                <span className="block font-serif italic normal-case text-6xl md:text-7xl lg:text-[7.5rem] text-white/60 tracking-normal mt-4" style={{ fontFamily: 'var(--font-playfair)' }}>
-                  Actually Convert.
+                <span className="block font-serif italic normal-case text-4xl md:text-5xl lg:text-[5.5rem] text-white/60 tracking-normal mt-4" style={{ fontFamily: 'var(--font-playfair)' }}>
+                  For UAE & GCC Brands.
                 </span>
               </h1>
             </div>
@@ -864,6 +865,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <SEOContent />
+
     </>
   );
 }

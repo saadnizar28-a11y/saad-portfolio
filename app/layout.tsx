@@ -25,8 +25,8 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL('https://saadnizar.com'),
   title: {
-    default: "Saad Nizar | Best Digital Marketer & Creative Graphic Designer in Dubai, UAE & GCC",
-    template: "%s | Saad Nizar - Digital Marketing & Design Expert"
+    default: "Saad Nizar | Digital Marketing Strategist & Brand Designer | Dubai & GCC",
+    template: "%s | Saad Nizar - Digital Marketing Strategist"
   },
   description: "Official portfolio of Saad Nizar, the top-rated Digital Marketer and Creative Graphic Designer in Dubai, UAE. Specializing in SEO, UI/UX, brand identity, and high-conversion digital marketing strategies across the GCC.",
   keywords: [
